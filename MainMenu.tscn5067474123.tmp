@@ -1,0 +1,236 @@
+[gd_scene format=3 uid="uid://dlk6lo7k3ppdl"]
+
+[ext_resource type="Script" uid="uid://lxwgqve7hum3" path="res://MenuControl.gd" id="1_eiy7p"]
+[ext_resource type="Texture2D" uid="uid://j0nd3cxfuu2x" path="res://Resources/Placeholders/Button.webp" id="1_i26rj"]
+[ext_resource type="Script" uid="uid://cjvqas40g2rdk" path="res://main_menu.gd" id="2_h7a2f"]
+[ext_resource type="Script" uid="uid://2udw37h1bc1u" path="res://settings_menu.gd" id="4_qoqlk"]
+
+[node name="MenuControl" type="Control" unique_id=1851138345]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_eiy7p")
+
+[node name="MainMenu" type="Panel" parent="." unique_id=286869214]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_h7a2f")
+
+[node name="Buttons" type="Control" parent="MainMenu" unique_id=702723417]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Start" type="Control" parent="MainMenu/Buttons" unique_id=464414419]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="StartSprite" type="Sprite2D" parent="MainMenu/Buttons/Start" unique_id=2106238099]
+position = Vector2(0, 246)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("1_i26rj")
+hframes = 2
+
+[node name="Start" type="Button" parent="MainMenu/Buttons/Start" unique_id=710389524]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.0
+offset_top = -45.5
+offset_right = 142.0
+offset_bottom = 45.5
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Start"
+flat = true
+
+[node name="Settings" type="Control" parent="MainMenu/Buttons" unique_id=959079976]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 140.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SettingsSprite" type="Sprite2D" parent="MainMenu/Buttons/Settings" unique_id=163269231]
+position = Vector2(0, 246)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("1_i26rj")
+hframes = 2
+
+[node name="Settings" type="Button" parent="MainMenu/Buttons/Settings" unique_id=772952554]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -42.0
+offset_right = 143.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 55
+text = "Settings
+"
+flat = true
+
+[node name="Exit" type="Control" parent="MainMenu/Buttons" unique_id=1369245709]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 277.0
+offset_bottom = 277.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ExitSprite" type="Sprite2D" parent="MainMenu/Buttons/Exit" unique_id=2058104368]
+position = Vector2(0, 246)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("1_i26rj")
+hframes = 2
+
+[node name="Exit" type="Button" parent="MainMenu/Buttons/Exit" unique_id=1316449081]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -42.0
+offset_right = 144.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 55
+text = "Exit
+
+"
+flat = true
+
+[node name="Labels" type="Control" parent="MainMenu" unique_id=620571505]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="MainMenu/Labels" unique_id=274105429]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 150.0
+offset_right = 20.0
+offset_bottom = 173.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 100
+text = "Template"
+
+[node name="SettingsMenu" type="Panel" parent="." unique_id=41986700]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_qoqlk")
+
+[node name="Controls" type="Control" parent="SettingsMenu" unique_id=210564442]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Back" type="Control" parent="SettingsMenu/Controls" unique_id=575307906]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 277.0
+offset_bottom = 277.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BackSprite" type="Sprite2D" parent="SettingsMenu/Controls/Back" unique_id=1201931901]
+position = Vector2(0, 246)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("1_i26rj")
+hframes = 2
+
+[node name="Back" type="Button" parent="SettingsMenu/Controls/Back" unique_id=1561672145]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -42.0
+offset_right = 144.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 55
+text = "Back
+
+"
+flat = true
+
+[connection signal="button_down" from="MainMenu/Buttons/Settings/Settings" to="." method="_on_settings_button_down"]
+[connection signal="button_up" from="MainMenu/Buttons/Settings/Settings" to="." method="_on_settings_button_up"]
+[connection signal="button_down" from="MainMenu/Buttons/Exit/Exit" to="." method="_on_exit_button_down"]
+[connection signal="button_up" from="MainMenu/Buttons/Exit/Exit" to="." method="_on_exit_button_up"]
+[connection signal="button_down" from="SettingsMenu/Controls/Back/Back" to="." method="_on_back_button_down"]
+[connection signal="button_up" from="SettingsMenu/Controls/Back/Back" to="." method="_on_back_button_up"]

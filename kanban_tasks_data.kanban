@@ -1,0 +1,60 @@
+{
+	"categories": [
+		{
+			"uuid": "190588e1-5aad-4fac-9383-4b1f6769dd48",
+			"title": "Required",
+			"color": "ff0808"
+		},
+		{
+			"uuid": "6deed6e0-28e5-4b6d-8604-bcb6e054f779",
+			"title": "Bug",
+			"color": "effc04"
+		},
+		{
+			"uuid": "8c27b97c-cdd3-4916-a37a-fe4a073a1af7",
+			"title": "Polish",
+			"color": "13e90c"
+		},
+		{
+			"uuid": "3e8988c0-596c-4baf-a989-7e753b44371f",
+			"title": "Team",
+			"color": "352ffd"
+		},
+		{
+			"uuid": "469bb5b7-c554-4723-a72a-59751c83be04",
+			"title": "Possible Feature",
+			"color": "3c004f"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "1ed2c5aa-37d0-4ffc-a049-22a405558df2",
+			"title": "Todo",
+			"tasks": []
+		},
+		{
+			"uuid": "4c4fd0b0-e9ae-42a9-86be-e2b9fc73f092",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "b83031cf-bb2a-439d-a528-c512d3c716bf",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [],
+	"layout": {
+		"columns": [
+			[
+				"1ed2c5aa-37d0-4ffc-a049-22a405558df2"
+			],
+			[
+				"4c4fd0b0-e9ae-42a9-86be-e2b9fc73f092"
+			],
+			[
+				"b83031cf-bb2a-439d-a528-c512d3c716bf"
+			]
+		]
+	}
+}
