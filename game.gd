@@ -22,7 +22,7 @@ func init() -> void:
 
 func InputCheck() -> void:
 	pass
-	if Input.is_action_just_pressed('Q'):
+	if Input.is_action_just_pressed('Esc'):
 		LevelSelect()
 
 func LevelSelect() ->void:

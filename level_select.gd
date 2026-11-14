@@ -15,12 +15,17 @@ func _ready() -> void:
 	Setup()
 
 func _process(_delta: float) -> void:
-	pass
-	#InputCheck()
-	
-#func InputCheck():
-	#if Input.is_action_just_pressed('Q'):
-		#NextLevel()
+
+	InputCheck()
+
+func InputCheck() -> void:
+	if Input.is_action_just_pressed('Esc'):
+		MainMenu()
+
+func MainMenu() -> void:
+	get_tree().change_scene_to_file("res://MainMenu/MainMenu.tscn")
+	queue_free()
+	Game.queue_free()
 
 func LevelInput(_viewport : Variant, input : InputEvent , _shape_idx: Variant, area : Area2D) -> void:
 	if input.is_action_pressed('LMB'):
@@ -43,23 +48,3 @@ func LevelLoad(index : int) -> void:
 	Game.visible = true
 	Game.init()
 	queue_free()
-	#Level = index+1
-#func NextLevel() -> void:
-	#if Game.get_child(3) and Game.get_child(3).is_in_group('Levels'):
-		#Game.get_child(3).queue_free()
-	#if Levels.size() > 0:
-		#LevelLoad()
-#
-#func LevelLoad() -> void:
-	#var NewGame : Node = GameScene.instantiate()
-	#var Level : Node2D = Levels.pop_front().instantiate()
-	#Level.name = 'Level'
-	#Game.add_child(Level)
-	#add_sibling(Game)
-	#
-	
-	#add_child(Level)
-	#Level.name = 'Level'
-	#Level.add_to_group('Levels')
-	#Level.connect('Action',LevelAction)
-	##
