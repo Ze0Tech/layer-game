@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dca6kn32327pe"]
+
+[ext_resource type="Script" uid="uid://cwlg4nliy2sim" path="res://game.gd" id="1_wbfu4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hg4s6"]
+
+[node name="GameControl" type="Node2D" unique_id=394411517]
+script = ExtResource("1_wbfu4")
+
+[node name="Audio" type="Node" parent="." unique_id=801366289]
+
+[node name="UIUX" type="Control" parent="." unique_id=868836405]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_lock_ = true
+
+[node name="Screen" type="Panel" parent="UIUX" unique_id=1151499811]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hg4s6")
+metadata/_edit_lock_ = true
