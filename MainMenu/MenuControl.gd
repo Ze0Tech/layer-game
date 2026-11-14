@@ -9,7 +9,8 @@ func _ready() -> void:
 	Settings.visible = false
 	
 func Start() -> void:
-	get_tree().change_scene_to_file("res://Game.tscn")
+	if get_tree():
+		get_tree().change_scene_to_file("res://Game.tscn")
 
 func Exit() -> void:
 	get_tree().quit()
