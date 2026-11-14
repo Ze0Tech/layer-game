@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bqahjl2ggcsjx"]
 
-[ext_resource type="Texture2D" uid="uid://3cxum5wxpf3t" path="res://Resources/Placeholders/title_screen_draft3.webp" id="1_3hls8"]
 [ext_resource type="Script" uid="uid://cgl4tu0s5v6t5" path="res://level_1.gd" id="1_hbghi"]
+[ext_resource type="Texture2D" uid="uid://c311u4gficdx3" path="res://Resources/Placeholders/title_screen_draftbig.png" id="2_b67fw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hg4s6"]
 radius = 21.568604
@@ -16,7 +16,7 @@ metadata/_edit_vertical_guides_ = [1348.0]
 [node name="Background" type="TextureRect" parent="Background" unique_id=1254707277]
 offset_right = 1600.0
 offset_bottom = 900.0
-texture = ExtResource("1_3hls8")
+texture = ExtResource("2_b67fw")
 
 [node name="Layers" type="Node2D" parent="." unique_id=1000858341]
 position = Vector2(1437, 61)
