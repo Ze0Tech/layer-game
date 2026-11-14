@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://dca6kn32327pe"]
 
 [ext_resource type="Script" uid="uid://cwlg4nliy2sim" path="res://game.gd" id="1_wbfu4"]
+[ext_resource type="Script" uid="uid://bdgmoct1nrtu5" path="res://game_functions.gd" id="2_xkndl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hg4s6"]
 
 [node name="GameControl" type="Node2D" unique_id=394411517]
 script = ExtResource("1_wbfu4")
+
+[node name="GameFunctions" type="Node" parent="." unique_id=900857801]
+script = ExtResource("2_xkndl")
 
 [node name="Audio" type="Node" parent="." unique_id=801366289]
 

@@ -110,12 +110,13 @@ polygon = PackedVector2Array(-86.27466, -119.60785, -72.54907, -121.5686, -60.78
 
 [node name="Objects" type="Node2D" parent="." unique_id=1071373600]
 
-[node name="Lock" type="Area2D" parent="Objects" unique_id=1291409030]
+[node name="Key" type="Area2D" parent="Objects" unique_id=1291409030]
+visible = false
 position = Vector2(-276, 2)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Lock" unique_id=2073432009]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Key" unique_id=2073432009]
 shape = SubResource("CircleShape2D_hg4s6")
 
-[node name="Polygon2D" type="Polygon2D" parent="Objects/Lock" unique_id=1383621693]
+[node name="Polygon2D" type="Polygon2D" parent="Objects/Key" unique_id=1383621693]
 color = Color(0.40960324, 0.40960327, 0.40960324, 1)
 polygon = PackedVector2Array(-86.27466, -119.60785, -72.54907, -121.5686, -60.784424, -117.64703, -52.941162, -107.84314, -54.9021, -92.15686, -60.784424, -84.31372, -72.54907, -78.4314, -84.31372, -82.35297, -94.117676, -90.196106, -94.117676, -103.92157, -92.15698, -111.76471)

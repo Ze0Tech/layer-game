@@ -8,6 +8,8 @@ radius = 21.568604
 
 [node name="Level1" type="Node2D" unique_id=1789833393]
 script = ExtResource("1_hbghi")
+metadata/_edit_horizontal_guides_ = [159.0]
+metadata/_edit_vertical_guides_ = [1348.0]
 
 [node name="Background" type="Node2D" parent="." unique_id=2056750400]
 
@@ -55,6 +57,7 @@ polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="LayerItems" type="Node2D" parent="." unique_id=798432804]
+z_index = 1
 
 [node name="Layer1" type="Area2D" parent="LayerItems" unique_id=749099220]
 position = Vector2(305, 153)
@@ -93,10 +96,10 @@ position = Vector2(1117, 378)
 scale = Vector2(0.51, 0.51)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Places/Cage" unique_id=483403328]
-polygon = PackedVector2Array(150, 50, 150, -50, 123, -255, 5, -304, -127, -255, -150, -50, -150, 50)
+polygon = PackedVector2Array(147.05884, 147.05884, 150, -50, 143.1372, -168.62744, 92.15674, -239.2157, 0, -272.54904, -78.4314, -237.25491, -147.05896, -166.66669, -150, -50, -145.09814, 152.94116)
 
 [node name="CollisionPolygon2D2" type="Polygon2D" parent="Places/Cage" unique_id=1872063925]
-polygon = PackedVector2Array(150, 50, 150, -50, 123, -255, 5, -304, -127, -255, -150, -50, -150, 50)
+polygon = PackedVector2Array(147.05884, 147.05884, 150, -50, 143.1372, -168.62744, 92.15674, -239.2157, 0, -272.54904, -78.4314, -237.25491, -147.05896, -166.66669, -150, -50, -145.09814, 152.94116)
 
 [node name="Lock" type="Area2D" parent="Places/Cage" unique_id=661323961]
 
@@ -108,14 +111,28 @@ shape = SubResource("CircleShape2D_hg4s6")
 color = Color(0.40960324, 0.40960327, 0.40960324, 1)
 polygon = PackedVector2Array(-86.27466, -119.60785, -72.54907, -121.5686, -60.784424, -117.64703, -52.941162, -107.84314, -54.9021, -92.15686, -60.784424, -84.31372, -72.54907, -78.4314, -84.31372, -82.35297, -94.117676, -90.196106, -94.117676, -103.92157, -92.15698, -111.76471)
 
+[node name="Label" type="Label" parent="Places/Cage" unique_id=944388127]
+visible = false
+offset_left = -64.70589
+offset_top = -50.980396
+offset_right = 76.29411
+offset_bottom = 46.019604
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 71
+text = "Yay!"
+
 [node name="Objects" type="Node2D" parent="." unique_id=1071373600]
 
-[node name="Lock" type="Area2D" parent="Objects" unique_id=1291409030]
-position = Vector2(-276, 2)
+[node name="Key" type="Area2D" parent="Objects" unique_id=1170720236]
+visible = false
+position = Vector2(218, 159)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Lock" unique_id=2073432009]
-shape = SubResource("CircleShape2D_hg4s6")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Objects/Key" unique_id=1983812248]
+polygon = PackedVector2Array(-1, -22, 15, -16, 89, -2, 94, 11, 83, 11, 74, 4, 71, 11, 61, 6, 55, 11, 48, 4, 42, 12, 27, 2, 16, 15, 1, 21, -15, 16, -22, -1, -16, -16)
 
-[node name="Polygon2D" type="Polygon2D" parent="Objects/Lock" unique_id=1383621693]
-color = Color(0.40960324, 0.40960327, 0.40960324, 1)
-polygon = PackedVector2Array(-86.27466, -119.60785, -72.54907, -121.5686, -60.784424, -117.64703, -52.941162, -107.84314, -54.9021, -92.15686, -60.784424, -84.31372, -72.54907, -78.4314, -84.31372, -82.35297, -94.117676, -90.196106, -94.117676, -103.92157, -92.15698, -111.76471)
+[node name="Polygon2D" type="Polygon2D" parent="Objects/Key" unique_id=870457023]
+color = Color(0.6223451, 0.5599006, 0, 1)
+polygon = PackedVector2Array(-1, -22, 15, -16, 89, -2, 94, 11, 83, 11, 74, 4, 71, 11, 61, 6, 55, 11, 48, 4, 42, 12, 27, 2, 16, 15, 1, 21, -15, 16, -22, -1, -16, -16)
+
+[connection signal="area_entered" from="Places/Cage/Lock" to="." method="_on_lock_area_entered"]
+[connection signal="area_exited" from="Places/Cage/Lock" to="." method="_on_lock_area_exited"]
