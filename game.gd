@@ -1,4 +1,7 @@
 extends Node2D
+
+@onready var LevelSelectScene : PackedScene = load("res://level_select.tscn")
+
 #Variables ////////////////////////////////////////////////////////////////
 
 @onready var GameFunctions : Node = $GameFunctions
@@ -8,22 +11,25 @@ var Levels : Array = []
 
 #Setup ////////////////////////////////////////////////////////////////////
 
-func _ready() -> void:
-	
-	LevelSetup()
-	
-	NextLevel()
-
 func _process(_delta: float) -> void:
-	
-	InputCheck()
+	if visible:
+		InputCheck()
 
 #Custom Functions /////////////////////////////////////////////////////////	
 
-func InputCheck() -> void:
-	if Input.is_action_just_pressed('Q'):
-		NextLevel()
+func init() -> void:
+	get_child(3).connect('Action',LevelAction)
 
+func InputCheck() -> void:
+	pass
+	if Input.is_action_just_pressed('Q'):
+		LevelSelect()
+
+func LevelSelect() ->void:
+	var NewLevelSelect : Node2D = LevelSelectScene.instantiate()
+	add_sibling(NewLevelSelect)
+	queue_free()
+	
 func LevelAction(Command : String, Item : Area2D = null) -> void:
 	if has_method(Command):
 		if Item:
@@ -32,32 +38,12 @@ func LevelAction(Command : String, Item : Area2D = null) -> void:
 	elif GameFunctions.has_method(Command): 
 		GameFunctionPass(Command,Item)
 	else: print('No Such "' + Command + '" Command, sorry dawg.')
+	
 func GameFunctionPass(Command : String,Item : Area2D = null) -> void:
 	if Item:
 		GameFunctions.call(Command,Item)
 	else: GameFunctions.call(Command)
-func LevelSetup() -> void:
-	for Scene : String in DirAccess.open("res://LevelScenes/").get_files():
-		Scene = Scene.trim_suffix(".remap")
-		Levels.append(load("res://LevelScenes/" + Scene))
-	print(Levels)
-
-func NextLevel() -> void:
-	if get_child(3) and get_child(3).is_in_group('Levels'):
-		get_child(3).queue_free()
-	if Levels.size() > 0:
-		LevelLoad()
-
-func LevelLoad() -> void:
-	var Level : Node2D = Levels.pop_front().instantiate()
-	add_child(Level)
-	Level.name = 'Level'
-	Level.add_to_group('Levels')
-	Level.connect('Action',LevelAction)
-	#
 	
-	
-
-func yay(...args) -> String:
-	print('yay')
+func yay(...args : Array) -> String:
+	print('yay' + str(args))
 	return('yay')

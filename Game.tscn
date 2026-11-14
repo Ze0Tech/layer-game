@@ -31,3 +31,5 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_hg4s6")
 metadata/_edit_lock_ = true
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]

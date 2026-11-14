@@ -20,7 +20,7 @@ func _ready() -> void:
 				q.add_to_group(i.name)
 				print(q.get_groups())
 				q.connect('input_event',ItemInput.bind(q))
-func ItemInput(_viewport,input:InputEvent,_shape_idx,area : Area2D) -> void:
+func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D) -> void:
 	if input.is_action_pressed("LMB"):
 		if area.is_in_group('Layers'):
 			var LayerObj : Area2D = LevelItems[2].get_child(area.get_index())
@@ -54,13 +54,14 @@ func PuzzleCheck() -> void:
 
 func LockCheck() -> void:			
 	if Lock:
+		var WinLabel : Label = $Places/Cage/Label
 		LockItem.visible = false
-		$Places/Cage/Label.visible = true
+		WinLabel.visible = true
 
 
 func _on_lock_area_entered(area: Area2D) -> void:
 	if area.name == 'Key':
 		Lock = true
 
-func _on_lock_area_exited(area: Area2D) -> void:
+func _on_lock_area_exited(_area: Area2D) -> void:
 	Lock = false

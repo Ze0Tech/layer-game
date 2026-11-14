@@ -57,7 +57,7 @@ polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 [node name="LayerItems" type="Node2D" parent="." unique_id=798432804]
 
 [node name="Layer1" type="Area2D" parent="LayerItems" unique_id=749099220]
-position = Vector2(346, 376)
+position = Vector2(341, 372)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerItems/Layer1" unique_id=867639590]
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
@@ -67,7 +67,7 @@ color = Color(1, 0, 0, 1)
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="Layer2" type="Area2D" parent="LayerItems" unique_id=2095095901]
-position = Vector2(675, 560)
+position = Vector2(341, 235)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerItems/Layer2" unique_id=91085960]
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
@@ -77,7 +77,7 @@ color = Color(0, 0, 1, 1)
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="Layer3" type="Area2D" parent="LayerItems" unique_id=456468339]
-position = Vector2(758, 262)
+position = Vector2(343, 519)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerItems/Layer3" unique_id=1881658915]
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)

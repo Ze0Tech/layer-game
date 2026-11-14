@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://j008vhq2nciy"]
+
+[ext_resource type="Script" uid="uid://cokoxw74snauh" path="res://level_select.gd" id="1_vomi7"]
+[ext_resource type="Texture2D" uid="uid://ceke1ydisdl0" path="res://Resources/Placeholders/Screenshot_20261114_004718_Firefox.jpg" id="2_wevku"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hg4s6"]
+size = Vector2(196, 197)
+
+[node name="LevelSelect" type="Node2D" unique_id=1908919975]
+script = ExtResource("1_vomi7")
+
+[node name="Background" type="Node2D" parent="." unique_id=1581725154]
+
+[node name="Image" type="Sprite2D" parent="Background" unique_id=1946003138]
+position = Vector2(946, 509)
+texture = ExtResource("2_wevku")
+metadata/_edit_lock_ = true
+
+[node name="Markers" type="Node2D" parent="Background" unique_id=1338639493]
+
+[node name="Marker2D" type="Marker2D" parent="Background/Markers" unique_id=618150353]
+position = Vector2(306, 188)
+
+[node name="Marker2D2" type="Marker2D" parent="Background/Markers" unique_id=65664757]
+position = Vector2(512, 187)
+
+[node name="Marker2D3" type="Marker2D" parent="Background/Markers" unique_id=781595826]
+position = Vector2(721, 185)
+
+[node name="Marker2D4" type="Marker2D" parent="Background/Markers" unique_id=1573208700]
+position = Vector2(927, 187)
+
+[node name="Marker2D5" type="Marker2D" parent="Background/Markers" unique_id=963956303]
+position = Vector2(301, 406)
+
+[node name="LevelAreas" type="Node2D" parent="." unique_id=393300960]
+
+[node name="Area2D" type="Area2D" parent="LevelAreas" unique_id=502937854]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelAreas/Area2D" unique_id=313070078]
+position = Vector2(405, 285.5)
+shape = SubResource("RectangleShape2D_hg4s6")
+
+[node name="Area2D2" type="Area2D" parent="LevelAreas" unique_id=1135108250]
+position = Vector2(208, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelAreas/Area2D2" unique_id=1536195647]
+position = Vector2(405, 285.5)
+shape = SubResource("RectangleShape2D_hg4s6")
+
+[node name="Area2D3" type="Area2D" parent="LevelAreas" unique_id=77442027]
+position = Vector2(416, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelAreas/Area2D3" unique_id=86591082]
+position = Vector2(405, 285.5)
+shape = SubResource("RectangleShape2D_hg4s6")
