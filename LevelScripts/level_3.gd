@@ -27,6 +27,12 @@ func _ready() -> void:
 				q.add_to_group(i.name)
 				print(q.get_groups())
 				q.connect('input_event',ItemInput.bind(q))
+	
+	Globals.Bird.visible = false
+	Globals.BirdHide()
+	
+	Clothes = Globals.Clothes
+	Change()
 				
 func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D) -> void:
 	if input.is_action_pressed("LMB"):
@@ -65,6 +71,10 @@ func Change() -> void:
 				q.visible = true
 			else : q.visible = false
 	
+	Globals.Clothes[0] = Clothes[0]
+	Globals.Clothes[1] = Clothes[1]
+	Globals.Clothes[2] = Clothes[2]
+	print(Globals.Clothes)
 	#if Index == 0:
 		#print(Index)
 	#elif Index == 1:

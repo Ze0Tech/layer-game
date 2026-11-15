@@ -13,7 +13,9 @@ func _ready() -> void:
 		i.connect('input_event',LevelInput.bind(i))
 		
 	Setup()
-
+	if Globals.Clothes:
+		Globals.BirdUpdate()
+		
 func _process(_delta: float) -> void:
 
 	InputCheck()
@@ -24,6 +26,7 @@ func InputCheck() -> void:
 
 func MainMenu() -> void:
 	get_tree().change_scene_to_file("res://MainMenu/MainMenu.tscn")
+	
 	queue_free()
 	Game.queue_free()
 
@@ -47,4 +50,5 @@ func LevelLoad(index : int) -> void:
 	Game.add_child(NewLevel)
 	Game.visible = true
 	Game.init()
+	#Globals.BirdHide()
 	queue_free()

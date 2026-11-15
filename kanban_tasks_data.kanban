@@ -42,15 +42,17 @@
 			"uuid": "4c4fd0b0-e9ae-42a9-86be-e2b9fc73f092",
 			"title": "Doing",
 			"tasks": [
-				"d7db8930-d54d-4961-99f0-7773eedff94c",
-				"c81d1144-89b3-491b-8fdc-d76fd3c33bf0",
-				"93de1445-66c7-4222-83f0-e6d8fec6799d"
+				"c81d1144-89b3-491b-8fdc-d76fd3c33bf0"
 			]
 		},
 		{
 			"uuid": "b83031cf-bb2a-439d-a528-c512d3c716bf",
 			"title": "Done",
-			"tasks": []
+			"tasks": [
+				"93de1445-66c7-4222-83f0-e6d8fec6799d",
+				"d7db8930-d54d-4961-99f0-7773eedff94c",
+				"fc83684e-9afa-4f48-ac69-3843cbea4b04"
+			]
 		}
 	],
 	"tasks": [
@@ -106,6 +108,13 @@
 		{
 			"uuid": "93de1445-66c7-4222-83f0-e6d8fec6799d",
 			"title": "Bird Dress Up",
+			"description": "",
+			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
+			"steps": []
+		},
+		{
+			"uuid": "fc83684e-9afa-4f48-ac69-3843cbea4b04",
+			"title": "Key Finder",
 			"description": "",
 			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
 			"steps": []
