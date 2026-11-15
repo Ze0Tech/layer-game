@@ -35,15 +35,14 @@
 				"fc69525f-aedb-460f-bf95-3df13c2cef4b",
 				"f7b93a03-7016-4fe8-8501-d229dcef5d8b",
 				"180b8857-d35f-45b9-9f33-9add721d1d2b",
-				"5f8faa55-dd3b-40bd-a74c-a716c3ce087c"
+				"5f8faa55-dd3b-40bd-a74c-a716c3ce087c",
+				"ce8c89a9-f3ff-4b1d-bcdb-70398b81c999"
 			]
 		},
 		{
 			"uuid": "4c4fd0b0-e9ae-42a9-86be-e2b9fc73f092",
 			"title": "Doing",
-			"tasks": [
-				"c81d1144-89b3-491b-8fdc-d76fd3c33bf0"
-			]
+			"tasks": []
 		},
 		{
 			"uuid": "b83031cf-bb2a-439d-a528-c512d3c716bf",
@@ -51,7 +50,8 @@
 			"tasks": [
 				"93de1445-66c7-4222-83f0-e6d8fec6799d",
 				"d7db8930-d54d-4961-99f0-7773eedff94c",
-				"fc83684e-9afa-4f48-ac69-3843cbea4b04"
+				"fc83684e-9afa-4f48-ac69-3843cbea4b04",
+				"c81d1144-89b3-491b-8fdc-d76fd3c33bf0"
 			]
 		}
 	],
@@ -117,6 +117,13 @@
 			"title": "Key Finder",
 			"description": "",
 			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
+			"steps": []
+		},
+		{
+			"uuid": "ce8c89a9-f3ff-4b1d-bcdb-70398b81c999",
+			"title": "Bluescreen on death",
+			"description": "",
+			"category": "8c27b97c-cdd3-4916-a37a-fe4a073a1af7",
 			"steps": []
 		}
 	],

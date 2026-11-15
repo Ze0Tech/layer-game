@@ -30,7 +30,7 @@ func LevelSelect() ->void:
 	add_sibling(NewLevelSelect)
 	queue_free()
 	
-func LevelAction(Command : String, Item : Area2D = null) -> void:
+func LevelAction(Command : String, Item : Variant= null) -> void:
 	if has_method(Command):
 		if Item:
 			call(Command,Item)
@@ -39,7 +39,7 @@ func LevelAction(Command : String, Item : Area2D = null) -> void:
 		GameFunctionPass(Command,Item)
 	else: print('No Such "' + Command + '" Command, sorry dawg.')
 	
-func GameFunctionPass(Command : String,Item : Area2D = null) -> void:
+func GameFunctionPass(Command : String ,Item : Variant = null) -> void:
 	if Item:
 		GameFunctions.call(Command,Item)
 	else: GameFunctions.call(Command)

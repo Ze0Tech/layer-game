@@ -11,13 +11,13 @@ var AltControl : bool = 0
 func BirdUpdate() -> void:
 	Bird.visible = true
 	if Clothes != [0,0,0]:
-		for i in ClothesNode.get_children():
+		for i : Node2D in ClothesNode.get_children():
 			if i.get_child(Clothes[i.get_index()]):
 				i.get_child(Clothes[i.get_index()]).visible = true
 	
 func BirdHide() -> void:
-	for i in ClothesNode.get_children():
-		for q in i.get_children():
+	for i : Node2D in ClothesNode.get_children():
+		for q : Sprite2D in i.get_children():
 			q.visible = false
 
 func _process(delta: float) -> void:
