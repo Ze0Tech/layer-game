@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oceqien1py1b"
-path="res://.godot/imported/image.png-3e9ecf0f250e83d0167239bc9e538b2a.ctex"
+uid="uid://i5xci50ckckt"
+path="res://.godot/imported/Blush.png-157213ed65b072ac9d284d89311c7c14.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Placeholders/image.png"
-dest_files=["res://.godot/imported/image.png-3e9ecf0f250e83d0167239bc9e538b2a.ctex"]
+source_file="res://Resources/DressUp/Middle/Blush.png"
+dest_files=["res://.godot/imported/Blush.png-157213ed65b072ac9d284d89311c7c14.ctex"]
 
 [params]
 
