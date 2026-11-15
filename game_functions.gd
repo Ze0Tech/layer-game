@@ -16,17 +16,21 @@ func _process(_delta: float) -> void:
 	if Data[0]:
 		Data[0].position = GameControl.get_global_mouse_position()
 		
-func VisToggle(Item : Area2D ) -> void:
-	if Item.visible:
+func VisToggle(Item : Area2D  = null) -> void:
+	if Item == null:
+		print('No Item')
+	elif Item.visible:
 		Item.visible = false
 	else: 
 		Item.visible = true
 		
 func Hold(Item : Area2D) -> void:
 	Data[0] = Item
-
+	Data[0].add_to_group('Held')
 func Unhold() -> void:
-	Data[0] = null
+	if Data[0]:
+		Data[0].remove_from_group('Held')
+		Data[0] = null
 
 func CenterBig(NewPlace : Area2D) -> void:
 	if Data[1] != NewPlace:

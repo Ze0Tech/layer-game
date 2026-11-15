@@ -32,13 +32,20 @@
 			"title": "Todo",
 			"tasks": [
 				"dc4ddddc-978e-4692-be61-f4f406fcf0b7",
-				"d7db8930-d54d-4961-99f0-7773eedff94c"
+				"fc69525f-aedb-460f-bf95-3df13c2cef4b",
+				"f7b93a03-7016-4fe8-8501-d229dcef5d8b",
+				"180b8857-d35f-45b9-9f33-9add721d1d2b",
+				"5f8faa55-dd3b-40bd-a74c-a716c3ce087c"
 			]
 		},
 		{
 			"uuid": "4c4fd0b0-e9ae-42a9-86be-e2b9fc73f092",
 			"title": "Doing",
-			"tasks": []
+			"tasks": [
+				"d7db8930-d54d-4961-99f0-7773eedff94c",
+				"c81d1144-89b3-491b-8fdc-d76fd3c33bf0",
+				"93de1445-66c7-4222-83f0-e6d8fec6799d"
+			]
 		},
 		{
 			"uuid": "b83031cf-bb2a-439d-a528-c512d3c716bf",
@@ -57,6 +64,48 @@
 		{
 			"uuid": "d7db8930-d54d-4961-99f0-7773eedff94c",
 			"title": "Start Menu Puzzle",
+			"description": "",
+			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
+			"steps": []
+		},
+		{
+			"uuid": "c81d1144-89b3-491b-8fdc-d76fd3c33bf0",
+			"title": "Platformer",
+			"description": "",
+			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
+			"steps": []
+		},
+		{
+			"uuid": "fc69525f-aedb-460f-bf95-3df13c2cef4b",
+			"title": "Vistoggle for cover from rock",
+			"description": "",
+			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
+			"steps": []
+		},
+		{
+			"uuid": "f7b93a03-7016-4fe8-8501-d229dcef5d8b",
+			"title": "Lollipop",
+			"description": "",
+			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
+			"steps": []
+		},
+		{
+			"uuid": "180b8857-d35f-45b9-9f33-9add721d1d2b",
+			"title": "Tetris",
+			"description": "",
+			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
+			"steps": []
+		},
+		{
+			"uuid": "5f8faa55-dd3b-40bd-a74c-a716c3ce087c",
+			"title": "Paint by Numbers",
+			"description": "",
+			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
+			"steps": []
+		},
+		{
+			"uuid": "93de1445-66c7-4222-83f0-e6d8fec6799d",
+			"title": "Bird Dress Up",
 			"description": "",
 			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
 			"steps": []

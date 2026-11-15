@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dkg6c2dqlrwp8"]
+
+[ext_resource type="Texture2D" uid="uid://oceqien1py1b" path="res://Resources/Placeholders/image.png" id="1_fugm4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hg4s6"]
+size = Vector2(175, 80)
+
+[node name="StartPuzzle" type="Node2D" unique_id=502647089]
+
+[node name="Areas" type="Node2D" parent="." unique_id=431091693]
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="Areas" unique_id=1164724730]
+position = Vector2(-87, -40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Area2D" unique_id=168337972]
+shape = SubResource("RectangleShape2D_hg4s6")
+metadata/_edit_lock_ = true
+
+[node name="Image2" type="Sprite2D" parent="Areas/Area2D" unique_id=1186339517]
+texture = ExtResource("1_fugm4")
+region_enabled = true
+region_rect = Rect2(39, 15, 175, 80)
+metadata/_edit_lock_ = true
+
+[node name="Area2D2" type="Area2D" parent="Areas" unique_id=293651086]
+position = Vector2(-87, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Area2D2" unique_id=237372982]
+shape = SubResource("RectangleShape2D_hg4s6")
+metadata/_edit_lock_ = true
+
+[node name="Image3" type="Sprite2D" parent="Areas/Area2D2" unique_id=333452057]
+texture = ExtResource("1_fugm4")
+region_enabled = true
+region_rect = Rect2(39, 96, 175, 80)
+metadata/_edit_lock_ = true
+
+[node name="Area2D3" type="Area2D" parent="Areas" unique_id=978905971]
+position = Vector2(88, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Area2D3" unique_id=93875594]
+shape = SubResource("RectangleShape2D_hg4s6")
+metadata/_edit_lock_ = true
+
+[node name="Image4" type="Sprite2D" parent="Areas/Area2D3" unique_id=905803034]
+texture = ExtResource("1_fugm4")
+region_enabled = true
+region_rect = Rect2(212, 96.125, 175, 80)
+metadata/_edit_lock_ = true
+
+[node name="Area2D4" type="Area2D" parent="Areas" unique_id=1018993258]
+position = Vector2(88, -40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Area2D4" unique_id=178860193]
+shape = SubResource("RectangleShape2D_hg4s6")
+metadata/_edit_lock_ = true
+
+[node name="Image5" type="Sprite2D" parent="Areas/Area2D4" unique_id=738239518]
+texture = ExtResource("1_fugm4")
+region_enabled = true
+region_rect = Rect2(212, 15, 175, 80)
+metadata/_edit_lock_ = true

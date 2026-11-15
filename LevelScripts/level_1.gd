@@ -22,9 +22,11 @@ func _ready() -> void:
 				q.connect('input_event',ItemInput.bind(q))
 func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D) -> void:
 	if input.is_action_pressed("LMB"):
+		
 		if area.is_in_group('Layers'):
 			var LayerObj : Area2D = LevelItems[2].get_child(area.get_index())
 			Action.emit('VisToggle',LayerObj)
+			
 		if area.is_in_group('Places'):
 			Action.emit('CenterBig',area)
 			KeyItem.position = Vector2(1350,150)

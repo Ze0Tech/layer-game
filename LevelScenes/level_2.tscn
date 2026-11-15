@@ -1,19 +1,22 @@
 [gd_scene format=3 uid="uid://clgaps6ltfn2y"]
 
-[ext_resource type="Script" uid="uid://cgl4tu0s5v6t5" path="res://level_1.gd" id="1_ov0xj"]
+[ext_resource type="Script" uid="uid://b42fym2vex0qu" path="res://LevelScripts/level_2.gd" id="1_b75xs"]
 [ext_resource type="Texture2D" uid="uid://3cxum5wxpf3t" path="res://Resources/Placeholders/title_screen_draft3.webp" id="2_b75xs"]
+[ext_resource type="Texture2D" uid="uid://oceqien1py1b" path="res://Resources/Placeholders/image.png" id="3_b75xs"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hg4s6"]
-radius = 21.568604
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_etfwc"]
+size = Vector2(175, 80)
 
-[node name="Level1" type="Node2D" unique_id=1789833393]
-script = ExtResource("1_ov0xj")
+[node name="Level2" type="Node2D" unique_id=1789833393]
+script = ExtResource("1_b75xs")
 
 [node name="Background" type="Node2D" parent="." unique_id=2056750400]
 
 [node name="Background" type="TextureRect" parent="Background" unique_id=1254707277]
-offset_right = 1600.0
-offset_bottom = 900.0
+offset_left = 6.0
+offset_top = 15.0
+offset_right = 1606.0
+offset_bottom = 915.0
 texture = ExtResource("2_b75xs")
 
 [node name="Layers" type="Node2D" parent="." unique_id=1000858341]
@@ -54,69 +57,93 @@ polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 [node name="CollisionPolygon2D2" type="Polygon2D" parent="Layers/Layer3" unique_id=1310164455]
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
+[node name="Layer4" type="Area2D" parent="Layers" unique_id=1277268826]
+modulate = Color(1, 1, 1, 0.68235296)
+position = Vector2(-88.99999, 575)
+scale = Vector2(0.7, 0.7)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layers/Layer4" unique_id=324605325]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="Layers/Layer4" unique_id=839930633]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+
 [node name="LayerItems" type="Node2D" parent="." unique_id=798432804]
 
-[node name="Layer1" type="Area2D" parent="LayerItems" unique_id=749099220]
-position = Vector2(877, 207)
+[node name="Piece1" type="Area2D" parent="LayerItems" unique_id=1430737765]
+visible = false
+modulate = Color(0.39181867, 0.39181864, 0.39181864, 1)
+position = Vector2(390, 247)
+scale = Vector2(2, 2)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerItems/Layer1" unique_id=867639590]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LayerItems/Piece1" unique_id=2078659246]
+shape = SubResource("RectangleShape2D_etfwc")
+metadata/_edit_lock_ = true
 
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerItems/Layer1" unique_id=830251240]
-color = Color(1, 0, 0, 1)
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="Image2" type="Sprite2D" parent="LayerItems/Piece1" unique_id=1605687575]
+texture = ExtResource("3_b75xs")
+region_enabled = true
+region_rect = Rect2(39, 15, 175, 80)
+metadata/_edit_lock_ = true
 
-[node name="Layer2" type="Area2D" parent="LayerItems" unique_id=2095095901]
-position = Vector2(419, 347)
+[node name="Piece2" type="Area2D" parent="LayerItems" unique_id=2091816194]
+modulate = Color(0.39181867, 0.39181864, 0.39181864, 1)
+position = Vector2(481, 564)
+scale = Vector2(2, 2)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerItems/Layer2" unique_id=91085960]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LayerItems/Piece2" unique_id=1277257398]
+shape = SubResource("RectangleShape2D_etfwc")
+metadata/_edit_lock_ = true
 
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerItems/Layer2" unique_id=17305437]
-color = Color(0, 0, 1, 1)
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="Image3" type="Sprite2D" parent="LayerItems/Piece2" unique_id=249461180]
+texture = ExtResource("3_b75xs")
+region_enabled = true
+region_rect = Rect2(39, 96, 175, 80)
+metadata/_edit_lock_ = true
 
-[node name="Layer3" type="Area2D" parent="LayerItems" unique_id=456468339]
-position = Vector2(607, 601)
+[node name="Piece3" type="Area2D" parent="LayerItems" unique_id=364867974]
+visible = false
+modulate = Color(0.39181867, 0.39181864, 0.39181864, 1)
+position = Vector2(964, 695)
+scale = Vector2(2, 2)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerItems/Layer3" unique_id=1881658915]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LayerItems/Piece3" unique_id=1184099855]
+shape = SubResource("RectangleShape2D_etfwc")
+metadata/_edit_lock_ = true
 
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerItems/Layer3" unique_id=1519217165]
-color = Color(0, 1, 0, 1)
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="Image4" type="Sprite2D" parent="LayerItems/Piece3" unique_id=747118248]
+texture = ExtResource("3_b75xs")
+region_enabled = true
+region_rect = Rect2(212, 96, 175, 80)
+metadata/_edit_lock_ = true
+
+[node name="Piece4" type="Area2D" parent="LayerItems" unique_id=650172222]
+modulate = Color(0.39181867, 0.39181864, 0.39181864, 1)
+position = Vector2(899, 355)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LayerItems/Piece4" unique_id=1620061189]
+shape = SubResource("RectangleShape2D_etfwc")
+metadata/_edit_lock_ = true
+
+[node name="Image5" type="Sprite2D" parent="LayerItems/Piece4" unique_id=661375390]
+texture = ExtResource("3_b75xs")
+region_enabled = true
+region_rect = Rect2(212, 15, 175, 80)
+metadata/_edit_lock_ = true
 
 [node name="Places" type="Node2D" parent="." unique_id=1153796374]
 
-[node name="Cage" type="Area2D" parent="Places" unique_id=809217837]
-position = Vector2(1117, 378)
-scale = Vector2(0.51, 0.51)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Places/Cage" unique_id=483403328]
-polygon = PackedVector2Array(150, 50, 150, -50, 123, -255, 5, -304, -127, -255, -150, -50, -150, 50)
-
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="Places/Cage" unique_id=1872063925]
-polygon = PackedVector2Array(150, 50, 150, -50, 123, -255, 5, -304, -127, -255, -150, -50, -150, 50)
-
-[node name="Lock" type="Area2D" parent="Places/Cage" unique_id=661323961]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Places/Cage/Lock" unique_id=1614299075]
-position = Vector2(-74.50981, -100.00001)
-shape = SubResource("CircleShape2D_hg4s6")
-
-[node name="Polygon2D" type="Polygon2D" parent="Places/Cage/Lock" unique_id=1784585808]
-color = Color(0.40960324, 0.40960327, 0.40960324, 1)
-polygon = PackedVector2Array(-86.27466, -119.60785, -72.54907, -121.5686, -60.784424, -117.64703, -52.941162, -107.84314, -54.9021, -92.15686, -60.784424, -84.31372, -72.54907, -78.4314, -84.31372, -82.35297, -94.117676, -90.196106, -94.117676, -103.92157, -92.15698, -111.76471)
-
 [node name="Objects" type="Node2D" parent="." unique_id=1071373600]
 
-[node name="Key" type="Area2D" parent="Objects" unique_id=1291409030]
+[node name="Buttons" type="Node2D" parent="." unique_id=1779889652]
+
+[node name="Button" type="Button" parent="Buttons" unique_id=1892988803]
 visible = false
-position = Vector2(-276, 2)
+offset_right = 700.0
+offset_bottom = 320.0
+flat = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Key" unique_id=2073432009]
-shape = SubResource("CircleShape2D_hg4s6")
-
-[node name="Polygon2D" type="Polygon2D" parent="Objects/Key" unique_id=1383621693]
-color = Color(0.40960324, 0.40960327, 0.40960324, 1)
-polygon = PackedVector2Array(-86.27466, -119.60785, -72.54907, -121.5686, -60.784424, -117.64703, -52.941162, -107.84314, -54.9021, -92.15686, -60.784424, -84.31372, -72.54907, -78.4314, -84.31372, -82.35297, -94.117676, -90.196106, -94.117676, -103.92157, -92.15698, -111.76471)
+[connection signal="button_down" from="Buttons/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Buttons/Button" to="." method="_on_button_button_up"]
+[connection signal="pressed" from="Buttons/Button" to="." method="_on_button_pressed"]
