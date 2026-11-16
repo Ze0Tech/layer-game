@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0bfyf8nvo0t4"
-path="res://.godot/imported/Nest.png-ad169d1f32ad2a5b8659cdef701b5bf8.ctex"
+uid="uid://c3o7jv0gofyoi"
+path="res://.godot/imported/Ze0BadgeSmall.png-25899072251f4130801e4d5830534e48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Nest.png"
-dest_files=["res://.godot/imported/Nest.png-ad169d1f32ad2a5b8659cdef701b5bf8.ctex"]
+source_file="res://Resources/General/Ze0BadgeSmall.png"
+dest_files=["res://.godot/imported/Ze0BadgeSmall.png-25899072251f4130801e4d5830534e48.ctex"]
 
 [params]
 

@@ -60,54 +60,24 @@ polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 [node name="LayerObjects" type="Node2D" parent="." unique_id=798432804]
 z_index = 1
 
-[node name="Leyer1" type="Node2D" parent="LayerObjects" unique_id=1347626343]
+[node name="Layer1" type="Node2D" parent="LayerObjects" unique_id=1347626343]
 
-[node name="Platform" type="Area2D" parent="LayerObjects/Leyer1" unique_id=456468339]
-position = Vector2(1044, 553)
+[node name="Platform3" type="Area2D" parent="LayerObjects/Layer1" unique_id=2095095901]
+visible = false
+position = Vector2(688, 485)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Leyer1/Platform" unique_id=1881658915]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Layer1/Platform3" unique_id=91085960]
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Leyer1/Platform" unique_id=1519217165]
-color = Color(0, 1, 0, 1)
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Leyer1/Platform" unique_id=333992864]
-metadata/_edit_lock_ = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Leyer1/Platform/StaticBody2D" unique_id=305164224]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
-[node name="Platform2" type="Area2D" parent="LayerObjects/Leyer1" unique_id=749099220]
-position = Vector2(339, 512)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Leyer1/Platform2" unique_id=867639590]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Leyer1/Platform2" unique_id=830251240]
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Layer1/Platform3" unique_id=17305437]
 color = Color(1, 0, 0, 1)
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Leyer1/Platform2" unique_id=972466188]
+[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Layer1/Platform3" unique_id=1341510372]
+collision_layer = 0
 metadata/_edit_lock_ = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Leyer1/Platform2/StaticBody2D" unique_id=1704671819]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
-[node name="Platform3" type="Area2D" parent="LayerObjects/Leyer1" unique_id=2095095901]
-position = Vector2(688, 586)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Leyer1/Platform3" unique_id=91085960]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Leyer1/Platform3" unique_id=17305437]
-color = Color(0, 0, 1, 1)
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Leyer1/Platform3" unique_id=1341510372]
-metadata/_edit_lock_ = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Leyer1/Platform3/StaticBody2D" unique_id=526615030]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Layer1/Platform3/StaticBody2D" unique_id=526615030]
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="Layer2" type="Node2D" parent="LayerObjects" unique_id=2017837487]
@@ -119,7 +89,7 @@ position = Vector2(1030, 296)
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Layer2/Platform" unique_id=370891389]
-color = Color(0, 1, 0, 1)
+color = Color(0, 0, 1, 1)
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Layer2/Platform" unique_id=1530120627]
@@ -128,86 +98,24 @@ metadata/_edit_lock_ = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Layer2/Platform/StaticBody2D" unique_id=118760826]
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
-[node name="Platform2" type="Area2D" parent="LayerObjects/Layer2" unique_id=1374811769]
-position = Vector2(306, 258)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Layer2/Platform2" unique_id=1342464834]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Layer2/Platform2" unique_id=67673383]
-color = Color(1, 0, 0, 1)
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Layer2/Platform2" unique_id=259696856]
-metadata/_edit_lock_ = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Layer2/Platform2/StaticBody2D" unique_id=60142361]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
-[node name="Platform3" type="Area2D" parent="LayerObjects/Layer2" unique_id=135345542]
-position = Vector2(680, 383)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Layer2/Platform3" unique_id=1819062118]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Layer2/Platform3" unique_id=466625789]
-color = Color(0, 0, 1, 1)
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Layer2/Platform3" unique_id=671887833]
-metadata/_edit_lock_ = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Layer2/Platform3/StaticBody2D" unique_id=1278633575]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
 [node name="Layer3" type="Node2D" parent="LayerObjects" unique_id=1786440315]
 
-[node name="Platform" type="Area2D" parent="LayerObjects/Layer3" unique_id=1323536676]
-position = Vector2(1036, 696)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Layer3/Platform" unique_id=959064107]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Layer3/Platform" unique_id=1781740556]
-color = Color(0, 1, 0, 1)
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Layer3/Platform" unique_id=264334710]
-metadata/_edit_lock_ = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Layer3/Platform/StaticBody2D" unique_id=155616427]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
 [node name="Platform2" type="Area2D" parent="LayerObjects/Layer3" unique_id=1229859782]
+visible = false
 position = Vector2(345, 645)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Layer3/Platform2" unique_id=1734585862]
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Layer3/Platform2" unique_id=1199154243]
-color = Color(1, 0, 0, 1)
+color = Color(0, 1, 0, 1)
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Layer3/Platform2" unique_id=1963282465]
+collision_layer = 0
 metadata/_edit_lock_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Layer3/Platform2/StaticBody2D" unique_id=1159705870]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
-[node name="Platform3" type="Area2D" parent="LayerObjects/Layer3" unique_id=1235861600]
-position = Vector2(684, 728)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Layer3/Platform3" unique_id=1574543629]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Layer3/Platform3" unique_id=861766860]
-color = Color(0, 0, 1, 1)
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Layer3/Platform3" unique_id=1559964608]
-metadata/_edit_lock_ = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Layer3/Platform3/StaticBody2D" unique_id=1156871363]
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="Places" type="Node2D" parent="." unique_id=1153796374]
@@ -243,7 +151,7 @@ scale = Vector2(0.575, 0.575)
 script = ExtResource("3_dcwjs")
 Speed = 70.0
 Friction = 0.94
-Gravity = 65
+Gravity = 47
 Force = 0.59
 JumpSpeed = 1.06
 

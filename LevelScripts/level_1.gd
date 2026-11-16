@@ -4,6 +4,8 @@ extends Node2D
 @onready var LockItem : Area2D = $Places/Cage/Lock
 @onready var LevelItems : Array = get_children()
 
+
+var Sprites : Array
 var Items : Array
 var Lock : bool
 var Finished : bool
@@ -14,12 +16,20 @@ func _ready() -> void:
 	for i : Node2D in LevelItems:
 		if i.name == 'Background':
 			pass
+		elif i.name == 'Timers':
+			pass
 		else:
 			var NewItems : Array = i.get_children()
 			for q : Area2D in NewItems:
 				q.add_to_group(i.name)
 				print(q.get_groups())
 				q.connect('input_event',ItemInput.bind(q))
+	
+	for i : Area2D in LevelItems[2].get_children():
+		Sprites.append(i.get_child(2))
+	
+	print(Sprites)			
+				
 func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D) -> void:
 	if input.is_action_pressed("LMB"):
 		
@@ -67,3 +77,9 @@ func _on_lock_area_entered(area: Area2D) -> void:
 
 func _on_lock_area_exited(_area: Area2D) -> void:
 	Lock = false
+
+
+func _on_animation_timeout() -> void:
+	for i : Sprite2D in Sprites:
+		i.frame = (i.frame + 1) % 3
+		

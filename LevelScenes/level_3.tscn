@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://clsiq005yu32u" path="res://LevelScripts/level_3.gd" id="1_mkcfh"]
 [ext_resource type="Texture2D" uid="uid://3cxum5wxpf3t" path="res://Resources/Placeholders/title_screen_draft3.webp" id="2_wlht5"]
-[ext_resource type="Texture2D" uid="uid://bur6c2ho6b3jb" path="res://Resources/Background.webp" id="3_p13q0"]
-[ext_resource type="Texture2D" uid="uid://c0bfyf8nvo0t4" path="res://Resources/Nest.png" id="4_d8hiq"]
-[ext_resource type="Texture2D" uid="uid://cyj3js0vdgo13" path="res://Resources/Bird.png" id="5_i3jd7"]
+[ext_resource type="Texture2D" uid="uid://bur6c2ho6b3jb" path="res://Resources/General/Background.webp" id="3_p13q0"]
+[ext_resource type="Texture2D" uid="uid://c0bfyf8nvo0t4" path="res://Resources/General/Nest.png" id="4_d8hiq"]
+[ext_resource type="Texture2D" uid="uid://cyj3js0vdgo13" path="res://Resources/General/Bird.png" id="5_i3jd7"]
 [ext_resource type="Texture2D" uid="uid://camyrt3fpydeg" path="res://Resources/DressUp/Tops/Afro.png" id="6_cly6y"]
 [ext_resource type="Texture2D" uid="uid://cai1f6olpav4d" path="res://Resources/DressUp/Tops/Cap.png" id="7_jp4te"]
 [ext_resource type="Texture2D" uid="uid://kg5n4kk0dtjr" path="res://Resources/DressUp/Tops/Cowboy.png" id="8_ajs20"]

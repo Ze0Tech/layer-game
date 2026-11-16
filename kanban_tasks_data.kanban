@@ -36,13 +36,18 @@
 				"f7b93a03-7016-4fe8-8501-d229dcef5d8b",
 				"180b8857-d35f-45b9-9f33-9add721d1d2b",
 				"5f8faa55-dd3b-40bd-a74c-a716c3ce087c",
-				"ce8c89a9-f3ff-4b1d-bcdb-70398b81c999"
+				"ce8c89a9-f3ff-4b1d-bcdb-70398b81c999",
+				"278eecc3-7edd-4bb3-b250-f0d75fb0c7a7"
 			]
 		},
 		{
 			"uuid": "4c4fd0b0-e9ae-42a9-86be-e2b9fc73f092",
 			"title": "Doing",
-			"tasks": []
+			"tasks": [
+				"dfcdb69c-4f9d-4421-a2fa-87c207b2ca14",
+				"1f5f4318-2665-4a2c-8b3b-33ff376c518d",
+				"ad8858eb-50b2-4c79-b847-a7f5593d327a"
+			]
 		},
 		{
 			"uuid": "b83031cf-bb2a-439d-a528-c512d3c716bf",
@@ -51,7 +56,8 @@
 				"93de1445-66c7-4222-83f0-e6d8fec6799d",
 				"d7db8930-d54d-4961-99f0-7773eedff94c",
 				"fc83684e-9afa-4f48-ac69-3843cbea4b04",
-				"c81d1144-89b3-491b-8fdc-d76fd3c33bf0"
+				"c81d1144-89b3-491b-8fdc-d76fd3c33bf0",
+				"83346589-8190-49c7-9c7d-436df3835edb"
 			]
 		}
 	],
@@ -124,6 +130,41 @@
 			"title": "Bluescreen on death",
 			"description": "",
 			"category": "8c27b97c-cdd3-4916-a37a-fe4a073a1af7",
+			"steps": []
+		},
+		{
+			"uuid": "278eecc3-7edd-4bb3-b250-f0d75fb0c7a7",
+			"title": "little bird stealing key Lev1",
+			"description": "",
+			"category": "8c27b97c-cdd3-4916-a37a-fe4a073a1af7",
+			"steps": []
+		},
+		{
+			"uuid": "dfcdb69c-4f9d-4421-a2fa-87c207b2ca14",
+			"title": "Cage assets",
+			"description": "",
+			"category": "3e8988c0-596c-4baf-a989-7e753b44371f",
+			"steps": []
+		},
+		{
+			"uuid": "1f5f4318-2665-4a2c-8b3b-33ff376c518d",
+			"title": "Sfx",
+			"description": "",
+			"category": "3e8988c0-596c-4baf-a989-7e753b44371f",
+			"steps": []
+		},
+		{
+			"uuid": "ad8858eb-50b2-4c79-b847-a7f5593d327a",
+			"title": "Music",
+			"description": "",
+			"category": "3e8988c0-596c-4baf-a989-7e753b44371f",
+			"steps": []
+		},
+		{
+			"uuid": "83346589-8190-49c7-9c7d-436df3835edb",
+			"title": "Animate Level1",
+			"description": "",
+			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
 			"steps": []
 		}
 	],

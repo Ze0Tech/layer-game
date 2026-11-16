@@ -16,25 +16,33 @@ func _process(_delta: float) -> void:
 	if Data[0]:
 		Data[0].position = GameControl.get_global_mouse_position()
 		
-func VisToggle(Item : Variant  = null) -> void:
-	if Item == null:
-		print('No Item')
-	elif Item.visible:
-		Item.visible = false
-	else: 
-		Item.visible = true
+func VisToggle(Item : Variant) -> void:
+	
+		if Item.visible:
+			Item.visible = false
+		else: Item.visible = true
 
+func VisOn(Item : Variant) -> void:
+	Item.visible = true
+func VisOff(Item : Variant) -> void:
+	Item.visible = false
+	
 func CollisionToggle(Item : Variant) -> void:
-	if Item == null:
-		print('No Item')
-	elif Item.collision_layer == 1:
-		Item.collision_layer = 0
-	else: 
-		Item.collision_layer = 1
-		
+
+		if Item.collision_layer == 1:
+			Item.collision_layer = 0
+		else: Item.collision_layer = 1
+
+func CollOn(Item : Variant) -> void:
+	Item.collision_layer = 1
+	
+func CollOff(Item : Variant) -> void:
+	Item.collision_layer = 0
+			
 func Hold(Item : Area2D) -> void:
 	Data[0] = Item
 	Data[0].add_to_group('Held')
+
 func Unhold() -> void:
 	if Data[0]:
 		Data[0].remove_from_group('Held')

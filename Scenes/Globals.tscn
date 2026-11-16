@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cvhbogho2sne0"]
 
 [ext_resource type="Script" uid="uid://ddpegmdvjci5e" path="res://Scripts/globals.gd" id="1_38vhn"]
-[ext_resource type="Texture2D" uid="uid://cyj3js0vdgo13" path="res://Resources/Bird.png" id="2_oflcj"]
+[ext_resource type="Texture2D" uid="uid://cyj3js0vdgo13" path="res://Resources/General/Bird.png" id="2_oflcj"]
 [ext_resource type="Texture2D" uid="uid://camyrt3fpydeg" path="res://Resources/DressUp/Tops/Afro.png" id="3_qibbi"]
 [ext_resource type="Texture2D" uid="uid://cai1f6olpav4d" path="res://Resources/DressUp/Tops/Cap.png" id="4_i1gy3"]
 [ext_resource type="Texture2D" uid="uid://kg5n4kk0dtjr" path="res://Resources/DressUp/Tops/Cowboy.png" id="5_j2ib6"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bur6c2ho6b3jb"
-path="res://.godot/imported/Background.webp-0cb0ed3c20c44fcafc49c9b7e95ed1cc.ctex"
+uid="uid://c0bfyf8nvo0t4"
+path="res://.godot/imported/Nest.png-3f0dca7f5ae1f7dac94ff71b3d44f53b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Background.webp"
-dest_files=["res://.godot/imported/Background.webp-0cb0ed3c20c44fcafc49c9b7e95ed1cc.ctex"]
+source_file="res://Resources/General/Nest.png"
+dest_files=["res://.godot/imported/Nest.png-3f0dca7f5ae1f7dac94ff71b3d44f53b.ctex"]
 
 [params]
 

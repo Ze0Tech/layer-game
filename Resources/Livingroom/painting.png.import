@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3o7jv0gofyoi"
-path="res://.godot/imported/Ze0BadgeSmall.png-854ff17870fe44348a2b209474252441.ctex"
+uid="uid://sgutvd7c6r0o"
+path="res://.godot/imported/painting.png-470340324696e4c6e96e1d3e744572d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Ze0BadgeSmall.png"
-dest_files=["res://.godot/imported/Ze0BadgeSmall.png-854ff17870fe44348a2b209474252441.ctex"]
+source_file="res://Resources/Livingroom/painting.png"
+dest_files=["res://.godot/imported/painting.png-470340324696e4c6e96e1d3e744572d0.ctex"]
 
 [params]
 

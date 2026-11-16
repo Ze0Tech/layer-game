@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5dvtwef041v2"
-path="res://.godot/imported/Ze0Badge.png-eebd8e4131b8ab560b6998aa2e8aba1b.ctex"
+uid="uid://oceqien1py1b"
+path="res://.godot/imported/image.png-de3768b61dad5dd055ec2bd1500781c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Ze0Badge.png"
-dest_files=["res://.godot/imported/Ze0Badge.png-eebd8e4131b8ab560b6998aa2e8aba1b.ctex"]
+source_file="res://Resources/General/image.png"
+dest_files=["res://.godot/imported/image.png-de3768b61dad5dd055ec2bd1500781c7.ctex"]
 
 [params]
 

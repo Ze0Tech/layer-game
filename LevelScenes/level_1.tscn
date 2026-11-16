@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cgl4tu0s5v6t5" path="res://LevelScripts/level_1.gd" id="1_hbghi"]
 [ext_resource type="Texture2D" uid="uid://c311u4gficdx3" path="res://Resources/Placeholders/title_screen_draftbig.png" id="2_b67fw"]
+[ext_resource type="Texture2D" uid="uid://sgutvd7c6r0o" path="res://Resources/Livingroom/painting.png" id="3_6yxb1"]
+[ext_resource type="Texture2D" uid="uid://bamgu80dxrmix" path="res://Resources/Livingroom/couch.png" id="4_0dhat"]
+[ext_resource type="Texture2D" uid="uid://bb1r1t72anvn4" path="res://Resources/Livingroom/table_sheet.png" id="5_sjlvs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hg4s6"]
 radius = 21.568604
@@ -59,40 +62,61 @@ polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 [node name="LayerItems" type="Node2D" parent="." unique_id=798432804]
 z_index = 1
 
-[node name="Layer1" type="Area2D" parent="LayerItems" unique_id=749099220]
-position = Vector2(305, 153)
+[node name="Painting" type="Area2D" parent="LayerItems" unique_id=749099220]
+position = Vector2(992.9999, 248)
+rotation = 0.19198622
+scale = Vector2(2.645, 2.645)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerItems/Layer1" unique_id=867639590]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerItems/Painting" unique_id=867639590]
+polygon = PackedVector2Array(45, -30, 46, -20, 51, -2, 51, 25, 46, 34, 24, 37, -39, 46, -49, 43, -56, 24, -57, -8, -53, -18, -45, -23, -12, -29, -7, -50, 1, -31, 36, -32)
 
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerItems/Layer1" unique_id=830251240]
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerItems/Painting" unique_id=830251240]
+visible = false
 color = Color(1, 0, 0, 1)
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
-[node name="Layer2" type="Area2D" parent="LayerItems" unique_id=2095095901]
-position = Vector2(802, 214)
+[node name="Painting" type="Sprite2D" parent="LayerItems/Painting" unique_id=881976099]
+texture = ExtResource("3_6yxb1")
+hframes = 3
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerItems/Layer2" unique_id=91085960]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="Couch" type="Area2D" parent="LayerItems" unique_id=2095095901]
+position = Vector2(893, 471)
+scale = Vector2(1.545, 1.545)
 
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerItems/Layer2" unique_id=17305437]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerItems/Couch" unique_id=91085960]
+polygon = PackedVector2Array(-92, -73, -56, -80, 137, -53, 140, 38, 31, 90, 5, 85, 5, 61, -85, 46, -116, 59, -136, 56, -135, 20, -151, 24, -160, 16, -158, 0, -152, -13, -141, -19, -92, -28)
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerItems/Couch" unique_id=17305437]
+visible = false
 color = Color(0, 0, 1, 1)
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
-[node name="Layer3" type="Area2D" parent="LayerItems" unique_id=456468339]
-position = Vector2(1044, 553)
+[node name="Couch2" type="Sprite2D" parent="LayerItems/Couch" unique_id=1540251055]
+texture = ExtResource("4_0dhat")
+hframes = 3
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerItems/Layer3" unique_id=1881658915]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="Table" type="Area2D" parent="LayerItems" unique_id=456468339]
+position = Vector2(543, 625)
+rotation = -0.14835298
+scale = Vector2(2.535, 2.535)
 
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerItems/Layer3" unique_id=1519217165]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerItems/Table" unique_id=1881658915]
+polygon = PackedVector2Array(-74, -33, -30, -54, 0, -47, 76, -6, 76, 8, 72, 14, 72, 40, 67, 43, 61, 40, 60, 20, 14, 39, 12, 59, 3, 59, -1, 56, 2, 38, -56, -6, -56, 13, -62, 15, -67, 13, -67, 1, -64, -13, -75, -20)
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerItems/Table" unique_id=1519217165]
+visible = false
 color = Color(0, 1, 0, 1)
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+
+[node name="TableSheet" type="Sprite2D" parent="LayerItems/Table" unique_id=405529786]
+texture = ExtResource("5_sjlvs")
+hframes = 3
 
 [node name="Places" type="Node2D" parent="." unique_id=1153796374]
 
 [node name="Cage" type="Area2D" parent="Places" unique_id=809217837]
-position = Vector2(1117, 378)
+z_index = 1
+position = Vector2(461, 492)
 scale = Vector2(0.51, 0.51)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Places/Cage" unique_id=483403328]
@@ -125,7 +149,6 @@ text = "Yay!"
 
 [node name="Key" type="Area2D" parent="Objects" unique_id=1170720236]
 visible = false
-position = Vector2(218, 159)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Objects/Key" unique_id=1983812248]
 polygon = PackedVector2Array(-1, -22, 15, -16, 89, -2, 94, 11, 83, 11, 74, 4, 71, 11, 61, 6, 55, 11, 48, 4, 42, 12, 27, 2, 16, 15, 1, 21, -15, 16, -22, -1, -16, -16)
@@ -134,5 +157,12 @@ polygon = PackedVector2Array(-1, -22, 15, -16, 89, -2, 94, 11, 83, 11, 74, 4, 71
 color = Color(0.6223451, 0.5599006, 0, 1)
 polygon = PackedVector2Array(-1, -22, 15, -16, 89, -2, 94, 11, 83, 11, 74, 4, 71, 11, 61, 6, 55, 11, 48, 4, 42, 12, 27, 2, 16, 15, 1, 21, -15, 16, -22, -1, -16, -16)
 
+[node name="Timers" type="Node2D" parent="." unique_id=1746420953]
+
+[node name="Animation" type="Timer" parent="Timers" unique_id=1149300461]
+wait_time = 0.101
+autostart = true
+
 [connection signal="area_entered" from="Places/Cage/Lock" to="." method="_on_lock_area_entered"]
 [connection signal="area_exited" from="Places/Cage/Lock" to="." method="_on_lock_area_exited"]
+[connection signal="timeout" from="Timers/Animation" to="." method="_on_animation_timeout"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oceqien1py1b"
-path="res://.godot/imported/image.png-f9e702dac2bd34f8eb06c4301bde3d61.ctex"
+uid="uid://bb1r1t72anvn4"
+path="res://.godot/imported/table_sheet.png-4cdf593322862f19ea2f31b888cc68a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/image.png"
-dest_files=["res://.godot/imported/image.png-f9e702dac2bd34f8eb06c4301bde3d61.ctex"]
+source_file="res://Resources/Livingroom/table_sheet.png"
+dest_files=["res://.godot/imported/table_sheet.png-4cdf593322862f19ea2f31b888cc68a2.ctex"]
 
 [params]
 
