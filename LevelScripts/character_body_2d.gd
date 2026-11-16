@@ -13,6 +13,8 @@ func _process(delta: float) -> void:
 	
 	move_and_slide()
 	
+	Globals.Bird.position = position
+	
 	if is_on_wall() and not is_on_floor():
 		walljump = true
 	else:

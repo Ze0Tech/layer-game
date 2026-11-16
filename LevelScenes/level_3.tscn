@@ -1,42 +1,42 @@
 [gd_scene format=3 uid="uid://dctuhbjndxiwk"]
 
-[ext_resource type="Script" uid="uid://clsiq005yu32u" path="res://LevelScripts/level_3.gd" id="1_mkcfh"]
-[ext_resource type="Texture2D" uid="uid://3cxum5wxpf3t" path="res://Resources/Placeholders/title_screen_draft3.webp" id="2_wlht5"]
-[ext_resource type="Texture2D" uid="uid://bur6c2ho6b3jb" path="res://Resources/General/Background.webp" id="3_p13q0"]
-[ext_resource type="Texture2D" uid="uid://c0bfyf8nvo0t4" path="res://Resources/General/Nest.png" id="4_d8hiq"]
-[ext_resource type="Texture2D" uid="uid://cyj3js0vdgo13" path="res://Resources/General/Bird.png" id="5_i3jd7"]
-[ext_resource type="Texture2D" uid="uid://camyrt3fpydeg" path="res://Resources/DressUp/Tops/Afro.png" id="6_cly6y"]
-[ext_resource type="Texture2D" uid="uid://cai1f6olpav4d" path="res://Resources/DressUp/Tops/Cap.png" id="7_jp4te"]
-[ext_resource type="Texture2D" uid="uid://kg5n4kk0dtjr" path="res://Resources/DressUp/Tops/Cowboy.png" id="8_ajs20"]
-[ext_resource type="Texture2D" uid="uid://7txnert5f2qo" path="res://Resources/DressUp/Tops/Dunce.png" id="9_phw4y"]
-[ext_resource type="Texture2D" uid="uid://conuc46ofvttw" path="res://Resources/DressUp/Tops/Fedora.png" id="10_pbtcx"]
-[ext_resource type="Texture2D" uid="uid://c3au1qxipb2tc" path="res://Resources/DressUp/Tops/Headphones.png" id="11_srx7s"]
-[ext_resource type="Texture2D" uid="uid://ch2nn1dvveqba" path="res://Resources/DressUp/Tops/Wizard.png" id="12_abj5o"]
-[ext_resource type="Texture2D" uid="uid://i5xci50ckckt" path="res://Resources/DressUp/Middle/Blush.png" id="13_og32y"]
-[ext_resource type="Texture2D" uid="uid://bsi5hdodqhdjk" path="res://Resources/DressUp/Middle/Bowtie.png" id="14_7hdvx"]
-[ext_resource type="Texture2D" uid="uid://obvanrk3j45b" path="res://Resources/DressUp/Middle/NewYork.png" id="15_64ex2"]
-[ext_resource type="Texture2D" uid="uid://dk6utvyb2ktym" path="res://Resources/DressUp/Middle/Scarf.png" id="16_1214i"]
-[ext_resource type="Texture2D" uid="uid://dhqjgxc3f5l1g" path="res://Resources/DressUp/Middle/Tie.png" id="17_dlrl0"]
+[ext_resource type="Script" uid="uid://clsiq005yu32u" path="res://LevelScripts/level_3.gd" id="1_3ivnp"]
+[ext_resource type="Texture2D" uid="uid://3cxum5wxpf3t" path="res://Resources/Placeholders/title_screen_draft3.webp" id="2_b75xs"]
+[ext_resource type="Texture2D" uid="uid://bur6c2ho6b3jb" path="res://Resources/General/Background.webp" id="3_gdm0j"]
+[ext_resource type="Texture2D" uid="uid://c0bfyf8nvo0t4" path="res://Resources/General/Nest.png" id="4_4ov67"]
+[ext_resource type="Texture2D" uid="uid://cyj3js0vdgo13" path="res://Resources/General/Bird.png" id="5_xo66r"]
+[ext_resource type="Texture2D" uid="uid://conuc46ofvttw" path="res://Resources/DressUp/Tops/Fedora.png" id="6_u2few"]
+[ext_resource type="Texture2D" uid="uid://camyrt3fpydeg" path="res://Resources/DressUp/Tops/Afro.png" id="7_km2rb"]
+[ext_resource type="Texture2D" uid="uid://cai1f6olpav4d" path="res://Resources/DressUp/Tops/Cap.png" id="8_1i245"]
+[ext_resource type="Texture2D" uid="uid://kg5n4kk0dtjr" path="res://Resources/DressUp/Tops/Cowboy.png" id="9_t2pa7"]
+[ext_resource type="Texture2D" uid="uid://7txnert5f2qo" path="res://Resources/DressUp/Tops/Dunce.png" id="10_fn0k5"]
+[ext_resource type="Texture2D" uid="uid://c3au1qxipb2tc" path="res://Resources/DressUp/Tops/Headphones.png" id="11_eaqdc"]
+[ext_resource type="Texture2D" uid="uid://ch2nn1dvveqba" path="res://Resources/DressUp/Tops/Wizard.png" id="12_n0eec"]
+[ext_resource type="Texture2D" uid="uid://bsi5hdodqhdjk" path="res://Resources/DressUp/Middle/Bowtie.png" id="13_cadp2"]
+[ext_resource type="Texture2D" uid="uid://i5xci50ckckt" path="res://Resources/DressUp/Middle/Blush.png" id="14_5mpae"]
+[ext_resource type="Texture2D" uid="uid://obvanrk3j45b" path="res://Resources/DressUp/Middle/NewYork.png" id="15_720wd"]
+[ext_resource type="Texture2D" uid="uid://dk6utvyb2ktym" path="res://Resources/DressUp/Middle/Scarf.png" id="16_l13oo"]
+[ext_resource type="Texture2D" uid="uid://dhqjgxc3f5l1g" path="res://Resources/DressUp/Middle/Tie.png" id="17_56f06"]
 
-[node name="Level3" type="Node2D" unique_id=1789833393]
-script = ExtResource("1_mkcfh")
+[node name="CharacterCreation" type="Node2D" unique_id=1789833393]
+script = ExtResource("1_3ivnp")
 
 [node name="Background" type="Node2D" parent="." unique_id=2056750400]
 
 [node name="Background" type="TextureRect" parent="Background" unique_id=1254707277]
 offset_right = 1600.0
 offset_bottom = 900.0
-texture = ExtResource("2_wlht5")
+texture = ExtResource("2_b75xs")
 
 [node name="Background2" type="Sprite2D" parent="Background" unique_id=1175293324]
 position = Vector2(672.5, 451.99997)
 scale = Vector2(1.25, 1.2517005)
-texture = ExtResource("3_p13q0")
+texture = ExtResource("3_gdm0j")
 metadata/_edit_lock_ = true
 
 [node name="Nest" type="Sprite2D" parent="Background" unique_id=799028299]
 position = Vector2(663, 621)
-texture = ExtResource("4_d8hiq")
+texture = ExtResource("4_4ov67")
 metadata/_edit_lock_ = true
 
 [node name="Layers" type="Node2D" parent="." unique_id=1000858341]
@@ -85,89 +85,89 @@ scale = Vector2(1.5, 1.5)
 
 [node name="Bird" type="Sprite2D" parent="LayerItems/Bird" unique_id=2048625487]
 position = Vector2(661, 460)
-texture = ExtResource("5_i3jd7")
+texture = ExtResource("5_xo66r")
 
 [node name="Clothes" type="Node2D" parent="LayerItems" unique_id=1833478186]
 
 [node name="Top" type="Node2D" parent="LayerItems/Clothes" unique_id=1366472783]
 position = Vector2(32, 46)
 
+[node name="Fedora" type="Sprite2D" parent="LayerItems/Clothes/Top" unique_id=343522687]
+visible = false
+position = Vector2(618, 301.33334)
+texture = ExtResource("6_u2few")
+metadata/_edit_lock_ = true
+
 [node name="Afro" type="Sprite2D" parent="LayerItems/Clothes/Top" unique_id=2074525966]
 visible = false
 position = Vector2(588, 294)
-texture = ExtResource("6_cly6y")
+texture = ExtResource("7_km2rb")
 metadata/_edit_lock_ = true
 
 [node name="Cap" type="Sprite2D" parent="LayerItems/Clothes/Top" unique_id=136132594]
 visible = false
 position = Vector2(602.6667, 306)
-texture = ExtResource("7_jp4te")
+texture = ExtResource("8_1i245")
 metadata/_edit_lock_ = true
 
 [node name="Cowboy" type="Sprite2D" parent="LayerItems/Clothes/Top" unique_id=215614261]
 visible = false
 position = Vector2(625.3333, 289.33334)
-texture = ExtResource("8_ajs20")
+texture = ExtResource("9_t2pa7")
 metadata/_edit_lock_ = true
 
 [node name="Dunce" type="Sprite2D" parent="LayerItems/Clothes/Top" unique_id=1008432396]
 visible = false
 position = Vector2(612.6667, 260.66666)
-texture = ExtResource("9_phw4y")
-metadata/_edit_lock_ = true
-
-[node name="Fedora" type="Sprite2D" parent="LayerItems/Clothes/Top" unique_id=343522687]
-visible = false
-position = Vector2(618, 301.33334)
-texture = ExtResource("10_pbtcx")
+texture = ExtResource("10_fn0k5")
 metadata/_edit_lock_ = true
 
 [node name="Headphones" type="Sprite2D" parent="LayerItems/Clothes/Top" unique_id=278331190]
 visible = false
 position = Vector2(601.3333, 324)
-texture = ExtResource("11_srx7s")
+texture = ExtResource("11_eaqdc")
 metadata/_edit_lock_ = true
 
 [node name="Wizard" type="Sprite2D" parent="LayerItems/Clothes/Top" unique_id=2020069964]
 visible = false
 position = Vector2(606.6667, 267.33334)
-texture = ExtResource("12_abj5o")
+texture = ExtResource("12_n0eec")
 metadata/_edit_lock_ = true
 
 [node name="Middle" type="Node2D" parent="LayerItems/Clothes" unique_id=495949260]
 
-[node name="Blush" type="Sprite2D" parent="LayerItems/Clothes/Middle" unique_id=984642318]
+[node name="Bowtie" type="Sprite2D" parent="LayerItems/Clothes/Middle" unique_id=1152359218]
 visible = false
-position = Vector2(368.66666, 464.6667)
-texture = ExtResource("13_og32y")
+position = Vector2(368.6667, 457.33334)
+texture = ExtResource("13_cadp2")
 offset = Vector2(296.00006, -19.333344)
 metadata/_edit_lock_ = true
 
-[node name="Bowtie" type="Sprite2D" parent="LayerItems/Clothes/Middle" unique_id=1152359218]
+[node name="Blush" type="Sprite2D" parent="LayerItems/Clothes/Middle" unique_id=984642318]
 visible = false
-position = Vector2(368.66666, 457.33334)
-texture = ExtResource("14_7hdvx")
+position = Vector2(368.66666, 464.6667)
+texture = ExtResource("14_5mpae")
 offset = Vector2(296.00006, -19.333344)
 metadata/_edit_lock_ = true
 
 [node name="NewYork" type="Sprite2D" parent="LayerItems/Clothes/Middle" unique_id=1423111794]
 visible = false
 position = Vector2(366.66666, 488.66666)
-texture = ExtResource("15_64ex2")
+texture = ExtResource("15_720wd")
 offset = Vector2(296.00006, -19.333344)
 metadata/_edit_lock_ = true
 
 [node name="Scarf" type="Sprite2D" parent="LayerItems/Clothes/Middle" unique_id=1658732184]
 visible = false
 position = Vector2(360.66666, 465.33334)
-texture = ExtResource("16_1214i")
+texture = ExtResource("16_l13oo")
 offset = Vector2(296.00006, -19.333344)
 metadata/_edit_lock_ = true
 
 [node name="Tie" type="Sprite2D" parent="LayerItems/Clothes/Middle" unique_id=981662084]
 visible = false
 position = Vector2(359.99997, 463.33334)
-texture = ExtResource("17_dlrl0")
+texture = ExtResource("17_56f06")
 offset = Vector2(296.00006, -19.333344)
 metadata/_edit_lock_ = true
 

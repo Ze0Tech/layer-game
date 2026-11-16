@@ -116,3 +116,4 @@ func _on_button_button_down() -> void:
 func _on_button_button_up() -> void:
 	for i : Area2D in Pieces:
 		i.modulate = Color(1.0, 1.0, 1.0, 1.0)
+		

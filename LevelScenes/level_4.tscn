@@ -87,6 +87,27 @@ metadata/_edit_lock_ = true
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 metadata/_edit_lock_ = true
 
+[node name="Platform6" type="Area2D" parent="LayerObjects/Reds" unique_id=82181760]
+position = Vector2(1092, 611)
+scale = Vector2(0.8187257, 0.145678)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Reds/Platform6" unique_id=462267323]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Reds/Platform6" unique_id=729465964]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Reds/Platform6" unique_id=606354127]
+collision_layer = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Reds/Platform6/StaticBody2D" unique_id=1636762946]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
 [node name="Platform7" type="Area2D" parent="LayerObjects/Reds" unique_id=409120903]
 position = Vector2(967.00006, 170)
 rotation = -1.5707964
@@ -106,6 +127,72 @@ collision_layer = 0
 metadata/_edit_lock_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Reds/Platform7/StaticBody2D" unique_id=1454175893]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="Platform14" type="Area2D" parent="LayerObjects/Reds" unique_id=694384706]
+position = Vector2(967.00006, 337)
+rotation = -1.5707964
+scale = Vector2(0.56831497, 0.18721376)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Reds/Platform14" unique_id=1980325258]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Reds/Platform14" unique_id=1263401495]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Reds/Platform14" unique_id=1801557335]
+collision_layer = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Reds/Platform14/StaticBody2D" unique_id=2116176109]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="Platform15" type="Area2D" parent="LayerObjects/Reds" unique_id=323243515]
+position = Vector2(967, 495)
+rotation = -1.5707964
+scale = Vector2(0.56831497, 0.18721376)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Reds/Platform15" unique_id=758040905]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Reds/Platform15" unique_id=1116310698]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Reds/Platform15" unique_id=1847755327]
+collision_layer = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Reds/Platform15/StaticBody2D" unique_id=909078437]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="Platform16" type="Area2D" parent="LayerObjects/Reds" unique_id=91968370]
+position = Vector2(967, 533.00006)
+rotation = -1.5707964
+scale = Vector2(0.56831497, 0.18721376)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Reds/Platform16" unique_id=1369975516]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Reds/Platform16" unique_id=2104822637]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Reds/Platform16" unique_id=1797738036]
+collision_layer = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Reds/Platform16/StaticBody2D" unique_id=2125101672]
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 metadata/_edit_lock_ = true
 
@@ -197,30 +284,8 @@ metadata/_edit_lock_ = true
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 metadata/_edit_lock_ = true
 
-[node name="Platform5" type="Area2D" parent="LayerObjects/Reds" unique_id=1809155559]
-position = Vector2(960, 477)
-rotation = 1.5707964
-scale = Vector2(1, 0.26)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Reds/Platform5" unique_id=567116551]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50, -3.2052002, 50)
-metadata/_edit_lock_ = true
-
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Reds/Platform5" unique_id=69923924]
-color = Color(1, 0, 0, 1)
-polygon = PackedVector2Array(150, 50, 150, -50, 0.57073975, -50, -150, -50, -150, 50)
-metadata/_edit_lock_ = true
-
-[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Reds/Platform5" unique_id=289778696]
-collision_layer = 0
-metadata/_edit_lock_ = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Reds/Platform5/StaticBody2D" unique_id=1045398964]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
-metadata/_edit_lock_ = true
-
 [node name="Platform4" type="Area2D" parent="LayerObjects/Reds" unique_id=809242412]
-position = Vector2(333.00003, 230)
+position = Vector2(333.00003, 325)
 scale = Vector2(1.353, 0.152)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Reds/Platform4" unique_id=1395141779]
@@ -282,6 +347,38 @@ metadata/_edit_lock_ = true
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 metadata/_edit_lock_ = true
 
+[node name="Platform21" type="Area2D" parent="LayerObjects/Reds" unique_id=409414737]
+position = Vector2(335.00003, 597)
+scale = Vector2(0.37697002, 0.11745609)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Reds/Platform21" unique_id=443012546]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Reds/Platform21" unique_id=93448532]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Reds/Platform21" unique_id=1899567396]
+collision_layer = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Reds/Platform21/StaticBody2D" unique_id=100519627]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="Red2" type="Label" parent="LayerObjects/Reds/Platform21" unique_id=706094306]
+visible = false
+offset_left = -557.07355
+offset_top = -3984.4678
+offset_right = -185.07355
+offset_bottom = -3861.4678
+scale = Vector2(2.75, 9)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 89
+text = "L k        s "
+
 [node name="Blues" type="Node2D" parent="LayerObjects" unique_id=2017837487]
 
 [node name="Platform" type="Area2D" parent="LayerObjects/Blues" unique_id=1024268701]
@@ -325,6 +422,48 @@ metadata/_edit_lock_ = true
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 metadata/_edit_lock_ = true
 
+[node name="Platform7" type="Area2D" parent="LayerObjects/Blues" unique_id=1212460354]
+position = Vector2(814, 408)
+rotation = -1.5707964
+scale = Vector2(0.053733766, 2.940584)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Blues/Platform7" unique_id=26470865]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Blues/Platform7" unique_id=537673321]
+color = Color(0, 0, 1, 1)
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Blues/Platform7" unique_id=8129909]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Blues/Platform7/StaticBody2D" unique_id=1424755302]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="Platform8" type="Area2D" parent="LayerObjects/Blues" unique_id=1376721020]
+position = Vector2(967.00006, 795)
+rotation = -1.5707964
+scale = Vector2(0.053733766, 2.940584)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Blues/Platform8" unique_id=805438711]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Blues/Platform8" unique_id=2096904271]
+color = Color(0, 0, 1, 1)
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Blues/Platform8" unique_id=1080873853]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Blues/Platform8/StaticBody2D" unique_id=501910818]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
 [node name="Platform4" type="Area2D" parent="LayerObjects/Blues" unique_id=1010288000]
 position = Vector2(678, 246.00002)
 rotation = 3.1415925
@@ -343,6 +482,27 @@ metadata/_edit_lock_ = true
 metadata/_edit_lock_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Blues/Platform4/StaticBody2D" unique_id=489744606]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="Platform9" type="Area2D" parent="LayerObjects/Blues" unique_id=1994782289]
+position = Vector2(967.00006, 251.00002)
+rotation = 3.1415927
+scale = Vector2(0.05843092, 3.3)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Blues/Platform9" unique_id=1090495108]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Blues/Platform9" unique_id=2115979632]
+color = Color(0, 0, 1, 1)
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Blues/Platform9" unique_id=1471055001]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Blues/Platform9/StaticBody2D" unique_id=1592886659]
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 metadata/_edit_lock_ = true
 
@@ -389,9 +549,9 @@ polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 metadata/_edit_lock_ = true
 
 [node name="Platform3" type="Area2D" parent="LayerObjects/Blues" unique_id=1691598585]
-position = Vector2(604, 611)
+position = Vector2(606.99994, 611.0001)
 rotation = -1.5707964
-scale = Vector2(0.04833246, -1.2607899)
+scale = Vector2(0.048975803, -1.5371578)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Blues/Platform3" unique_id=896171309]
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
@@ -409,32 +569,119 @@ metadata/_edit_lock_ = true
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 metadata/_edit_lock_ = true
 
-[node name="Greens" type="Node2D" parent="LayerObjects" unique_id=1786440315]
+[node name="Platform17" type="Area2D" parent="LayerObjects/Blues" unique_id=406069037]
+position = Vector2(1092, 611)
+scale = Vector2(0.8187257, 0.145678)
 
-[node name="Platform2" type="Area2D" parent="LayerObjects/Greens" unique_id=1229859782]
-position = Vector2(329, 610)
-scale = Vector2(1.3137721, 0.14085795)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Greens/Platform2" unique_id=1734585862]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Blues/Platform17" unique_id=599945022]
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 metadata/_edit_lock_ = true
 
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Greens/Platform2" unique_id=1199154243]
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Blues/Platform17" unique_id=60478634]
+color = Color(0, 0, 1, 1)
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Blues/Platform17" unique_id=965774794]
+collision_layer = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Blues/Platform17/StaticBody2D" unique_id=598932860]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="Platform18" type="Area2D" parent="LayerObjects/Blues" unique_id=722590608]
+position = Vector2(1092, 253)
+scale = Vector2(0.8187257, 0.145678)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Blues/Platform18" unique_id=940351595]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Blues/Platform18" unique_id=1397460538]
+color = Color(0, 0, 1, 1)
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Blues/Platform18" unique_id=462480853]
+collision_layer = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Blues/Platform18/StaticBody2D" unique_id=702307287]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="Platform19" type="Area2D" parent="LayerObjects/Blues" unique_id=1276126327]
+position = Vector2(335, 597)
+scale = Vector2(0.37697002, 0.11745609)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Blues/Platform19" unique_id=1274373115]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Blues/Platform19" unique_id=1463033092]
+color = Color(0, 0, 1, 1)
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Blues/Platform19" unique_id=1919281131]
+collision_layer = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Blues/Platform19/StaticBody2D" unique_id=1411981811]
+visible = false
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="Blue" type="Label" parent="LayerObjects/Blues/Platform19" unique_id=1731996069]
+offset_left = -511.977
+offset_top = -4401.6445
+offset_right = -280.4659
+offset_bottom = -4156.6445
+scale = Vector2(2.75, 9)
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "ya ha ha you found me
+"
+autowrap_mode = 2
+
+[node name="Blue2" type="Label" parent="LayerObjects/Blues/Platform19" unique_id=870521382]
+visible = false
+offset_left = -546.4626
+offset_top = -3984.4678
+offset_right = -263.4626
+offset_bottom = -3861.4678
+scale = Vector2(2.75, 9)
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 89
+text = "  i  e th"
+
+[node name="Greens" type="Node2D" parent="LayerObjects" unique_id=1786440315]
+
+[node name="Platform5" type="Area2D" parent="LayerObjects/Greens" unique_id=1399930992]
+position = Vector2(822.00006, 611)
+scale = Vector2(0.9139808, 0.14693666)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Greens/Platform5" unique_id=618564021]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Greens/Platform5" unique_id=2036201660]
 color = Color(0, 1, 0, 1)
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 metadata/_edit_lock_ = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Greens/Platform2" unique_id=1963282465]
+[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Greens/Platform5" unique_id=1419285880]
 collision_layer = 0
 metadata/_edit_lock_ = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Greens/Platform2/StaticBody2D" unique_id=1159705870]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Greens/Platform5/StaticBody2D" unique_id=1564558984]
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 metadata/_edit_lock_ = true
 
 [node name="Platform4" type="Area2D" parent="LayerObjects/Greens" unique_id=1514149438]
-position = Vector2(607, 408.00003)
-scale = Vector2(0.42454225, 0.14176367)
+position = Vector2(607.00006, 408.00003)
+scale = Vector2(0.42454225, 0.15354487)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Greens/Platform4" unique_id=974328227]
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
@@ -454,9 +701,9 @@ polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 metadata/_edit_lock_ = true
 
 [node name="Platform3" type="Area2D" parent="LayerObjects/Greens" unique_id=1124721756]
-position = Vector2(535, 511)
+position = Vector2(966.99994, 259)
 rotation = -1.5707964
-scale = Vector2(1.4174029, 0.12701735)
+scale = Vector2(1.1633222, 0.1856135)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Greens/Platform3" unique_id=2115862145]
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
@@ -474,6 +721,72 @@ metadata/_edit_lock_ = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Greens/Platform3/StaticBody2D" unique_id=1580213435]
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 metadata/_edit_lock_ = true
+
+[node name="Platform6" type="Area2D" parent="LayerObjects/Greens" unique_id=1864862793]
+position = Vector2(1095, 426.99997)
+scale = Vector2(0.7969561, 0.1291421)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Greens/Platform6" unique_id=8888788]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Greens/Platform6" unique_id=777618292]
+color = Color(0, 1, 0, 1)
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Greens/Platform6" unique_id=1477495427]
+collision_layer = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Greens/Platform6/StaticBody2D" unique_id=2093058742]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="Platform20" type="Area2D" parent="LayerObjects/Greens" unique_id=1078113344]
+position = Vector2(335.00003, 597)
+scale = Vector2(0.37697002, 0.11745609)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Greens/Platform20" unique_id=834223328]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerObjects/Greens/Platform20" unique_id=343661393]
+color = Color(0, 1, 0, 1)
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LayerObjects/Greens/Platform20" unique_id=1493478380]
+collision_layer = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerObjects/Greens/Platform20/StaticBody2D" unique_id=1092421619]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+metadata/_edit_lock_ = true
+
+[node name="Green" type="Label" parent="LayerObjects/Greens/Platform20" unique_id=905200008]
+visible = false
+offset_left = -546.46265
+offset_top = -3984.4675
+offset_right = -191.47906
+offset_bottom = -3105.4675
+scale = Vector2(2.75, 9)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 44
+text = "ya ha ha you found me :)"
+autowrap_mode = 2
+
+[node name="Green2" type="Label" parent="LayerObjects/Greens/Platform20" unique_id=2016347503]
+offset_left = -445.6589
+offset_top = -4197.313
+offset_right = -70.41806
+offset_bottom = -4072.313
+scale = Vector2(2.75, 9)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 44
+text = "W A S D - Move
+Space - Jump"
+autowrap_mode = 2
 
 [node name="Places" type="Node2D" parent="." unique_id=1153796374]
 
@@ -511,9 +824,9 @@ scale = Vector2(0.575, 0.575)
 script = ExtResource("3_dcwjs")
 Speed = 70.0
 Friction = 0.94
-Gravity = 47
-Force = 0.59
-JumpSpeed = 1.06
+Gravity = 49
+Force = 0.46
+JumpSpeed = 0.92
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/CharacterBody2D" unique_id=482579952]
 polygon = PackedVector2Array(-29, 10, -35, -32, -17, -60, 36, -70, 61, -25, 61, 18, 38, 46, -6, 32)

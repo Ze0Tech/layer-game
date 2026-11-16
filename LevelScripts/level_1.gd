@@ -49,8 +49,9 @@ func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, ar
 		elif area.is_in_group('Objects') and area.is_in_group('Holdable'):
 			Action.emit('Hold',area)
 	if input.is_action_released('LMB'):
-		Mod.modulate = Color8(0,0,0,0)
-		Action.emit('Unhold')
+		if Mod:
+			Mod.modulate = Color8(0,0,0,0)
+			Action.emit('Unhold')
 	if not Place and not Finished:
 		PuzzleCheck()
 	elif Place:

@@ -1,40 +1,29 @@
-[gd_scene format=3 uid="uid://bqahjl2ggcsjx"]
+[gd_scene format=3 uid="uid://clgaps6ltfn2y"]
 
-[ext_resource type="Script" uid="uid://cgl4tu0s5v6t5" path="res://LevelScripts/level_1.gd" id="1_hbghi"]
-[ext_resource type="Texture2D" uid="uid://c311u4gficdx3" path="res://Resources/Placeholders/title_screen_draftbig.png" id="2_b67fw"]
-[ext_resource type="Texture2D" uid="uid://sgutvd7c6r0o" path="res://Resources/Livingroom/painting.png" id="3_6yxb1"]
-[ext_resource type="Texture2D" uid="uid://bv6btbe5x1s5n" path="res://Resources/Livingroom/living_room.png" id="3_w537q"]
-[ext_resource type="Texture2D" uid="uid://bamgu80dxrmix" path="res://Resources/Livingroom/couch.png" id="4_0dhat"]
-[ext_resource type="Texture2D" uid="uid://bb1r1t72anvn4" path="res://Resources/Livingroom/table_sheet.png" id="5_sjlvs"]
-[ext_resource type="Texture2D" uid="uid://c27ud3gknqwpw" path="res://Resources/Livingroom/birdcage.png" id="6_0dhat"]
-[ext_resource type="Texture2D" uid="uid://cqj2atst7s8px" path="res://Resources/Livingroom/key_sheet.png" id="8_fym0b"]
-[ext_resource type="Texture2D" uid="uid://badiy3ge8ge7c" path="res://Resources/Livingroom/shadow_sheet.png" id="8_pk6k6"]
+[ext_resource type="Script" uid="uid://b42fym2vex0qu" path="res://LevelScripts/level_2.gd" id="1_udi3q"]
+[ext_resource type="Texture2D" uid="uid://3cxum5wxpf3t" path="res://Resources/Placeholders/title_screen_draft3.webp" id="2_etohe"]
+[ext_resource type="Texture2D" uid="uid://oceqien1py1b" path="res://Resources/General/image.png" id="3_6yxb1"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hg4s6"]
-radius = 21.568604
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_etfwc"]
+size = Vector2(175, 80)
 
-[node name="Level1" type="Node2D" unique_id=1789833393]
-script = ExtResource("1_hbghi")
-metadata/_edit_horizontal_guides_ = [159.0]
-metadata/_edit_vertical_guides_ = [1348.0]
+[node name="StartLevel" type="Node2D" unique_id=1789833393]
+script = ExtResource("1_udi3q")
 
 [node name="Background" type="Node2D" parent="." unique_id=2056750400]
 
 [node name="Background" type="TextureRect" parent="Background" unique_id=1254707277]
-offset_right = 1600.0
-offset_bottom = 900.0
-texture = ExtResource("2_b67fw")
-
-[node name="LivingRoom" type="Sprite2D" parent="Background" unique_id=1082982232]
-position = Vector2(672.5, 452.5)
-scale = Vector2(1.25, 1.25)
-texture = ExtResource("3_w537q")
+offset_left = 6.0
+offset_top = 15.0
+offset_right = 1606.0
+offset_bottom = 915.0
+texture = ExtResource("2_etohe")
 
 [node name="Layers" type="Node2D" parent="." unique_id=1000858341]
-position = Vector2(1437, 61)
+position = Vector2(1445, 76)
 
 [node name="Layer1" type="Area2D" parent="Layers" unique_id=1411662192]
-modulate = Color(1, 1, 1, 0)
+modulate = Color(1, 1, 1, 0.68235296)
 position = Vector2(-88, 313)
 scale = Vector2(0.7, 0.7)
 
@@ -43,10 +32,10 @@ polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="CollisionPolygon2D2" type="Polygon2D" parent="Layers/Layer1" unique_id=1511358146]
 position = Vector2(1.4285713, 1.4285713)
-polygon = PackedVector2Array(104.28577, 48.571472, 128.57141, 32.857178, 140.00012, -1.4285278, 125.71423, -35.714233, 105.714355, -49.99994, -98.57141, -49.99994, -127.14282, -32.857117, -135.71423, -1.4285278, -124.285645, 30, -102.857056, 48.571472)
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="Layer2" type="Area2D" parent="Layers" unique_id=96898445]
-modulate = Color(1, 1, 1, 0)
+modulate = Color(1, 1, 1, 0.68235296)
 position = Vector2(-87.99999, 402.99997)
 scale = Vector2(0.7, 0.7)
 
@@ -55,10 +44,10 @@ polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="CollisionPolygon2D2" type="Polygon2D" parent="Layers/Layer2" unique_id=862527272]
 position = Vector2(0, 1.428615)
-polygon = PackedVector2Array(104.28577, 48.571472, 128.57141, 32.857178, 140.00012, -1.4285278, 125.71423, -35.714233, 105.714355, -49.99994, -98.57141, -49.99994, -127.14282, -32.857117, -135.71423, -1.4285278, -124.285645, 30, -102.857056, 48.571472)
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="Layer3" type="Area2D" parent="Layers" unique_id=813493975]
-modulate = Color(1, 1, 1, 0)
+modulate = Color(1, 1, 1, 0.68235296)
 position = Vector2(-88.99999, 494.00006)
 scale = Vector2(0.7, 0.7)
 
@@ -66,132 +55,95 @@ scale = Vector2(0.7, 0.7)
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="CollisionPolygon2D2" type="Polygon2D" parent="Layers/Layer3" unique_id=1310164455]
-polygon = PackedVector2Array(104.28577, 48.571472, 128.57141, 32.857178, 140.00012, -1.4285278, 125.71423, -35.714233, 105.714355, -49.99994, -98.57141, -49.99994, -127.14282, -32.857117, -135.71423, -1.4285278, -124.285645, 30, -102.857056, 48.571472)
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+
+[node name="Layer4" type="Area2D" parent="Layers" unique_id=1277268826]
+modulate = Color(1, 1, 1, 0.68235296)
+position = Vector2(-88.99999, 575)
+scale = Vector2(0.7, 0.7)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layers/Layer4" unique_id=324605325]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="Layers/Layer4" unique_id=839930633]
+polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="LayerItems" type="Node2D" parent="." unique_id=798432804]
-z_index = 1
 
-[node name="Painting" type="Area2D" parent="LayerItems" unique_id=749099220]
-position = Vector2(992.9999, 248)
-rotation = 0.19198622
-scale = Vector2(2.645, 2.645)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerItems/Painting" unique_id=867639590]
-polygon = PackedVector2Array(45, -30, 46, -20, 51, -2, 51, 25, 46, 34, 24, 37, -39, 46, -49, 43, -56, 24, -57, -8, -53, -18, -45, -23, -12, -29, -7, -50, 1, -31, 36, -32)
-
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerItems/Painting" unique_id=830251240]
+[node name="Piece1" type="Area2D" parent="LayerItems" unique_id=1430737765]
 visible = false
-color = Color(1, 0, 0, 1)
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+modulate = Color(0.39181867, 0.39181864, 0.39181864, 1)
+position = Vector2(390, 247)
+scale = Vector2(2, 2)
 
-[node name="Painting" type="Sprite2D" parent="LayerItems/Painting" unique_id=881976099]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LayerItems/Piece1" unique_id=2078659246]
+shape = SubResource("RectangleShape2D_etfwc")
+metadata/_edit_lock_ = true
+
+[node name="Image2" type="Sprite2D" parent="LayerItems/Piece1" unique_id=1605687575]
 texture = ExtResource("3_6yxb1")
-hframes = 3
+region_enabled = true
+region_rect = Rect2(39, 15, 175, 80)
+metadata/_edit_lock_ = true
 
-[node name="Couch" type="Area2D" parent="LayerItems" unique_id=2095095901]
-position = Vector2(893, 471)
-scale = Vector2(1.545, 1.545)
+[node name="Piece2" type="Area2D" parent="LayerItems" unique_id=2091816194]
+modulate = Color(0.39181867, 0.39181864, 0.39181864, 1)
+position = Vector2(481, 564)
+scale = Vector2(2, 2)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerItems/Couch" unique_id=91085960]
-polygon = PackedVector2Array(-92, -73, -56, -80, 137, -53, 140, 38, 31, 90, 5, 85, 5, 61, -85, 46, -116, 59, -136, 56, -135, 20, -151, 24, -160, 16, -158, 0, -152, -13, -141, -19, -92, -28)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LayerItems/Piece2" unique_id=1277257398]
+shape = SubResource("RectangleShape2D_etfwc")
+metadata/_edit_lock_ = true
 
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerItems/Couch" unique_id=17305437]
+[node name="Image3" type="Sprite2D" parent="LayerItems/Piece2" unique_id=249461180]
+texture = ExtResource("3_6yxb1")
+region_enabled = true
+region_rect = Rect2(39, 96, 175, 80)
+metadata/_edit_lock_ = true
+
+[node name="Piece3" type="Area2D" parent="LayerItems" unique_id=364867974]
 visible = false
-color = Color(0, 0, 1, 1)
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+modulate = Color(0.39181867, 0.39181864, 0.39181864, 1)
+position = Vector2(964, 695)
+scale = Vector2(2, 2)
 
-[node name="Couch2" type="Sprite2D" parent="LayerItems/Couch" unique_id=1540251055]
-texture = ExtResource("4_0dhat")
-hframes = 3
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LayerItems/Piece3" unique_id=1184099855]
+shape = SubResource("RectangleShape2D_etfwc")
+metadata/_edit_lock_ = true
 
-[node name="Table" type="Area2D" parent="LayerItems" unique_id=456468339]
-position = Vector2(543, 625)
-rotation = -0.14835298
-scale = Vector2(2.535, 2.535)
+[node name="Image4" type="Sprite2D" parent="LayerItems/Piece3" unique_id=747118248]
+texture = ExtResource("3_6yxb1")
+region_enabled = true
+region_rect = Rect2(212, 96, 175, 80)
+metadata/_edit_lock_ = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LayerItems/Table" unique_id=1881658915]
-polygon = PackedVector2Array(-74, -33, -30, -54, 0, -47, 76, -6, 76, 8, 72, 14, 72, 40, 67, 43, 61, 40, 60, 20, 14, 39, 12, 59, 3, 59, -1, 56, 2, 38, -56, -6, -56, 13, -62, 15, -67, 13, -67, 1, -64, -13, -75, -20)
+[node name="Piece4" type="Area2D" parent="LayerItems" unique_id=650172222]
+modulate = Color(0.39181867, 0.39181864, 0.39181864, 1)
+position = Vector2(899, 355)
+scale = Vector2(2, 2)
 
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="LayerItems/Table" unique_id=1519217165]
-visible = false
-color = Color(0, 1, 0, 1)
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LayerItems/Piece4" unique_id=1620061189]
+shape = SubResource("RectangleShape2D_etfwc")
+metadata/_edit_lock_ = true
 
-[node name="TableSheet" type="Sprite2D" parent="LayerItems/Table" unique_id=405529786]
-texture = ExtResource("5_sjlvs")
-hframes = 3
+[node name="Image5" type="Sprite2D" parent="LayerItems/Piece4" unique_id=661375390]
+texture = ExtResource("3_6yxb1")
+region_enabled = true
+region_rect = Rect2(212, 15, 175, 80)
+metadata/_edit_lock_ = true
 
 [node name="Places" type="Node2D" parent="." unique_id=1153796374]
 
-[node name="Cage" type="Area2D" parent="Places" unique_id=809217837]
-z_index = 1
-position = Vector2(274.00003, 323.00003)
-scale = Vector2(0.51, 0.51)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Places/Cage" unique_id=483403328]
-position = Vector2(350.9804, 337.2549)
-polygon = PackedVector2Array(-517.6471, -166.66669, -482.35297, -256.86273, -431.3726, -296.07843, -370.58826, -305.8824, -286.27454, -290.1961, -223.52942, -235.29413, -172.54901, -131.37256, -145.09808, -74.50983, -156.86273, -43.137268, -139.2157, 49.019592, -158.82355, 70.58826, -219.60785, 84.31372, -317.6471, 96.07849, -435.29416, 101.960815, -517.6471, 86.274536, -535.2942, 78.4314, -533.3334, -94.117615)
-
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="Places/Cage" unique_id=1872063925]
-visible = false
-polygon = PackedVector2Array(147.05884, 147.05884, 150, -50, 143.1372, -168.62744, 92.15674, -239.2157, 0, -272.54904, -78.4314, -237.25491, -147.05896, -166.66669, -150, -50, -145.09814, 152.94116)
-
-[node name="Lock" type="Area2D" parent="Places/Cage" unique_id=661323961]
-position = Vector2(13.725431, 350.98035)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Places/Cage/Lock" unique_id=1614299075]
-position = Vector2(-74.50981, -100.00001)
-shape = SubResource("CircleShape2D_hg4s6")
-
-[node name="Polygon2D" type="Polygon2D" parent="Places/Cage/Lock" unique_id=1784585808]
-color = Color(0.40960324, 0.40960327, 0.40960324, 1)
-polygon = PackedVector2Array(-86.27466, -119.60785, -72.54907, -121.5686, -60.784424, -117.64703, -52.941162, -107.84314, -54.9021, -92.15686, -60.784424, -84.31372, -72.54907, -78.4314, -84.31372, -82.35297, -94.117676, -90.196106, -94.117676, -103.92157, -92.15698, -111.76471)
-
-[node name="Label" type="Label" parent="Places/Cage" unique_id=944388127]
-visible = false
-offset_left = -64.70589
-offset_top = -50.980396
-offset_right = 76.29411
-offset_bottom = 46.019604
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 71
-text = "Yay!"
-
-[node name="Birdcage" type="Sprite2D" parent="Places/Cage" unique_id=1508812064]
-scale = Vector2(3.011, 3.011)
-texture = ExtResource("6_0dhat")
-hframes = 3
-
-[node name="ShadowSheet" type="Sprite2D" parent="Places/Cage/Birdcage" unique_id=1714257528]
-position = Vector2(2.6048174, 281.9726)
-texture = ExtResource("8_pk6k6")
-hframes = 3
-
 [node name="Objects" type="Node2D" parent="." unique_id=1071373600]
 
-[node name="Key" type="Area2D" parent="Objects" unique_id=1170720236]
+[node name="Buttons" type="Node2D" parent="." unique_id=1779889652]
+
+[node name="Button" type="Button" parent="Buttons" unique_id=1892988803]
 visible = false
+offset_right = 700.0
+offset_bottom = 320.0
+flat = true
 
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Objects/Key" unique_id=1983812248]
-polygon = PackedVector2Array(-38, -13, 30, -10, 36, -24, 56, -31, 75, -25, 90, -8, 89, 8, 75, 18, 39, 21, 35, 8, 3, 9, 3, 24, -14, 21, -23, 14, -39, 15)
-
-[node name="Polygon2D" type="Polygon2D" parent="Objects/Key" unique_id=870457023]
-visible = false
-color = Color(0.6223451, 0.5599006, 0, 1)
-polygon = PackedVector2Array(-1, -22, 15, -16, 89, -2, 94, 11, 83, 11, 74, 4, 71, 11, 61, 6, 55, 11, 48, 4, 42, 12, 27, 2, 16, 15, 1, 21, -15, 16, -22, -1, -16, -16)
-
-[node name="KeySheet" type="Sprite2D" parent="Objects/Key" unique_id=1347503933]
-position = Vector2(28, 2)
-scale = Vector2(3.03, 3.03)
-texture = ExtResource("8_fym0b")
-hframes = 3
-
-[node name="Timers" type="Node2D" parent="." unique_id=1746420953]
-
-[node name="Animation" type="Timer" parent="Timers" unique_id=1149300461]
-wait_time = 0.101
-autostart = true
-
-[connection signal="area_entered" from="Places/Cage/Lock" to="." method="_on_lock_area_entered"]
-[connection signal="area_exited" from="Places/Cage/Lock" to="." method="_on_lock_area_exited"]
-[connection signal="timeout" from="Timers/Animation" to="." method="_on_animation_timeout"]
+[connection signal="button_down" from="Buttons/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Buttons/Button" to="." method="_on_button_button_up"]
+[connection signal="pressed" from="Buttons/Button" to="." method="_on_button_pressed"]
