@@ -41,7 +41,7 @@ func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, ar
 	
 	if input.is_action_pressed("LMB"):
 		
-		if area.is_in_group('Layers'):
+		if area.is_in_group('Layers') or _shape_idx == 1:
 			
 			var Index = area.get_index()
 			var Layers : Array = LevelItems[2].get_children()
@@ -94,3 +94,11 @@ func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, ar
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print('yey')
+
+
+func _on_death_body_entered(body: Node2D) -> void:
+	Player.position = Vector2(325,550)
+	var input = InputEventAction.new()
+	input.action = 'LMB'
+	input.pressed = true
+	ItemInput(null,input,1,$Layers/Layer3)

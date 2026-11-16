@@ -29,11 +29,8 @@ func _ready() -> void:
 	for i : Area2D in LevelItems[2].get_children():
 		Sprites.append(i.get_child(2))
 	Sprites.append($Places/Cage/Birdcage)
-	print(Sprites)			
-
-func _process(delta: float) -> void:
-	print(Mod)
-
+	Sprites.append($Objects/Key/KeySheet)
+	Sprites.append($Places/Cage/Birdcage/ShadowSheet)
 				
 func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D) -> void:
 	if input.is_action_pressed("LMB"):

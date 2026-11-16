@@ -3,9 +3,12 @@
 [ext_resource type="Script" uid="uid://cgl4tu0s5v6t5" path="res://LevelScripts/level_1.gd" id="1_hbghi"]
 [ext_resource type="Texture2D" uid="uid://c311u4gficdx3" path="res://Resources/Placeholders/title_screen_draftbig.png" id="2_b67fw"]
 [ext_resource type="Texture2D" uid="uid://sgutvd7c6r0o" path="res://Resources/Livingroom/painting.png" id="3_6yxb1"]
+[ext_resource type="Texture2D" uid="uid://bv6btbe5x1s5n" path="res://Resources/Livingroom/living_room.png" id="3_w537q"]
 [ext_resource type="Texture2D" uid="uid://bamgu80dxrmix" path="res://Resources/Livingroom/couch.png" id="4_0dhat"]
 [ext_resource type="Texture2D" uid="uid://bb1r1t72anvn4" path="res://Resources/Livingroom/table_sheet.png" id="5_sjlvs"]
 [ext_resource type="Texture2D" uid="uid://c27ud3gknqwpw" path="res://Resources/Livingroom/birdcage.png" id="6_0dhat"]
+[ext_resource type="Texture2D" uid="uid://cqj2atst7s8px" path="res://Resources/Livingroom/key_sheet.png" id="8_fym0b"]
+[ext_resource type="Texture2D" uid="uid://badiy3ge8ge7c" path="res://Resources/Livingroom/shadow_sheet.png" id="8_pk6k6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hg4s6"]
 radius = 21.568604
@@ -21,6 +24,11 @@ metadata/_edit_vertical_guides_ = [1348.0]
 offset_right = 1600.0
 offset_bottom = 900.0
 texture = ExtResource("2_b67fw")
+
+[node name="LivingRoom" type="Sprite2D" parent="Background" unique_id=1082982232]
+position = Vector2(672.5, 452.5)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("3_w537q")
 
 [node name="Layers" type="Node2D" parent="." unique_id=1000858341]
 position = Vector2(1437, 61)
@@ -154,17 +162,29 @@ scale = Vector2(3.011, 3.011)
 texture = ExtResource("6_0dhat")
 hframes = 3
 
+[node name="ShadowSheet" type="Sprite2D" parent="Places/Cage/Birdcage" unique_id=1714257528]
+position = Vector2(2.6048174, 281.9726)
+texture = ExtResource("8_pk6k6")
+hframes = 3
+
 [node name="Objects" type="Node2D" parent="." unique_id=1071373600]
 
 [node name="Key" type="Area2D" parent="Objects" unique_id=1170720236]
 visible = false
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Objects/Key" unique_id=1983812248]
-polygon = PackedVector2Array(-1, -22, 15, -16, 89, -2, 94, 11, 83, 11, 74, 4, 71, 11, 61, 6, 55, 11, 48, 4, 42, 12, 27, 2, 16, 15, 1, 21, -15, 16, -22, -1, -16, -16)
+polygon = PackedVector2Array(-38, -13, 30, -10, 36, -24, 56, -31, 75, -25, 90, -8, 89, 8, 75, 18, 39, 21, 35, 8, 3, 9, 3, 24, -14, 21, -23, 14, -39, 15)
 
 [node name="Polygon2D" type="Polygon2D" parent="Objects/Key" unique_id=870457023]
+visible = false
 color = Color(0.6223451, 0.5599006, 0, 1)
 polygon = PackedVector2Array(-1, -22, 15, -16, 89, -2, 94, 11, 83, 11, 74, 4, 71, 11, 61, 6, 55, 11, 48, 4, 42, 12, 27, 2, 16, 15, 1, 21, -15, 16, -22, -1, -16, -16)
+
+[node name="KeySheet" type="Sprite2D" parent="Objects/Key" unique_id=1347503933]
+position = Vector2(28, 2)
+scale = Vector2(3.03, 3.03)
+texture = ExtResource("8_fym0b")
+hframes = 3
 
 [node name="Timers" type="Node2D" parent="." unique_id=1746420953]
 
