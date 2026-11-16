@@ -10,6 +10,7 @@ var Items : Array
 var Lock : bool
 var Finished : bool
 var Place : bool
+var Mod : Area2D
 signal Action(Command : String, Item : Area2D)
 
 func _ready() -> void:
@@ -27,13 +28,19 @@ func _ready() -> void:
 	
 	for i : Area2D in LevelItems[2].get_children():
 		Sprites.append(i.get_child(2))
-	
+	Sprites.append($Places/Cage/Birdcage)
 	print(Sprites)			
+
+func _process(delta: float) -> void:
+	print(Mod)
+
 				
 func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D) -> void:
 	if input.is_action_pressed("LMB"):
 		
 		if area.is_in_group('Layers'):
+			area.modulate = Color8(100,100,100,100)
+			Mod = area
 			var LayerObj : Area2D = LevelItems[2].get_child(area.get_index())
 			Action.emit('VisToggle',LayerObj)
 			
@@ -45,7 +52,8 @@ func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, ar
 		elif area.is_in_group('Objects') and area.is_in_group('Holdable'):
 			Action.emit('Hold',area)
 	if input.is_action_released('LMB'):
-			Action.emit('Unhold')
+		Mod.modulate = Color8(0,0,0,0)
+		Action.emit('Unhold')
 	if not Place and not Finished:
 		PuzzleCheck()
 	elif Place:

@@ -20,7 +20,7 @@ offset_bottom = 915.0
 texture = ExtResource("2_b75xs")
 
 [node name="Layers" type="Node2D" parent="." unique_id=1000858341]
-position = Vector2(1437, 61)
+position = Vector2(1445, 76)
 
 [node name="Layer1" type="Area2D" parent="Layers" unique_id=1411662192]
 modulate = Color(1, 1, 1, 0.68235296)

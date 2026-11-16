@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://sgutvd7c6r0o" path="res://Resources/Livingroom/painting.png" id="3_6yxb1"]
 [ext_resource type="Texture2D" uid="uid://bamgu80dxrmix" path="res://Resources/Livingroom/couch.png" id="4_0dhat"]
 [ext_resource type="Texture2D" uid="uid://bb1r1t72anvn4" path="res://Resources/Livingroom/table_sheet.png" id="5_sjlvs"]
+[ext_resource type="Texture2D" uid="uid://c27ud3gknqwpw" path="res://Resources/Livingroom/birdcage.png" id="6_0dhat"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hg4s6"]
 radius = 21.568604
@@ -25,7 +26,7 @@ texture = ExtResource("2_b67fw")
 position = Vector2(1437, 61)
 
 [node name="Layer1" type="Area2D" parent="Layers" unique_id=1411662192]
-modulate = Color(1, 1, 1, 0.68235296)
+modulate = Color(1, 1, 1, 0)
 position = Vector2(-88, 313)
 scale = Vector2(0.7, 0.7)
 
@@ -34,10 +35,10 @@ polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="CollisionPolygon2D2" type="Polygon2D" parent="Layers/Layer1" unique_id=1511358146]
 position = Vector2(1.4285713, 1.4285713)
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+polygon = PackedVector2Array(104.28577, 48.571472, 128.57141, 32.857178, 140.00012, -1.4285278, 125.71423, -35.714233, 105.714355, -49.99994, -98.57141, -49.99994, -127.14282, -32.857117, -135.71423, -1.4285278, -124.285645, 30, -102.857056, 48.571472)
 
 [node name="Layer2" type="Area2D" parent="Layers" unique_id=96898445]
-modulate = Color(1, 1, 1, 0.68235296)
+modulate = Color(1, 1, 1, 0)
 position = Vector2(-87.99999, 402.99997)
 scale = Vector2(0.7, 0.7)
 
@@ -46,10 +47,10 @@ polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="CollisionPolygon2D2" type="Polygon2D" parent="Layers/Layer2" unique_id=862527272]
 position = Vector2(0, 1.428615)
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+polygon = PackedVector2Array(104.28577, 48.571472, 128.57141, 32.857178, 140.00012, -1.4285278, 125.71423, -35.714233, 105.714355, -49.99994, -98.57141, -49.99994, -127.14282, -32.857117, -135.71423, -1.4285278, -124.285645, 30, -102.857056, 48.571472)
 
 [node name="Layer3" type="Area2D" parent="Layers" unique_id=813493975]
-modulate = Color(1, 1, 1, 0.68235296)
+modulate = Color(1, 1, 1, 0)
 position = Vector2(-88.99999, 494.00006)
 scale = Vector2(0.7, 0.7)
 
@@ -57,7 +58,7 @@ scale = Vector2(0.7, 0.7)
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="CollisionPolygon2D2" type="Polygon2D" parent="Layers/Layer3" unique_id=1310164455]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+polygon = PackedVector2Array(104.28577, 48.571472, 128.57141, 32.857178, 140.00012, -1.4285278, 125.71423, -35.714233, 105.714355, -49.99994, -98.57141, -49.99994, -127.14282, -32.857117, -135.71423, -1.4285278, -124.285645, 30, -102.857056, 48.571472)
 
 [node name="LayerItems" type="Node2D" parent="." unique_id=798432804]
 z_index = 1
@@ -116,16 +117,19 @@ hframes = 3
 
 [node name="Cage" type="Area2D" parent="Places" unique_id=809217837]
 z_index = 1
-position = Vector2(461, 492)
+position = Vector2(274.00003, 323.00003)
 scale = Vector2(0.51, 0.51)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Places/Cage" unique_id=483403328]
-polygon = PackedVector2Array(147.05884, 147.05884, 150, -50, 143.1372, -168.62744, 92.15674, -239.2157, 0, -272.54904, -78.4314, -237.25491, -147.05896, -166.66669, -150, -50, -145.09814, 152.94116)
+position = Vector2(350.9804, 337.2549)
+polygon = PackedVector2Array(-517.6471, -166.66669, -482.35297, -256.86273, -431.3726, -296.07843, -370.58826, -305.8824, -286.27454, -290.1961, -223.52942, -235.29413, -172.54901, -131.37256, -145.09808, -74.50983, -156.86273, -43.137268, -139.2157, 49.019592, -158.82355, 70.58826, -219.60785, 84.31372, -317.6471, 96.07849, -435.29416, 101.960815, -517.6471, 86.274536, -535.2942, 78.4314, -533.3334, -94.117615)
 
 [node name="CollisionPolygon2D2" type="Polygon2D" parent="Places/Cage" unique_id=1872063925]
+visible = false
 polygon = PackedVector2Array(147.05884, 147.05884, 150, -50, 143.1372, -168.62744, 92.15674, -239.2157, 0, -272.54904, -78.4314, -237.25491, -147.05896, -166.66669, -150, -50, -145.09814, 152.94116)
 
 [node name="Lock" type="Area2D" parent="Places/Cage" unique_id=661323961]
+position = Vector2(13.725431, 350.98035)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Places/Cage/Lock" unique_id=1614299075]
 position = Vector2(-74.50981, -100.00001)
@@ -144,6 +148,11 @@ offset_bottom = 46.019604
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 71
 text = "Yay!"
+
+[node name="Birdcage" type="Sprite2D" parent="Places/Cage" unique_id=1508812064]
+scale = Vector2(3.011, 3.011)
+texture = ExtResource("6_0dhat")
+hframes = 3
 
 [node name="Objects" type="Node2D" parent="." unique_id=1071373600]
 

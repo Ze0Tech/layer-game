@@ -53,7 +53,7 @@ func CenterBig(NewPlace : Area2D) -> void:
 		Data[1] = NewPlace
 		Data[2] = NewPlace.position
 		Data[3] = NewPlace.scale
-		NewPlace.position = Vector2(700,550)
+		NewPlace.position = Vector2(700,200)
 		NewPlace.scale *= 3
 		PlaceToggle()
 	else:
