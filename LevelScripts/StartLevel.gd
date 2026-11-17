@@ -20,7 +20,8 @@ func _ready() -> void:
 			for q : Area2D in NewItems:
 				q.add_to_group(i.name)
 				print(q.get_groups())
-				q.connect('input_event',ItemInput.bind(q))
+				var v : Sprite2D = q.get_child(0).get_child(1)
+				q.connect('input_event',ItemInput.bind(q,v))
 				q.connect('area_entered',AreaEntered.bind(q,1))
 				q.connect('area_exited',AreaEntered.bind(q,0))
 				q.add_to_group('Objects')
@@ -33,11 +34,12 @@ func _ready() -> void:
 		
 		Pieces = LevelItems[2].get_children()
 				
-func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D) -> void:
+func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D, Vsprite : Sprite2D) -> void:
 	if input.is_action_pressed("LMB"):
 		if area.is_in_group('Layers'):
 			var LayerObj : Area2D = LevelItems[2].get_child(area.get_index())
 			Action.emit('VisToggle',LayerObj)
+			Vsprite.frame = not LayerObj.visible
 		if area.is_in_group('Places'):
 			Action.emit('CenterBig',area)
 			Place = not Place

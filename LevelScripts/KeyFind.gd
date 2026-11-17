@@ -19,6 +19,14 @@ func _ready() -> void:
 			pass
 		elif i.name == 'Timers':
 			pass
+		elif i.name == 'Layers':
+			var NewItems : Array = i.get_children()
+			for q : Area2D in NewItems:
+				q.add_to_group(i.name)
+				var v : Sprite2D = q.get_child(0).get_child(1)
+				#print(q.get_groups())
+				q.connect('input_event',ItemInput.bind(q,v))
+				
 		else:
 			var NewItems : Array = i.get_children()
 			for q : Area2D in NewItems:
@@ -32,15 +40,15 @@ func _ready() -> void:
 	Sprites.append($Objects/Key/KeySheet)
 	Sprites.append($Places/Cage/Birdcage/ShadowSheet)
 				
-func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D) -> void:
+func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D, Vsprite : Sprite2D) -> void:
 	if input.is_action_pressed("LMB"):
 		
 		if area.is_in_group('Layers'):
-			area.modulate = Color8(100,100,100,100)
+			#area.modulate = Color8(100,100,100,100)
 			Mod = area
 			var LayerObj : Area2D = LevelItems[2].get_child(area.get_index())
 			Action.emit('VisToggle',LayerObj)
-			
+			Vsprite.frame = not LayerObj.visible
 		if area.is_in_group('Places'):
 			Action.emit('CenterBig',area)
 			KeyItem.position = Vector2(1350,150)
@@ -50,7 +58,7 @@ func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, ar
 			Action.emit('Hold',area)
 	if input.is_action_released('LMB'):
 		if Mod:
-			Mod.modulate = Color8(0,0,0,0)
+			#Mod.modulate = Color8(0,0,0,0)
 			Action.emit('Unhold')
 	if not Place and not Finished:
 		PuzzleCheck()

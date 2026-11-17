@@ -1,20 +1,26 @@
 [gd_scene format=3 uid="uid://bqahjl2ggcsjx"]
 
-[ext_resource type="Script" uid="uid://cgl4tu0s5v6t5" path="res://LevelScripts/level_1.gd" id="1_hbghi"]
-[ext_resource type="Texture2D" uid="uid://c311u4gficdx3" path="res://Resources/Placeholders/title_screen_draftbig.png" id="2_b67fw"]
-[ext_resource type="Texture2D" uid="uid://sgutvd7c6r0o" path="res://Resources/Livingroom/painting.png" id="3_6yxb1"]
-[ext_resource type="Texture2D" uid="uid://bv6btbe5x1s5n" path="res://Resources/Livingroom/living_room.png" id="3_w537q"]
-[ext_resource type="Texture2D" uid="uid://bamgu80dxrmix" path="res://Resources/Livingroom/couch.png" id="4_0dhat"]
-[ext_resource type="Texture2D" uid="uid://bb1r1t72anvn4" path="res://Resources/Livingroom/table_sheet.png" id="5_sjlvs"]
-[ext_resource type="Texture2D" uid="uid://c27ud3gknqwpw" path="res://Resources/Livingroom/birdcage.png" id="6_0dhat"]
-[ext_resource type="Texture2D" uid="uid://cqj2atst7s8px" path="res://Resources/Livingroom/key_sheet.png" id="8_fym0b"]
-[ext_resource type="Texture2D" uid="uid://badiy3ge8ge7c" path="res://Resources/Livingroom/shadow_sheet.png" id="8_pk6k6"]
+[ext_resource type="Script" uid="uid://cgl4tu0s5v6t5" path="res://LevelScripts/KeyFind.gd" id="1_17ona"]
+[ext_resource type="Texture2D" uid="uid://c311u4gficdx3" path="res://Resources/Placeholders/title_screen_draftbig.png" id="2_714rq"]
+[ext_resource type="Texture2D" uid="uid://bv6btbe5x1s5n" path="res://Resources/Livingroom/living_room.png" id="3_iioe5"]
+[ext_resource type="Texture2D" uid="uid://dsdpsic1q2lka" path="res://Resources/General/Layer Icon.png" id="4_d8k1g"]
+[ext_resource type="Texture2D" uid="uid://hx0uaxatih5k" path="res://Resources/General/Lock Icon.png" id="5_aqlds"]
+[ext_resource type="Texture2D" uid="uid://jxcxu2nsyc8t" path="res://Resources/General/VisIcon.png" id="6_88gem"]
+[ext_resource type="Texture2D" uid="uid://sgutvd7c6r0o" path="res://Resources/Livingroom/painting.png" id="7_pwlwt"]
+[ext_resource type="Texture2D" uid="uid://bamgu80dxrmix" path="res://Resources/Livingroom/couch.png" id="8_i57s3"]
+[ext_resource type="Texture2D" uid="uid://bb1r1t72anvn4" path="res://Resources/Livingroom/table_sheet.png" id="9_t0ywq"]
+[ext_resource type="Texture2D" uid="uid://c27ud3gknqwpw" path="res://Resources/Livingroom/birdcage.png" id="10_i0o3e"]
+[ext_resource type="Texture2D" uid="uid://badiy3ge8ge7c" path="res://Resources/Livingroom/shadow_sheet.png" id="11_vnppm"]
+[ext_resource type="Texture2D" uid="uid://cqj2atst7s8px" path="res://Resources/Livingroom/key_sheet.png" id="12_23jpp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hg4s6"]
+size = Vector2(185.71436, 62.856934)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hg4s6"]
 radius = 21.568604
 
-[node name="Level1" type="Node2D" unique_id=1789833393]
-script = ExtResource("1_hbghi")
+[node name="KeyFind" type="Node2D" unique_id=1789833393]
+script = ExtResource("1_17ona")
 metadata/_edit_horizontal_guides_ = [159.0]
 metadata/_edit_vertical_guides_ = [1348.0]
 
@@ -23,50 +29,88 @@ metadata/_edit_vertical_guides_ = [1348.0]
 [node name="Background" type="TextureRect" parent="Background" unique_id=1254707277]
 offset_right = 1600.0
 offset_bottom = 900.0
-texture = ExtResource("2_b67fw")
+texture = ExtResource("2_714rq")
 
 [node name="LivingRoom" type="Sprite2D" parent="Background" unique_id=1082982232]
 position = Vector2(672.5, 452.5)
 scale = Vector2(1.25, 1.25)
-texture = ExtResource("3_w537q")
+texture = ExtResource("3_iioe5")
 
 [node name="Layers" type="Node2D" parent="." unique_id=1000858341]
-position = Vector2(1437, 61)
+position = Vector2(1490, -172)
+scale = Vector2(1.58, 1.58)
 
 [node name="Layer1" type="Area2D" parent="Layers" unique_id=1411662192]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(-88, 313)
 scale = Vector2(0.7, 0.7)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layers/Layer1" unique_id=922320463]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="LayerIcon" type="Sprite2D" parent="Layers/Layer1" unique_id=96636734]
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("4_d8k1g")
 
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="Layers/Layer1" unique_id=1511358146]
-position = Vector2(1.4285713, 1.4285713)
-polygon = PackedVector2Array(104.28577, 48.571472, 128.57141, 32.857178, 140.00012, -1.4285278, 125.71423, -35.714233, 105.714355, -49.99994, -98.57141, -49.99994, -127.14282, -32.857117, -135.71423, -1.4285278, -124.285645, 30, -102.857056, 48.571472)
+[node name="LockIcon" type="Sprite2D" parent="Layers/Layer1/LayerIcon" unique_id=144320255]
+position = Vector2(65.13574, -3.2007751)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("5_aqlds")
+hframes = 2
+
+[node name="VisIcon" type="Sprite2D" parent="Layers/Layer1/LayerIcon" unique_id=265536222]
+position = Vector2(-57.829956, -1.392456)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("6_88gem")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer1" unique_id=1603399617]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_hg4s6")
 
 [node name="Layer2" type="Area2D" parent="Layers" unique_id=96898445]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(-87.99999, 402.99997)
 scale = Vector2(0.7, 0.7)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layers/Layer2" unique_id=1920157576]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="LayerIcon" type="Sprite2D" parent="Layers/Layer2" unique_id=1279926879]
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("4_d8k1g")
 
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="Layers/Layer2" unique_id=862527272]
-position = Vector2(0, 1.428615)
-polygon = PackedVector2Array(104.28577, 48.571472, 128.57141, 32.857178, 140.00012, -1.4285278, 125.71423, -35.714233, 105.714355, -49.99994, -98.57141, -49.99994, -127.14282, -32.857117, -135.71423, -1.4285278, -124.285645, 30, -102.857056, 48.571472)
+[node name="LockIcon" type="Sprite2D" parent="Layers/Layer2/LayerIcon" unique_id=1948926545]
+position = Vector2(65.13574, -3.2007751)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("5_aqlds")
+hframes = 2
+
+[node name="VisIcon" type="Sprite2D" parent="Layers/Layer2/LayerIcon" unique_id=388736622]
+position = Vector2(-57.829956, -1.392456)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("6_88gem")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer2" unique_id=1331862918]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_hg4s6")
 
 [node name="Layer3" type="Area2D" parent="Layers" unique_id=813493975]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(-88.99999, 494.00006)
 scale = Vector2(0.7, 0.7)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layers/Layer3" unique_id=1896473980]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="LayerIcon" type="Sprite2D" parent="Layers/Layer3" unique_id=1489908215]
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("4_d8k1g")
 
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="Layers/Layer3" unique_id=1310164455]
-polygon = PackedVector2Array(104.28577, 48.571472, 128.57141, 32.857178, 140.00012, -1.4285278, 125.71423, -35.714233, 105.714355, -49.99994, -98.57141, -49.99994, -127.14282, -32.857117, -135.71423, -1.4285278, -124.285645, 30, -102.857056, 48.571472)
+[node name="LockIcon" type="Sprite2D" parent="Layers/Layer3/LayerIcon" unique_id=515753312]
+position = Vector2(65.13574, -3.2007751)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("5_aqlds")
+hframes = 2
+
+[node name="VisIcon" type="Sprite2D" parent="Layers/Layer3/LayerIcon" unique_id=198648568]
+position = Vector2(-57.829956, -1.392456)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("6_88gem")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer3" unique_id=1183495168]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_hg4s6")
 
 [node name="LayerItems" type="Node2D" parent="." unique_id=798432804]
 z_index = 1
@@ -85,7 +129,7 @@ color = Color(1, 0, 0, 1)
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="Painting" type="Sprite2D" parent="LayerItems/Painting" unique_id=881976099]
-texture = ExtResource("3_6yxb1")
+texture = ExtResource("7_pwlwt")
 hframes = 3
 
 [node name="Couch" type="Area2D" parent="LayerItems" unique_id=2095095901]
@@ -101,7 +145,7 @@ color = Color(0, 0, 1, 1)
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="Couch2" type="Sprite2D" parent="LayerItems/Couch" unique_id=1540251055]
-texture = ExtResource("4_0dhat")
+texture = ExtResource("8_i57s3")
 hframes = 3
 
 [node name="Table" type="Area2D" parent="LayerItems" unique_id=456468339]
@@ -118,7 +162,7 @@ color = Color(0, 1, 0, 1)
 polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
 
 [node name="TableSheet" type="Sprite2D" parent="LayerItems/Table" unique_id=405529786]
-texture = ExtResource("5_sjlvs")
+texture = ExtResource("9_t0ywq")
 hframes = 3
 
 [node name="Places" type="Node2D" parent="." unique_id=1153796374]
@@ -159,12 +203,12 @@ text = "Yay!"
 
 [node name="Birdcage" type="Sprite2D" parent="Places/Cage" unique_id=1508812064]
 scale = Vector2(3.011, 3.011)
-texture = ExtResource("6_0dhat")
+texture = ExtResource("10_i0o3e")
 hframes = 3
 
 [node name="ShadowSheet" type="Sprite2D" parent="Places/Cage/Birdcage" unique_id=1714257528]
 position = Vector2(2.6048174, 281.9726)
-texture = ExtResource("8_pk6k6")
+texture = ExtResource("11_vnppm")
 hframes = 3
 
 [node name="Objects" type="Node2D" parent="." unique_id=1071373600]
@@ -183,7 +227,7 @@ polygon = PackedVector2Array(-1, -22, 15, -16, 89, -2, 94, 11, 83, 11, 74, 4, 71
 [node name="KeySheet" type="Sprite2D" parent="Objects/Key" unique_id=1347503933]
 position = Vector2(28, 2)
 scale = Vector2(3.03, 3.03)
-texture = ExtResource("8_fym0b")
+texture = ExtResource("12_23jpp")
 hframes = 3
 
 [node name="Timers" type="Node2D" parent="." unique_id=1746420953]

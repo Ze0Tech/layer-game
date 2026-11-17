@@ -19,15 +19,13 @@ func _ready() -> void:
 		elif i.name == 'Objects':
 			Player = i.get_child(0)
 			
-		#elif i.name == 'LayerObjects':
-			#var LayerObjs: Array = i.get_children()
-			#
-			#for Layer in LayerObjs:
-				#var Boxes = Layer.get_children()
-				#if q.visible:
-					#q.get_child(2).collision_layer = true
-				#else:
-					#q.get_child(2).collision_layer = false
+		elif i.name == 'Layers':
+			var NewItems : Array = i.get_children()
+			for q : Area2D in NewItems:
+				q.add_to_group(i.name)
+				var v : Sprite2D = q.get_child(0).get_child(1)
+				#print(q.get_groups())
+				q.connect('input_event',ItemInput.bind(q,v))
 				
 		else:
 			var NewItems : Array = i.get_children()
@@ -37,7 +35,7 @@ func _ready() -> void:
 					print(q.get_groups())
 					q.connect('input_event',ItemInput.bind(q))
 				
-func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D) -> void:
+func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D, Vsprite : Sprite2D) -> void:
 	
 	if input.is_action_pressed("LMB"):
 		
@@ -49,12 +47,15 @@ func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, ar
 			for i in Layers:
 				var Boxes : Array = i.get_children()
 				for Box in Boxes:
+
 					if i.get_index() == Index:
 						Action.emit('VisOn',Box)
 						Action.emit('CollOn',Box.get_child(2))
+						Vsprite.frame = 1
 					else:
 						Action.emit('VisOff',Box)
 						Action.emit('CollOff',Box.get_child(2))
+						Vsprite.frame = 0
 			
 			
 			
@@ -101,4 +102,4 @@ func _on_death_body_entered(body: Node2D) -> void:
 	var input = InputEventAction.new()
 	input.action = 'LMB'
 	input.pressed = true
-	ItemInput(null,input,1,$Layers/Layer3)
+	ItemInput(null,input,1,$Layers/Layer3,$Layers/Layer1/LayerIcon/VisIcon)
