@@ -51,11 +51,14 @@ func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, ar
 					if i.get_index() == Index:
 						Action.emit('VisOn',Box)
 						Action.emit('CollOn',Box.get_child(2))
-						Vsprite.frame = 1
+						
+						fuck() 
+						Vsprite.frame = Box.visible
+						
 					else:
 						Action.emit('VisOff',Box)
 						Action.emit('CollOff',Box.get_child(2))
-						Vsprite.frame = 0
+						
 			
 			
 			

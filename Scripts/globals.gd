@@ -4,9 +4,13 @@ var MusicMod : float = 0
 var SFXMod : float = 0
 var AltControl : bool = 0
 
+@onready var Mouse : Sprite2D = $MouseIcon
 @onready var Bird : Node2D = $Bird
 @onready var ClothesNode : Node2D = $Bird/Clothes
 @export var Clothes : Array = [0,0,0]
+
+#func _ready() -> void:
+	#
 
 func BirdUpdate() -> void:
 	Bird.visible = true
@@ -23,3 +27,5 @@ func BirdHide() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed('Q'):
 		print(Clothes)
+		
+	Mouse.position = Mouse.get_global_mouse_position()

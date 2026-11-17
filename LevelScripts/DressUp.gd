@@ -21,6 +21,13 @@ func _ready() -> void:
 			pass
 		elif i.name == 'LayerItems':
 			pass
+		elif i.name == 'Layers':
+			var NewItems : Array = i.get_children()
+			for q : Area2D in NewItems:
+				q.add_to_group(i.name)
+				var v : Sprite2D = q.get_child(0).get_child(1)
+				#print(q.get_groups())
+				q.connect('input_event',ItemInput.bind(q,v))
 		else:
 			var NewItems : Array = i.get_children()
 			for q : Area2D in NewItems:
@@ -34,7 +41,7 @@ func _ready() -> void:
 	Clothes = Globals.Clothes
 	Change()
 				
-func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D) -> void:
+func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D, Vsprite : Sprite2D = null) -> void:
 	if input.is_action_pressed("LMB"):
 		var Index : int = area.get_index()
 		if area.is_in_group('Layers'):

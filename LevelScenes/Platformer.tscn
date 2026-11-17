@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://b1ukrl5n8bk6d"]
 
-[ext_resource type="Script" uid="uid://drhdooy85ixbp" path="res://LevelScripts/Platformer.gd" id="1_pi5pi"]
+[ext_resource type="Script" uid="uid://drhdooy85ixbp" path="res://LevelScripts/Platformer.gd" id="1_hblqb"]
 [ext_resource type="Texture2D" uid="uid://c311u4gficdx3" path="res://Resources/Placeholders/title_screen_draftbig.png" id="2_hblqb"]
 [ext_resource type="Texture2D" uid="uid://dsdpsic1q2lka" path="res://Resources/General/Layer Icon.png" id="3_kyn1k"]
+[ext_resource type="Texture2D" uid="uid://bur6c2ho6b3jb" path="res://Resources/General/Background.webp" id="3_w0j3k"]
 [ext_resource type="Texture2D" uid="uid://hx0uaxatih5k" path="res://Resources/General/Lock Icon.png" id="4_w0j3k"]
 [ext_resource type="Texture2D" uid="uid://jxcxu2nsyc8t" path="res://Resources/General/VisIcon.png" id="5_ainyb"]
 [ext_resource type="Script" uid="uid://bdc4put30p2lu" path="res://LevelScripts/character_body_2d.gd" id="6_hfqar"]
@@ -17,7 +18,7 @@ size = Vector2(130, 46)
 size = Vector2(1140, 46)
 
 [node name="Level4" type="Node2D" unique_id=1789833393]
-script = ExtResource("1_pi5pi")
+script = ExtResource("1_hblqb")
 metadata/_edit_horizontal_guides_ = [159.0]
 metadata/_edit_vertical_guides_ = [1348.0]
 
@@ -29,8 +30,14 @@ offset_bottom = 900.0
 texture = ExtResource("2_hblqb")
 metadata/_edit_lock_ = true
 
+[node name="Background2" type="Sprite2D" parent="Background" unique_id=896313840]
+position = Vector2(673, 452.99997)
+scale = Vector2(1.2488478, 1.2823129)
+texture = ExtResource("3_w0j3k")
+
 [node name="Layers" type="Node2D" parent="." unique_id=1000858341]
-position = Vector2(1437, 61)
+position = Vector2(1480, -102)
+scale = Vector2(1.5, 1.5)
 
 [node name="Layer1" type="Area2D" parent="Layers" unique_id=1025280598]
 position = Vector2(-88, 313)

@@ -1,14 +1,21 @@
 [gd_scene format=3 uid="uid://clgaps6ltfn2y"]
 
-[ext_resource type="Script" uid="uid://b42fym2vex0qu" path="res://LevelScripts/StartLevel.gd" id="1_pcvxh"]
-[ext_resource type="Texture2D" uid="uid://3cxum5wxpf3t" path="res://Resources/Placeholders/title_screen_draft3.webp" id="2_35qo5"]
+[ext_resource type="Script" uid="uid://b42fym2vex0qu" path="res://LevelScripts/StartLevel.gd" id="1_kqqls"]
+[ext_resource type="Texture2D" uid="uid://c311u4gficdx3" path="res://Resources/Placeholders/title_screen_draftbig.png" id="2_dw7j6"]
+[ext_resource type="Texture2D" uid="uid://bur6c2ho6b3jb" path="res://Resources/General/Background.webp" id="3_dw7j6"]
+[ext_resource type="Texture2D" uid="uid://dsdpsic1q2lka" path="res://Resources/General/Layer Icon.png" id="3_hkrva"]
 [ext_resource type="Texture2D" uid="uid://oceqien1py1b" path="res://Resources/General/image.png" id="3_x8u7c"]
+[ext_resource type="Texture2D" uid="uid://hx0uaxatih5k" path="res://Resources/General/Lock Icon.png" id="4_u17oo"]
+[ext_resource type="Texture2D" uid="uid://jxcxu2nsyc8t" path="res://Resources/General/VisIcon.png" id="5_a0wcj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjku7"]
+size = Vector2(185.71436, 62.856934)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_etfwc"]
 size = Vector2(175, 80)
 
 [node name="StartLevel" type="Node2D" unique_id=1789833393]
-script = ExtResource("1_pcvxh")
+script = ExtResource("1_kqqls")
 
 [node name="Background" type="Node2D" parent="." unique_id=2056750400]
 
@@ -17,56 +24,112 @@ offset_left = 6.0
 offset_top = 15.0
 offset_right = 1606.0
 offset_bottom = 915.0
-texture = ExtResource("2_35qo5")
+texture = ExtResource("2_dw7j6")
+
+[node name="Background2" type="Sprite2D" parent="Background" unique_id=1589670272]
+position = Vector2(678.5, 467.5)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("3_dw7j6")
 
 [node name="Layers" type="Node2D" parent="." unique_id=1000858341]
-position = Vector2(1445, 76)
+position = Vector2(1495, -198.99997)
+scale = Vector2(1.57, 1.57)
 
-[node name="Layer1" type="Area2D" parent="Layers" unique_id=1411662192]
-modulate = Color(1, 1, 1, 0.68235296)
+[node name="Layer1" type="Area2D" parent="Layers" unique_id=25877775]
 position = Vector2(-88, 313)
 scale = Vector2(0.7, 0.7)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layers/Layer1" unique_id=922320463]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="LayerIcon" type="Sprite2D" parent="Layers/Layer1" unique_id=653850335]
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("3_hkrva")
 
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="Layers/Layer1" unique_id=1511358146]
-position = Vector2(1.4285713, 1.4285713)
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="LockIcon" type="Sprite2D" parent="Layers/Layer1/LayerIcon" unique_id=1267643033]
+position = Vector2(65.13574, -3.2007751)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("4_u17oo")
+hframes = 2
 
-[node name="Layer2" type="Area2D" parent="Layers" unique_id=96898445]
-modulate = Color(1, 1, 1, 0.68235296)
+[node name="VisIcon" type="Sprite2D" parent="Layers/Layer1/LayerIcon" unique_id=826195232]
+position = Vector2(-57.829956, -1.392456)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("5_a0wcj")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer1" unique_id=1788392433]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_cjku7")
+
+[node name="Layer2" type="Area2D" parent="Layers" unique_id=1440496853]
 position = Vector2(-87.99999, 402.99997)
 scale = Vector2(0.7, 0.7)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layers/Layer2" unique_id=1920157576]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="LayerIcon" type="Sprite2D" parent="Layers/Layer2" unique_id=1660402263]
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("3_hkrva")
 
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="Layers/Layer2" unique_id=862527272]
-position = Vector2(0, 1.428615)
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="LockIcon" type="Sprite2D" parent="Layers/Layer2/LayerIcon" unique_id=1992919030]
+position = Vector2(65.13574, -3.2007751)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("4_u17oo")
+hframes = 2
 
-[node name="Layer3" type="Area2D" parent="Layers" unique_id=813493975]
-modulate = Color(1, 1, 1, 0.68235296)
+[node name="VisIcon" type="Sprite2D" parent="Layers/Layer2/LayerIcon" unique_id=112610927]
+position = Vector2(-57.829956, -1.392456)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("5_a0wcj")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer2" unique_id=1486937060]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_cjku7")
+
+[node name="Layer3" type="Area2D" parent="Layers" unique_id=577015962]
 position = Vector2(-88.99999, 494.00006)
 scale = Vector2(0.7, 0.7)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layers/Layer3" unique_id=1896473980]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="LayerIcon" type="Sprite2D" parent="Layers/Layer3" unique_id=587486441]
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("3_hkrva")
 
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="Layers/Layer3" unique_id=1310164455]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="LockIcon" type="Sprite2D" parent="Layers/Layer3/LayerIcon" unique_id=1538605617]
+position = Vector2(65.13574, -3.2007751)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("4_u17oo")
+hframes = 2
 
-[node name="Layer4" type="Area2D" parent="Layers" unique_id=1277268826]
-modulate = Color(1, 1, 1, 0.68235296)
-position = Vector2(-88.99999, 575)
+[node name="VisIcon" type="Sprite2D" parent="Layers/Layer3/LayerIcon" unique_id=1341420714]
+position = Vector2(-57.829956, -1.392456)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("5_a0wcj")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer3" unique_id=703510572]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_cjku7")
+
+[node name="Layer4" type="Area2D" parent="Layers" unique_id=118556930]
+position = Vector2(-88.99999, 584)
 scale = Vector2(0.7, 0.7)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layers/Layer4" unique_id=324605325]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="LayerIcon" type="Sprite2D" parent="Layers/Layer4" unique_id=1727326814]
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("3_hkrva")
 
-[node name="CollisionPolygon2D2" type="Polygon2D" parent="Layers/Layer4" unique_id=839930633]
-polygon = PackedVector2Array(150, 50, 150, -50, -150, -50, -150, 50)
+[node name="LockIcon" type="Sprite2D" parent="Layers/Layer4/LayerIcon" unique_id=478246404]
+position = Vector2(65.13574, -3.2007751)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("4_u17oo")
+hframes = 2
+
+[node name="VisIcon" type="Sprite2D" parent="Layers/Layer4/LayerIcon" unique_id=448535746]
+position = Vector2(-57.829956, -1.392456)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("5_a0wcj")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer4" unique_id=1814366594]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_cjku7")
 
 [node name="LayerItems" type="Node2D" parent="." unique_id=798432804]
 

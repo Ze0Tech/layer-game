@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://obvanrk3j45b" path="res://Resources/DressUp/Middle/NewYork.png" id="12_wsyjg"]
 [ext_resource type="Texture2D" uid="uid://dk6utvyb2ktym" path="res://Resources/DressUp/Middle/Scarf.png" id="13_twv7s"]
 [ext_resource type="Texture2D" uid="uid://dhqjgxc3f5l1g" path="res://Resources/DressUp/Middle/Tie.png" id="14_4yfcb"]
+[ext_resource type="Texture2D" uid="uid://dknlw0p86osja" path="res://Resources/General/MouseIcon.png" id="15_qibbi"]
 
 [node name="Globals" type="Node" unique_id=667785703]
 script = ExtResource("1_38vhn")
@@ -114,3 +115,9 @@ position = Vector2(359.99997, 463.33334)
 texture = ExtResource("14_4yfcb")
 offset = Vector2(296.00006, -19.333344)
 metadata/_edit_lock_ = true
+
+[node name="MouseIcon" type="Sprite2D" parent="." unique_id=1615775149]
+z_index = 3
+scale = Vector2(2.26, 2.26)
+texture = ExtResource("15_qibbi")
+offset = Vector2(4, 11)
