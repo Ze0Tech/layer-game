@@ -222,7 +222,7 @@ position = Vector2(4.750183, 96.58775)
 scale = Vector2(0.785, 0.785)
 texture = ExtResource("13_aqlds")
 
-[node name="Label" type="Label" parent="Places/Cage" unique_id=1195022384]
+[node name="WinLabel" type="Label" parent="Places/Cage" unique_id=1195022384]
 visible = false
 z_index = -1
 offset_left = -176.47067

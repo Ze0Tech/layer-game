@@ -6,25 +6,34 @@ var Items : Array
 var Finished : bool
 var Place : bool
 
-signal Action(Command : String, Item : Area2D)
+signal Action(Command : String, Item : Variant)
 
 func _ready() -> void:
-	for i : Node2D in LevelItems:
-		if i.name == 'Background':
+	for Category : Node2D in LevelItems:
+		
+		if Category.name == 'Background':
 			pass
 		else:
-			var NewItems : Array = i.get_children()
-			for q : Area2D in NewItems:
-				q.add_to_group(i.name)
-				print(q.get_groups())
-				q.connect('input_event',ItemInput.bind(q))
+			var NewItems : Array = Category.get_children()
+			for item : Variant in NewItems:
+				item.add_to_group(Category.name)
+				item.input_event.connect(
+				func
+					(
+					_viewport : Viewport ,
+					event : InputEvent,
+					_shape_idx : int
+					) -> void:
+					ItemInput(event,item))
 				
-func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D) -> void:
+func ItemInput(input : InputEvent, area : Variant) -> void:
 	if input.is_action_pressed("LMB"):
-		if area.is_in_group('Layers'):
-			var LayerObj : Area2D = LevelItems[2].get_child(area.get_index())
+		if area.is_in_group('LayerUI'):
+			var LayerObj : Variant = LevelItems[2].get_child(area.get_index())
 			if LayerObj:
+				var VSprite : Sprite2D = area.get_child(0).get_child(1)
 				Action.emit('VisToggle',LayerObj)
+				VSprite.frame = not LayerObj.visible
 		if area.is_in_group('Places'):
 			Action.emit('CenterBig',area)
 			Place = not Place
