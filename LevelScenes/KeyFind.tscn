@@ -21,6 +21,9 @@ size = Vector2(185.71436, 62.856934)
 [sub_resource type="CircleShape2D" id="CircleShape2D_hg4s6"]
 radius = 21.568604
 
+[sub_resource type="SystemFont" id="SystemFont_iioe5"]
+font_names = PackedStringArray("Times New Roman")
+
 [node name="KeyFind" type="Node2D" unique_id=1789833393]
 script = ExtResource("1_iioe5")
 metadata/_edit_horizontal_guides_ = [159.0]
@@ -218,6 +221,19 @@ z_index = -1
 position = Vector2(4.750183, 96.58775)
 scale = Vector2(0.785, 0.785)
 texture = ExtResource("13_aqlds")
+
+[node name="Label" type="Label" parent="Places/Cage" unique_id=1195022384]
+visible = false
+z_index = -1
+offset_left = -176.47067
+offset_top = 66.66661
+offset_right = -24.470673
+offset_bottom = 189.66661
+scale = Vector2(5.5, 5.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_iioe5")
+theme_override_font_sizes/font_size = 22
+text = "Yay!!1!"
 
 [node name="Objects" type="Node2D" parent="." unique_id=1071373600]
 

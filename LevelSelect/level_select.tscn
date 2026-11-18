@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://j008vhq2nciy"]
 
-[ext_resource type="Script" uid="uid://cokoxw74snauh" path="res://level_select.gd" id="1_vomi7"]
+[ext_resource type="Script" uid="uid://cokoxw74snauh" path="res://LevelSelect/level_select.gd" id="1_vomi7"]
 [ext_resource type="Texture2D" uid="uid://ceke1ydisdl0" path="res://Resources/Placeholders/Screenshot_20261114_004718_Firefox.jpg" id="2_wevku"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hg4s6"]
@@ -35,29 +35,36 @@ position = Vector2(301, 406)
 
 [node name="LevelAreas" type="Node2D" parent="." unique_id=393300960]
 
-[node name="Area2D" type="Area2D" parent="LevelAreas" unique_id=502937854]
+[node name="Slot1" type="Area2D" parent="LevelAreas" unique_id=502937854]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelAreas/Area2D" unique_id=313070078]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelAreas/Slot1" unique_id=313070078]
 position = Vector2(405, 285.5)
 shape = SubResource("RectangleShape2D_hg4s6")
 
-[node name="Area2D2" type="Area2D" parent="LevelAreas" unique_id=1135108250]
+[node name="Slot2" type="Area2D" parent="LevelAreas" unique_id=1135108250]
 position = Vector2(208, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelAreas/Area2D2" unique_id=1536195647]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelAreas/Slot2" unique_id=1536195647]
 position = Vector2(405, 285.5)
 shape = SubResource("RectangleShape2D_hg4s6")
 
-[node name="Area2D3" type="Area2D" parent="LevelAreas" unique_id=77442027]
+[node name="Slot3" type="Area2D" parent="LevelAreas" unique_id=77442027]
 position = Vector2(416, -1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelAreas/Area2D3" unique_id=86591082]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelAreas/Slot3" unique_id=86591082]
 position = Vector2(405, 285.5)
 shape = SubResource("RectangleShape2D_hg4s6")
 
-[node name="Area2D4" type="Area2D" parent="LevelAreas" unique_id=988469598]
+[node name="Slot4" type="Area2D" parent="LevelAreas" unique_id=988469598]
 position = Vector2(622, -1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelAreas/Area2D4" unique_id=149126579]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelAreas/Slot4" unique_id=149126579]
+position = Vector2(405, 285.5)
+shape = SubResource("RectangleShape2D_hg4s6")
+
+[node name="Slot5" type="Area2D" parent="LevelAreas" unique_id=1942038699]
+position = Vector2(-1, 225)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelAreas/Slot5" unique_id=231884517]
 position = Vector2(405, 285.5)
 shape = SubResource("RectangleShape2D_hg4s6")

@@ -8,7 +8,7 @@ extends CharacterBody2D
 @export var JumpSpeed : float = 0.1
 var walljump : bool
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	InputCheck()
 	
 	move_and_slide()

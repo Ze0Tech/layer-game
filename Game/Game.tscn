@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dca6kn32327pe"]
 
-[ext_resource type="Script" uid="uid://cwlg4nliy2sim" path="res://game.gd" id="1_wbfu4"]
-[ext_resource type="Script" uid="uid://bdgmoct1nrtu5" path="res://game_functions.gd" id="2_xkndl"]
+[ext_resource type="Script" uid="uid://cwlg4nliy2sim" path="res://Game/game.gd" id="1_wbfu4"]
+[ext_resource type="Script" uid="uid://bdgmoct1nrtu5" path="res://Game/game_functions.gd" id="2_xkndl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hg4s6"]
 

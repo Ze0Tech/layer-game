@@ -21,7 +21,7 @@ func _ready() -> void:
 			
 		elif i.name == 'Layers':
 			var NewItems : Array = i.get_children()
-			for q : Area2D in NewItems:
+			for q : Variant in NewItems:
 				q.add_to_group(i.name)
 				var v : Sprite2D = q.get_child(0).get_child(1)
 				#print(q.get_groups())
@@ -35,7 +35,7 @@ func _ready() -> void:
 					print(q.get_groups())
 					q.connect('input_event',ItemInput.bind(q))
 				
-func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D, Vsprite : Sprite2D) -> void:
+func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Variant, Vsprite : Sprite2D) -> void:
 	
 	if input.is_action_pressed("LMB"):
 		
@@ -96,11 +96,11 @@ func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, ar
 			Action.emit('Unhold')
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(_body: Node2D) -> void:
 	print('yey')
 
 
-func _on_death_body_entered(body: Node2D) -> void:
+func _on_death_body_entered(_body: Node2D) -> void:
 	Player.position = Vector2(325,550)
 	var input = InputEventAction.new()
 	input.action = 'LMB'

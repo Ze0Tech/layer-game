@@ -10,7 +10,7 @@ func _ready() -> void:
 	
 func Start() -> void:
 	if get_tree():
-		get_tree().change_scene_to_file("res://level_select.tscn")
+		get_tree().change_scene_to_file("res://LevelSelect/level_select.tscn")
 
 func Exit() -> void:
 	get_tree().quit()

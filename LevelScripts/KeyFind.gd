@@ -81,7 +81,7 @@ func PuzzleCheck() -> void:
 
 func LockCheck() -> void:			
 	if Lock:
-		var WinLabel : Label = $Places/Cage/Label
+		var WinLabel : Label = $Places/Cage/WinLabel
 		LockItem.visible = false
 		$Places/Cage/BirdcageNode/Birdcage.visible = false
 		$Places/Cage/BirdcageNode/BirdCelebrateSheet.visible = true

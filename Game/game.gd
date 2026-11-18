@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var LevelSelectScene : PackedScene = load("res://level_select.tscn")
+@onready var LevelSelectScene : PackedScene = load("res://levelSelect/level_select.tscn")
 
 #Variables ////////////////////////////////////////////////////////////////
 
