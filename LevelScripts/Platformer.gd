@@ -52,7 +52,7 @@ func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, ar
 						Action.emit('VisOn',Box)
 						Action.emit('CollOn',Box.get_child(2))
 						
-						fuck() 
+						#fuck() 
 						Vsprite.frame = Box.visible
 						
 					else:

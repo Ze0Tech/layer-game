@@ -17,7 +17,7 @@ size = Vector2(130, 46)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hsk4u"]
 size = Vector2(1140, 46)
 
-[node name="Level4" type="Node2D" unique_id=1789833393]
+[node name="Platformer" type="Node2D" unique_id=1789833393]
 script = ExtResource("1_hblqb")
 metadata/_edit_horizontal_guides_ = [159.0]
 metadata/_edit_vertical_guides_ = [1348.0]

@@ -37,7 +37,8 @@
 				"180b8857-d35f-45b9-9f33-9add721d1d2b",
 				"5f8faa55-dd3b-40bd-a74c-a716c3ce087c",
 				"ce8c89a9-f3ff-4b1d-bcdb-70398b81c999",
-				"278eecc3-7edd-4bb3-b250-f0d75fb0c7a7"
+				"278eecc3-7edd-4bb3-b250-f0d75fb0c7a7",
+				"2139a31e-fb1c-4815-8344-475427a8f49c"
 			]
 		},
 		{
@@ -165,6 +166,13 @@
 			"title": "Animate Level1",
 			"description": "",
 			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
+			"steps": []
+		},
+		{
+			"uuid": "2139a31e-fb1c-4815-8344-475427a8f49c",
+			"title": "vis icon in platformer",
+			"description": "",
+			"category": "6deed6e0-28e5-4b6d-8604-bcb6e054f779",
 			"steps": []
 		}
 	],

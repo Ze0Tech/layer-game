@@ -4,6 +4,7 @@ extends Node2D
 @onready var LockItem : Area2D = $Places/Cage/Lock
 @onready var LevelItems : Array = get_children()
 
+@onready var ChickSprite : Sprite2D = $Places/Cage/BirdcageNode/BirdCelebrateSheet
 
 var Sprites : Array
 var Items : Array
@@ -36,11 +37,11 @@ func _ready() -> void:
 	
 	for i : Area2D in LevelItems[2].get_children():
 		Sprites.append(i.get_child(2))
-	Sprites.append($Places/Cage/Birdcage)
+	Sprites.append($Places/Cage/BirdcageNode/Birdcage)
 	Sprites.append($Objects/Key/KeySheet)
-	Sprites.append($Places/Cage/Birdcage/ShadowSheet)
+	Sprites.append($Places/Cage/BirdcageNode/ShadowSheet)
 				
-func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D, Vsprite : Sprite2D) -> void:
+func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D, Vsprite : Sprite2D = null) -> void:
 	if input.is_action_pressed("LMB"):
 		
 		if area.is_in_group('Layers'):
@@ -82,6 +83,8 @@ func LockCheck() -> void:
 	if Lock:
 		var WinLabel : Label = $Places/Cage/Label
 		LockItem.visible = false
+		$Places/Cage/BirdcageNode/Birdcage.visible = false
+		$Places/Cage/BirdcageNode/BirdCelebrateSheet.visible = true
 		WinLabel.visible = true
 
 
@@ -96,4 +99,6 @@ func _on_lock_area_exited(_area: Area2D) -> void:
 func _on_animation_timeout() -> void:
 	for i : Sprite2D in Sprites:
 		i.frame = (i.frame + 1) % 3
+	ChickSprite.frame = (ChickSprite.frame +1) % 5
 		
+	
