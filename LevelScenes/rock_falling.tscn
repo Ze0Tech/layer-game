@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://hx0uaxatih5k" path="res://Resources/General/Lock Icon.png" id="5_2extm"]
 [ext_resource type="Texture2D" uid="uid://jxcxu2nsyc8t" path="res://Resources/General/VisIcon.png" id="6_vsb5o"]
 [ext_resource type="Script" uid="uid://cp4duay7jiomd" path="res://RockFalling/rock.gd" id="7_yg753"]
-[ext_resource type="Script" uid="uid://d0di1mxr5qqr6" path="res://RockFalling/character_body_2d.gd" id="8_j0d0v"]
+[ext_resource type="Script" uid="uid://d0di1mxr5qqr6" path="res://RockFalling/RockFallChick.gd" id="8_j0d0v"]
 [ext_resource type="Texture2D" uid="uid://bkqon8sexiq23" path="res://RockFalling/chick.png" id="9_pwx0u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rd45t"]
