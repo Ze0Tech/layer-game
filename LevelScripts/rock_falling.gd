@@ -6,6 +6,8 @@ extends Node2D
 
 @onready var RockTimer : Timer = $Timers/RockSpawn
 
+@onready var Character : CharacterBody2D = $Character/CharacterBody2D
+
 var Items : Array
 var Finished : bool
 var Place : bool
@@ -30,13 +32,13 @@ func _ready() -> void:
 					_shape_idx : int
 					) -> void:
 					ItemInput(event,item))
-				
+		
 func ItemInput(input : InputEvent, area : Variant) -> void:
 	
 	if input.is_action_pressed("LMB"):
 		
 		if area.is_in_group('LayerUI'):
-			var LayerObj : Variant = LevelItems[2].get_child(area.get_index())
+			var LayerObj : Variant = find_child('Objects').get_child(area.get_index())
 			if LayerObj:
 				var VSprite : Sprite2D = area.get_child(0).get_child(1)
 				Action.emit('VisToggle',LayerObj)
@@ -63,10 +65,11 @@ func RockSpawn() -> void:
 	
 	NewRock.position = Vector2(randi_range(180,1180),125)
 	NewRock.visible = true
+	NewRock.add_to_group('Rock')
 	
 	find_child('Rocks').add_child(NewRock)
 	
 	NewRock.process_mode = Node.PROCESS_MODE_INHERIT
-	
+
 func _on_rock_spawn_timeout() -> void:
 	RockSpawn()

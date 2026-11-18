@@ -8,12 +8,16 @@
 [ext_resource type="Texture2D" uid="uid://jxcxu2nsyc8t" path="res://Resources/General/VisIcon.png" id="6_vsb5o"]
 [ext_resource type="Script" uid="uid://cp4duay7jiomd" path="res://RockFalling/rock.gd" id="7_yg753"]
 [ext_resource type="Script" uid="uid://d0di1mxr5qqr6" path="res://RockFalling/character_body_2d.gd" id="8_j0d0v"]
+[ext_resource type="Texture2D" uid="uid://bkqon8sexiq23" path="res://RockFalling/chick.png" id="9_pwx0u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rd45t"]
 size = Vector2(185.71436, 62.856934)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hg4s6"]
-radius = 32.75668
+radius = 51.47815
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pwx0u"]
+radius = 40.0
 
 [node name="RockFalling" type="Node2D" unique_id=275928536]
 script = ExtResource("1_1hnk5")
@@ -193,11 +197,25 @@ polygon = PackedVector2Array(-1, -44, 24, -36, 37, -2, 27, 28, 2, 46, -32, 39, -
 position = Vector2(189, 778)
 script = ExtResource("8_j0d0v")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/CharacterBody2D" unique_id=185218208]
+[node name="Area2D" type="Area2D" parent="Character/CharacterBody2D" unique_id=91244077]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/CharacterBody2D/Area2D" unique_id=603101101]
 shape = SubResource("CircleShape2D_hg4s6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/CharacterBody2D" unique_id=185218208]
+shape = SubResource("CircleShape2D_pwx0u")
 
 [node name="Polygon2D" type="Polygon2D" parent="Character/CharacterBody2D" unique_id=1664822077]
 polygon = PackedVector2Array(-1, -34, 22, -25, 34, -3, 30, 12, 21, 26, -1, 31, -25, 22, -33, -1, -25, -23)
+
+[node name="Chick" type="Sprite2D" parent="Character/CharacterBody2D" unique_id=397805576]
+texture = ExtResource("9_pwx0u")
+offset = Vector2(0, -11.03)
+hframes = 3
+
+[node name="Flip" type="Timer" parent="Character/CharacterBody2D" unique_id=895348285]
+wait_time = 0.5
+one_shot = true
 
 [node name="Timers" type="Node2D" parent="." unique_id=162194476]
 
@@ -205,4 +223,9 @@ polygon = PackedVector2Array(-1, -34, 22, -25, 34, -3, 30, 12, 21, 26, -1, 31, -
 wait_time = 0.2
 autostart = true
 
+[node name="Animation" type="Timer" parent="Timers" unique_id=2137402187]
+wait_time = 0.1
+autostart = true
+
 [connection signal="timeout" from="Timers/RockSpawn" to="." method="_on_rock_spawn_timeout"]
+[connection signal="timeout" from="Timers/Animation" to="Character/CharacterBody2D" method="_on_animation_timeout"]

@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c27ud3gknqwpw" path="res://Resources/Livingroom/birdcage.png" id="10_i0o3e"]
 [ext_resource type="Texture2D" uid="uid://badiy3ge8ge7c" path="res://Resources/Livingroom/shadow_sheet.png" id="11_vnppm"]
 [ext_resource type="Texture2D" uid="uid://cqj2atst7s8px" path="res://Resources/Livingroom/key_sheet.png" id="12_23jpp"]
-[ext_resource type="Texture2D" uid="uid://b7iabumrowuap" path="res://Resources/General/bird_celebrate-Sheet.png" id="12_d8k1g"]
+[ext_resource type="Texture2D" uid="uid://b7iabumrowuap" path="res://Resources/Livingroom/bird_celebrate-Sheet.png" id="12_d8k1g"]
 [ext_resource type="Texture2D" uid="uid://bciwxredabgyn" path="res://Resources/General/bottom.png" id="13_aqlds"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hg4s6"]

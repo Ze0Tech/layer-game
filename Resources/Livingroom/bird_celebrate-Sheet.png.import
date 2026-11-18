@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7iabumrowuap"
-path="res://.godot/imported/bird_celebrate-Sheet.png-c4ee2251024e588e95f69dce02eea74e.ctex"
+path="res://.godot/imported/bird_celebrate-Sheet.png-148a0b76ec5c679d165e6936514f4ded.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/General/bird_celebrate-Sheet.png"
-dest_files=["res://.godot/imported/bird_celebrate-Sheet.png-c4ee2251024e588e95f69dce02eea74e.ctex"]
+source_file="res://Resources/Livingroom/bird_celebrate-Sheet.png"
+dest_files=["res://.godot/imported/bird_celebrate-Sheet.png-148a0b76ec5c679d165e6936514f4ded.ctex"]
 
 [params]
 
