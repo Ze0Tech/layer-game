@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var LevelSelectScene : PackedScene = load("res://levelSelect/level_select.tscn")
+@onready var LevelSelectScene : PackedScene = load("res://LevelSelect/level_select.tscn")
 
 #Variables ////////////////////////////////////////////////////////////////
 
@@ -44,6 +44,6 @@ func GameFunctionPass(Command : String ,Item : Variant = null) -> void:
 		GameFunctions.call(Command,Item)
 	else: GameFunctions.call(Command)
 	
-func yay(...args : Array) -> String:
-	print('yay' + str(args))
-	return('yay')
+#func yay(...args : Array) -> String:
+	#print('yay' + str(args))
+	#return('yay')

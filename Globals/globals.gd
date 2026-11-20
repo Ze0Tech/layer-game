@@ -4,9 +4,9 @@ var MusicMod : float = 0
 var SFXMod : float = 0
 var AltControl : bool = 0
 
-@onready var Mouse : Sprite2D = $MouseIcon
-@onready var Bird : Node2D = $Bird
-@onready var ClothesNode : Node2D = $Bird/Clothes
+@onready var Mouse : Sprite2D = $Canvas/MouseIcon
+@onready var Bird : Node2D = $Canvas/Bird
+@onready var ClothesNode : Node2D = $Canvas/Bird/Clothes
 @export var Clothes : Array = [0,0,0]
 
 #func _ready() -> void:

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cvhbogho2sne0"]
 
 [ext_resource type="Script" uid="uid://ddpegmdvjci5e" path="res://Globals/globals.gd" id="1_xjft1"]
-[ext_resource type="Texture2D" uid="uid://cyj3js0vdgo13" path="res://Resources/General/Bird.png" id="2_2qx4m"]
 [ext_resource type="Texture2D" uid="uid://camyrt3fpydeg" path="res://Resources/DressUp/Tops/Afro.png" id="3_p2x5f"]
 [ext_resource type="Texture2D" uid="uid://cai1f6olpav4d" path="res://Resources/DressUp/Tops/Cap.png" id="4_fl2xa"]
 [ext_resource type="Texture2D" uid="uid://kg5n4kk0dtjr" path="res://Resources/DressUp/Tops/Cowboy.png" id="5_ly8lm"]
@@ -16,107 +15,111 @@
 [ext_resource type="Texture2D" uid="uid://dhqjgxc3f5l1g" path="res://Resources/DressUp/Middle/Tie.png" id="14_csgbi"]
 [ext_resource type="Texture2D" uid="uid://dknlw0p86osja" path="res://Resources/General/MouseIcon.png" id="15_0fwwn"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_osx3g"]
+load_path = "res://.godot/imported/Bird.png-6ea07df844fa002c468e40753de5fda8.ctex"
+
 [node name="Globals" type="Node" unique_id=667785703]
 script = ExtResource("1_xjft1")
 
-[node name="Bird" type="Node2D" parent="." unique_id=522171128]
-visible = false
+[node name="Canvas" type="CanvasLayer" parent="." unique_id=1275508648]
+
+[node name="Bird" type="Node2D" parent="Canvas" unique_id=522171128]
 z_index = 3
 
-[node name="Bird2" type="Sprite2D" parent="Bird" unique_id=533807524]
+[node name="Bird2" type="Sprite2D" parent="Canvas/Bird" unique_id=533807524]
 position = Vector2(69, 811)
 scale = Vector2(0.6999999, 0.6999999)
-texture = ExtResource("2_2qx4m")
+texture = SubResource("CompressedTexture2D_osx3g")
 
-[node name="Clothes" type="Node2D" parent="Bird" unique_id=1854384913]
+[node name="Clothes" type="Node2D" parent="Canvas/Bird" unique_id=1854384913]
 z_index = 1
 scale = Vector2(0.7, 0.7)
 
-[node name="Top" type="Node2D" parent="Bird/Clothes" unique_id=2022701784]
+[node name="Top" type="Node2D" parent="Canvas/Bird/Clothes" unique_id=2022701784]
 position = Vector2(-530, 744.2857)
 metadata/_edit_lock_ = true
 
-[node name="Afro" type="Sprite2D" parent="Bird/Clothes/Top" unique_id=1039213389]
+[node name="Afro" type="Sprite2D" parent="Canvas/Bird/Clothes/Top" unique_id=1039213389]
 visible = false
 position = Vector2(588, 294)
 texture = ExtResource("3_p2x5f")
 
-[node name="Cap" type="Sprite2D" parent="Bird/Clothes/Top" unique_id=1594890608]
+[node name="Cap" type="Sprite2D" parent="Canvas/Bird/Clothes/Top" unique_id=1594890608]
 visible = false
 position = Vector2(602.6667, 306)
 texture = ExtResource("4_fl2xa")
 metadata/_edit_lock_ = true
 
-[node name="Cowboy" type="Sprite2D" parent="Bird/Clothes/Top" unique_id=1207093374]
+[node name="Cowboy" type="Sprite2D" parent="Canvas/Bird/Clothes/Top" unique_id=1207093374]
 visible = false
 position = Vector2(625.3333, 289.33334)
 texture = ExtResource("5_ly8lm")
 metadata/_edit_lock_ = true
 
-[node name="Dunce" type="Sprite2D" parent="Bird/Clothes/Top" unique_id=1004046163]
+[node name="Dunce" type="Sprite2D" parent="Canvas/Bird/Clothes/Top" unique_id=1004046163]
 visible = false
 position = Vector2(612.6667, 260.66666)
 texture = ExtResource("6_snxdp")
 metadata/_edit_lock_ = true
 
-[node name="Fedora" type="Sprite2D" parent="Bird/Clothes/Top" unique_id=1525086336]
+[node name="Fedora" type="Sprite2D" parent="Canvas/Bird/Clothes/Top" unique_id=1525086336]
 visible = false
 position = Vector2(618, 301.33334)
 texture = ExtResource("7_0yjq6")
 metadata/_edit_lock_ = true
 
-[node name="Headphones" type="Sprite2D" parent="Bird/Clothes/Top" unique_id=258054918]
+[node name="Headphones" type="Sprite2D" parent="Canvas/Bird/Clothes/Top" unique_id=258054918]
 visible = false
 position = Vector2(601.3333, 324)
 texture = ExtResource("8_dtnf7")
 metadata/_edit_lock_ = true
 
-[node name="Wizard" type="Sprite2D" parent="Bird/Clothes/Top" unique_id=1232561189]
+[node name="Wizard" type="Sprite2D" parent="Canvas/Bird/Clothes/Top" unique_id=1232561189]
 visible = false
 position = Vector2(606.6667, 267.33334)
 texture = ExtResource("9_0wtt1")
 metadata/_edit_lock_ = true
 
-[node name="Middle" type="Node2D" parent="Bird/Clothes" unique_id=1121242285]
+[node name="Middle" type="Node2D" parent="Canvas/Bird/Clothes" unique_id=1121242285]
 position = Vector2(-562.8572, 697.1429)
 metadata/_edit_lock_ = true
 
-[node name="Blush" type="Sprite2D" parent="Bird/Clothes/Middle" unique_id=1974780948]
+[node name="Blush" type="Sprite2D" parent="Canvas/Bird/Clothes/Middle" unique_id=1974780948]
 visible = false
 position = Vector2(368.66666, 464.6667)
 texture = ExtResource("10_6amwk")
 offset = Vector2(296.00006, -19.333344)
 metadata/_edit_lock_ = true
 
-[node name="Bowtie" type="Sprite2D" parent="Bird/Clothes/Middle" unique_id=1688360614]
+[node name="Bowtie" type="Sprite2D" parent="Canvas/Bird/Clothes/Middle" unique_id=1688360614]
 visible = false
 position = Vector2(368.66666, 457.33334)
 texture = ExtResource("11_nrv2h")
 offset = Vector2(296.00006, -19.333344)
 metadata/_edit_lock_ = true
 
-[node name="NewYork" type="Sprite2D" parent="Bird/Clothes/Middle" unique_id=1846134441]
+[node name="NewYork" type="Sprite2D" parent="Canvas/Bird/Clothes/Middle" unique_id=1846134441]
 visible = false
 position = Vector2(366.66666, 488.66666)
 texture = ExtResource("12_vcix4")
 offset = Vector2(296.00006, -19.333344)
 metadata/_edit_lock_ = true
 
-[node name="Scarf" type="Sprite2D" parent="Bird/Clothes/Middle" unique_id=861483793]
+[node name="Scarf" type="Sprite2D" parent="Canvas/Bird/Clothes/Middle" unique_id=861483793]
 visible = false
 position = Vector2(360.66666, 465.33334)
 texture = ExtResource("13_yvd7t")
 offset = Vector2(296.00006, -19.333344)
 metadata/_edit_lock_ = true
 
-[node name="Tie" type="Sprite2D" parent="Bird/Clothes/Middle" unique_id=397685804]
+[node name="Tie" type="Sprite2D" parent="Canvas/Bird/Clothes/Middle" unique_id=397685804]
 visible = false
 position = Vector2(359.99997, 463.33334)
 texture = ExtResource("14_csgbi")
 offset = Vector2(296.00006, -19.333344)
 metadata/_edit_lock_ = true
 
-[node name="MouseIcon" type="Sprite2D" parent="." unique_id=1615775149]
+[node name="MouseIcon" type="Sprite2D" parent="Canvas" unique_id=1615775149]
 z_index = 3
 scale = Vector2(2.26, 2.26)
 texture = ExtResource("15_0fwwn")

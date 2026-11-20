@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var Markers : Array = $Background/Markers.get_children()
-@onready var GameScene : PackedScene = preload('res://Game/game.tscn')
+@onready var GameScene : PackedScene = preload("res://Game/Game.tscn")
 @onready var LevelAreas : Array = $LevelAreas.get_children()
 
 var Game : Node2D
@@ -17,7 +17,7 @@ func _ready() -> void:
 		Globals.BirdUpdate()
 		
 func _process(_delta: float) -> void:
-
+	
 	InputCheck()
 
 func InputCheck() -> void:

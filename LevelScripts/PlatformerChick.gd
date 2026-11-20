@@ -18,8 +18,6 @@ func _process(_delta: float) -> void:
 	
 	move_and_slide()
 	
-	Globals.Bird.position = position
-	
 	if is_on_floor():
 		Jumping = false
 	
