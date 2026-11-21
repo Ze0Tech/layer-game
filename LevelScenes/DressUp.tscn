@@ -184,6 +184,7 @@ texture = ExtResource("15_yat1h")
 metadata/_edit_lock_ = true
 
 [node name="Middle" type="Node2D" parent="LayerItems/Clothes" unique_id=495949260]
+z_index = 1
 
 [node name="Bowtie" type="Sprite2D" parent="LayerItems/Clothes/Middle" unique_id=1152359218]
 visible = false
