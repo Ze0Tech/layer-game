@@ -36,7 +36,6 @@ script = ExtResource("1_wkuic")
 metadata/_edit_lock_ = true
 
 [node name="Background" type="TextureRect" parent="Background" unique_id=1254707277]
-visible = false
 offset_right = 1600.0
 offset_bottom = 900.0
 texture = ExtResource("2_cmulo")
@@ -49,12 +48,14 @@ hframes = 3
 metadata/_edit_lock_ = true
 
 [node name="Curtain2" type="Sprite2D" parent="Background" unique_id=411257742]
-position = Vector2(300, 333)
+z_index = 1
+position = Vector2(283, 333)
 scale = Vector2(1.9743936, 1.9743935)
 texture = ExtResource("4_s8ulb")
 
 [node name="Curtain3" type="Sprite2D" parent="Background" unique_id=254318413]
-position = Vector2(1157, 335)
+z_index = 1
+position = Vector2(1125, 332)
 scale = Vector2(1.9743936, 1.9743935)
 texture = ExtResource("4_s8ulb")
 flip_h = true
@@ -68,16 +69,19 @@ theme_override_font_sizes/font_size = 45
 text = "Finish"
 
 [node name="Background2" type="Sprite2D" parent="Background" unique_id=1725041532]
+z_index = 1
 position = Vector2(800, 450)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("5_xtf6y")
 
 [node name="Nest" type="Sprite2D" parent="Background" unique_id=799028299]
+z_index = 1
 position = Vector2(663, 621)
 texture = ExtResource("4_pdh8n")
 metadata/_edit_lock_ = true
 
 [node name="Layers" type="Node2D" parent="." unique_id=1778610906]
+z_index = 1
 position = Vector2(1490, -172)
 scale = Vector2(1.58, 1.58)
 
@@ -154,6 +158,7 @@ scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_y3m36")
 
 [node name="LayerItems" type="Node2D" parent="." unique_id=798432804]
+z_index = 1
 position = Vector2(-335, -204)
 scale = Vector2(1.5, 1.5)
 
@@ -278,5 +283,4 @@ wait_time = 0.2
 wait_time = 0.5
 
 [connection signal="pressed" from="Background/Finish" to="." method="_on_finish_pressed"]
-[connection signal="timeout" from="Timers/Anim" to="." method="_on_anim_timeout"]
 [connection signal="timeout" from="Timers/Flowers" to="." method="_on_flowers_timeout"]

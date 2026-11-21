@@ -9,6 +9,7 @@ extends Node2D
 @onready var Rcurtain : Sprite2D = $Background/Curtain3
 @onready var Crowd : Sprite2D = $Background/Crowd
 
+
 var Items : Array
 var Finished : bool
 var Place : bool
@@ -50,7 +51,8 @@ func _ready() -> void:
 	Clothes = Globals.Clothes
 	Change()
 				
-func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D, Vsprite : Sprite2D = null) -> void:
+func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Variant, Vsprite : Sprite2D = null) -> void:
+	print('hi')
 	if input.is_action_pressed("LMB"):
 		var Index : int = area.get_index()
 		if area.is_in_group('Layers'):
@@ -110,6 +112,22 @@ func Present() -> void:
 	Flowers.start()
 	
 func FlowerSpawn() -> void:
+	var tween : Tween = create_tween()
+	var spawn : Vector2 = Vector2(randi_range(130,1214),randi_range(200,450))
+	var arc : Vector2 = Vector2(randi_range(330,1014),randi_range(200,300))
+	var end : Vector2 = Vector2(randi_range(130,1214),randi_range(500,820))
+	
+	var newFlowers : Sprite2D = Sprite2D.new()
+	newFlowers.texture = load("res://Resources/DressUp/flowers.png")
+	newFlowers.position = spawn
+	newFlowers.z_index = 0
+	var scale : int = randi_range(2,2.5)
+	newFlowers.scale = Vector2(scale,scale)
+	add_child(newFlowers)
+	tween.tween_property(newFlowers,'position',arc,1)
+	newFlowers.z_index = randi_range(0,2)
+	tween.tween_property(newFlowers,'position',end,1.5)
+	
 	#choose spawn
 	#move in curve to top of arc
 	#move in curve to end point on stage area
