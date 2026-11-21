@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://civdhvrvhxelu" path="res://Resources/Platformer/chick.png" id="8_ainyb"]
 [ext_resource type="Texture2D" uid="uid://dpdx6sssooohj" path="res://Resources/Platformer/Jump.png" id="9_hfqar"]
 [ext_resource type="Texture2D" uid="uid://brnhcwjwger6u" path="res://Resources/Platformer/idle.png" id="10_am0gi"]
+[ext_resource type="Texture2D" uid="uid://rot8m3ro1h58" path="res://Resources/Platformer/bird_dash-Sheet.png" id="10_hfqar"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b3kt6"]
 size = Vector2(185.71436, 62.856934)
@@ -19,6 +20,92 @@ size = Vector2(130, 46)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hsk4u"]
 size = Vector2(1140, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ainyb"]
+atlas = ExtResource("10_am0gi")
+region = Rect2(0, 0, 99, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfqar"]
+atlas = ExtResource("10_am0gi")
+region = Rect2(99, 0, 99, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_am0gi"]
+atlas = ExtResource("10_am0gi")
+region = Rect2(198, 0, 99, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6umwk"]
+atlas = ExtResource("9_hfqar")
+region = Rect2(0, 0, 99, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8iut"]
+atlas = ExtResource("9_hfqar")
+region = Rect2(99, 0, 99, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4mce"]
+atlas = ExtResource("9_hfqar")
+region = Rect2(198, 0, 99, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wbbo"]
+atlas = ExtResource("10_hfqar")
+region = Rect2(0, 0, 100, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtj6x"]
+atlas = ExtResource("10_hfqar")
+region = Rect2(100, 0, 100, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1q26l"]
+atlas = ExtResource("10_hfqar")
+region = Rect2(200, 0, 100, 110)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wrku5"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ainyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfqar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_am0gi")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6umwk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8iut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4mce")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wbbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtj6x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1q26l")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 5.0
+}]
 
 [node name="Platformer" type="Node2D" unique_id=1789833393]
 script = ExtResource("1_hblqb")
@@ -46,26 +133,31 @@ scale = Vector2(1.5, 1.5)
 [node name="Layer1" type="Area2D" parent="Layers" unique_id=1025280598]
 position = Vector2(-88, 313)
 scale = Vector2(0.7, 0.7)
+metadata/_edit_lock_ = true
 
 [node name="LayerIcon" type="Sprite2D" parent="Layers/Layer1" unique_id=1052800348]
 scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("3_kyn1k")
+metadata/_edit_lock_ = true
 
 [node name="LockIcon" type="Sprite2D" parent="Layers/Layer1/LayerIcon" unique_id=1588756512]
 position = Vector2(65.13574, -3.2007751)
 scale = Vector2(0.90415925, 0.90415925)
 texture = ExtResource("4_w0j3k")
 hframes = 2
+metadata/_edit_lock_ = true
 
 [node name="VisIcon" type="Sprite2D" parent="Layers/Layer1/LayerIcon" unique_id=279867998]
 position = Vector2(-57.829956, -1.392456)
 scale = Vector2(0.90415925, 0.90415925)
 texture = ExtResource("5_ainyb")
 hframes = 2
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer1" unique_id=881219589]
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_b3kt6")
+metadata/_edit_lock_ = true
 
 [node name="Layer2" type="Area2D" parent="Layers" unique_id=1450982148]
 position = Vector2(-87.99999, 402.99997)
@@ -114,6 +206,28 @@ hframes = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer3" unique_id=1648934684]
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_b3kt6")
+
+[node name="Label2" type="Label" parent="Layers/Layer3" unique_id=219327502]
+z_index = 10
+offset_left = -30.952393
+offset_top = -288.57156
+offset_right = 22.047607
+offset_bottom = -265.57156
+text = "sticks1"
+
+[node name="Label" type="Label" parent="Layers/Layer3" unique_id=1032603195]
+offset_left = -23.333336
+offset_top = -29.52393
+offset_right = 29.666664
+offset_bottom = -6.5239296
+text = "sticks3"
+
+[node name="Label3" type="Label" parent="Layers/Layer3" unique_id=1891011363]
+offset_left = -21.428589
+offset_top = -160.00012
+offset_right = 31.571411
+offset_bottom = -137.00012
+text = "sticks2"
 
 [node name="LayerObjects" type="Node2D" parent="." unique_id=798432804]
 z_index = 1
@@ -935,6 +1049,12 @@ visible = false
 polygon = PackedVector2Array(-29, 10, -35, -32, -17, -60, 36, -70, 61, -25, 61, 18, 38, 46, -6, 32)
 metadata/_edit_lock_ = true
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Objects/CharacterBody2D" unique_id=1425773936]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_wrku5")
+animation = &"run"
+autoplay = "idle"
+
 [node name="Run" type="Sprite2D" parent="Objects/CharacterBody2D" unique_id=11661473]
 visible = false
 texture = ExtResource("8_ainyb")
@@ -959,6 +1079,9 @@ autostart = true
 [node name="JumpTimer" type="Timer" parent="Objects/CharacterBody2D" unique_id=745531110]
 wait_time = 0.2
 autostart = true
+
+[node name="VariableJump" type="Timer" parent="Objects/CharacterBody2D" unique_id=1745081351]
+one_shot = true
 
 [connection signal="body_entered" from="Places/Win" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Places/Death" to="." method="_on_death_body_entered"]
