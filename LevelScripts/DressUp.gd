@@ -2,9 +2,18 @@ extends Node2D
 
 @onready var LevelItems : Array = get_children()
 @onready var ClothesNode : Node2D = $LayerItems/Clothes
+
+@onready var Anim : Timer = $Timers/Anim
+@onready var Flowers : Timer = $Timers/Flowers
+@onready var Lcurtain : Sprite2D = $Background/Curtain2
+@onready var Rcurtain : Sprite2D = $Background/Curtain3
+@onready var Crowd : Sprite2D = $Background/Crowd
+
 var Items : Array
 var Finished : bool
 var Place : bool
+
+
 
 var Clothes : Array = [
 	0,
@@ -17,7 +26,7 @@ signal Action(Command : String, Item : Area2D)
 
 func _ready() -> void:
 	for i : Node2D in LevelItems:
-		if i.name == 'Background':
+		if i.name == 'Background' or i.name == 'Timers':
 			pass
 		elif i.name == 'LayerItems':
 			pass
@@ -89,3 +98,32 @@ func Change() -> void:
 	#else:
 		#print(Index)
 	
+func Present() -> void:
+	var tween : Tween = create_tween()
+	#var lTween : Tween = Tween.new()
+	#var rTween : Tween = Tween.new()
+	tween.tween_property(Lcurtain,'position',Vector2(-234,330),2)
+	tween.parallel()
+	tween.tween_property(Rcurtain,'position',Vector2(1580,330),2)
+	
+	Anim.start()
+	Flowers.start()
+	
+func FlowerSpawn() -> void:
+	#choose spawn
+	#move in curve to top of arc
+	#move in curve to end point on stage area
+	#change the timeout
+	pass
+	
+
+func _on_finish_pressed() -> void:
+	Present()
+
+
+func _on_flowers_timeout() -> void:
+	FlowerSpawn()
+
+
+func _on_anim_timeout() -> void:
+	Crowd.frame = (Crowd.frame + 1) % 3

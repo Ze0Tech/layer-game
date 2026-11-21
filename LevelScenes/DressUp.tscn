@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://clsiq005yu32u" path="res://LevelScripts/DressUp.gd" id="1_wkuic"]
 [ext_resource type="Texture2D" uid="uid://c311u4gficdx3" path="res://Resources/Placeholders/title_screen_draftbig.png" id="2_cmulo"]
-[ext_resource type="Texture2D" uid="uid://bur6c2ho6b3jb" path="res://Resources/General/Background.webp" id="3_2rbml"]
+[ext_resource type="Texture2D" uid="uid://cf3y4gmdbkp12" path="res://Resources/DressUp/crowd.png" id="3_sljk1"]
 [ext_resource type="Texture2D" uid="uid://c0bfyf8nvo0t4" path="res://Resources/General/Nest.png" id="4_pdh8n"]
+[ext_resource type="Texture2D" uid="uid://bkurb5pfwvkne" path="res://Resources/DressUp/curtain.png" id="4_s8ulb"]
 [ext_resource type="Texture2D" uid="uid://dsdpsic1q2lka" path="res://Resources/General/Layer Icon.png" id="5_1nthe"]
+[ext_resource type="Texture2D" uid="uid://1f65y7dyks85" path="res://Resources/Placeholders/Background.png" id="5_xtf6y"]
 [ext_resource type="Texture2D" uid="uid://hx0uaxatih5k" path="res://Resources/General/Lock Icon.png" id="6_sljk1"]
 [ext_resource type="Texture2D" uid="uid://jxcxu2nsyc8t" path="res://Resources/General/VisIcon.png" id="7_s8ulb"]
 [ext_resource type="Texture2D" uid="uid://cyj3js0vdgo13" path="res://Resources/General/Bird.png" id="8_xtf6y"]
@@ -31,19 +33,44 @@ size = Vector2(185.71436, 62.856934)
 script = ExtResource("1_wkuic")
 
 [node name="Background" type="Node2D" parent="." unique_id=2056750400]
+metadata/_edit_lock_ = true
 
 [node name="Background" type="TextureRect" parent="Background" unique_id=1254707277]
-offset_left = 15.0
-offset_top = -14.0
-offset_right = 1615.0
-offset_bottom = 886.0
+visible = false
+offset_right = 1600.0
+offset_bottom = 900.0
 texture = ExtResource("2_cmulo")
 
-[node name="Background2" type="Sprite2D" parent="Background" unique_id=1175293324]
-position = Vector2(672.5, 451.99997)
-scale = Vector2(1.25, 1.2517005)
-texture = ExtResource("3_2rbml")
+[node name="Crowd" type="Sprite2D" parent="Background" unique_id=1200610211]
+position = Vector2(672.5, 452.5)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("3_sljk1")
+hframes = 3
 metadata/_edit_lock_ = true
+
+[node name="Curtain2" type="Sprite2D" parent="Background" unique_id=411257742]
+position = Vector2(300, 333)
+scale = Vector2(1.9743936, 1.9743935)
+texture = ExtResource("4_s8ulb")
+
+[node name="Curtain3" type="Sprite2D" parent="Background" unique_id=254318413]
+position = Vector2(1157, 335)
+scale = Vector2(1.9743936, 1.9743935)
+texture = ExtResource("4_s8ulb")
+flip_h = true
+
+[node name="Finish" type="Button" parent="Background" unique_id=840875009]
+offset_left = 904.0
+offset_top = 673.0
+offset_right = 1040.0
+offset_bottom = 744.0
+theme_override_font_sizes/font_size = 45
+text = "Finish"
+
+[node name="Background2" type="Sprite2D" parent="Background" unique_id=1725041532]
+position = Vector2(800, 450)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("5_xtf6y")
 
 [node name="Nest" type="Sprite2D" parent="Background" unique_id=799028299]
 position = Vector2(663, 621)
@@ -241,3 +268,15 @@ texture = ExtResource("23_sljk1")
 [node name="Places" type="Node2D" parent="." unique_id=1153796374]
 
 [node name="Objects" type="Node2D" parent="." unique_id=1071373600]
+
+[node name="Timers" type="Node2D" parent="." unique_id=662326389]
+
+[node name="Anim" type="Timer" parent="Timers" unique_id=1035304774]
+wait_time = 0.2
+
+[node name="Flowers" type="Timer" parent="Timers" unique_id=1626402576]
+wait_time = 0.5
+
+[connection signal="pressed" from="Background/Finish" to="." method="_on_finish_pressed"]
+[connection signal="timeout" from="Timers/Anim" to="." method="_on_anim_timeout"]
+[connection signal="timeout" from="Timers/Flowers" to="." method="_on_flowers_timeout"]
