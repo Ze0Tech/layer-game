@@ -20,6 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://obvanrk3j45b" path="res://Resources/DressUp/Middle/NewYork.png" id="18_244ds"]
 [ext_resource type="Texture2D" uid="uid://dk6utvyb2ktym" path="res://Resources/DressUp/Middle/Scarf.png" id="19_huxnu"]
 [ext_resource type="Texture2D" uid="uid://dhqjgxc3f5l1g" path="res://Resources/DressUp/Middle/Tie.png" id="20_8kix5"]
+[ext_resource type="Texture2D" uid="uid://c7chx2bjboj0k" path="res://Resources/DressUp/Bottom/jeans.png" id="21_pdh8n"]
+[ext_resource type="Texture2D" uid="uid://voyxwivn15ff" path="res://Resources/DressUp/Bottom/shoez.png" id="22_1nthe"]
+[ext_resource type="Texture2D" uid="uid://c64ls6mvbv6l" path="res://Resources/DressUp/Bottom/trunks.png" id="23_sljk1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3m36"]
 size = Vector2(185.71436, 62.856934)
@@ -30,8 +33,10 @@ script = ExtResource("1_wkuic")
 [node name="Background" type="Node2D" parent="." unique_id=2056750400]
 
 [node name="Background" type="TextureRect" parent="Background" unique_id=1254707277]
-offset_right = 1600.0
-offset_bottom = 900.0
+offset_left = 15.0
+offset_top = -14.0
+offset_right = 1615.0
+offset_bottom = 886.0
 texture = ExtResource("2_cmulo")
 
 [node name="Background2" type="Sprite2D" parent="Background" unique_id=1175293324]
@@ -216,6 +221,21 @@ offset = Vector2(296.00006, -19.333344)
 metadata/_edit_lock_ = true
 
 [node name="Bottom" type="Node2D" parent="LayerItems/Clothes" unique_id=1152623708]
+
+[node name="Jeans" type="Sprite2D" parent="LayerItems/Clothes/Bottom" unique_id=1165561264]
+visible = false
+position = Vector2(666, 518.6667)
+texture = ExtResource("21_pdh8n")
+
+[node name="Shoez" type="Sprite2D" parent="LayerItems/Clothes/Bottom" unique_id=294503681]
+visible = false
+position = Vector2(677.3333, 544)
+texture = ExtResource("22_1nthe")
+
+[node name="Trunks" type="Sprite2D" parent="LayerItems/Clothes/Bottom" unique_id=404190592]
+visible = false
+position = Vector2(668.6667, 498.66666)
+texture = ExtResource("23_sljk1")
 
 [node name="Places" type="Node2D" parent="." unique_id=1153796374]
 
