@@ -148,8 +148,7 @@ scale = Vector2(2.26, 2.26)
 texture = ExtResource("15_0fwwn")
 offset = Vector2(4, 11)
 
-[node name="WarriorWithTheHeartOfAnEagle" type="AudioStreamPlayer" parent="." unique_id=1252120665]
+[node name="WarriorWithTheHeartOfAnEagle" type="AudioStreamPlayer" parent="." unique_id=345144297]
 stream = ExtResource("15_xjft1")
-volume_db = -10.0
+volume_db = 4.083
 autoplay = true
-parameters/looping = true
