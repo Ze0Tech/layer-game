@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cxw04if8j2wia"]
+
+[ext_resource type="Script" uid="uid://bnr2nwlrt65lo" path="res://end_screen.gd" id="1_lmk8k"]
+[ext_resource type="Texture2D" uid="uid://dt2xm045u66qa" path="res://Resources/Untitled.png" id="2_3w1jx"]
+[ext_resource type="FontFile" uid="uid://d2leid5c1hj10" path="res://Resources/HomeVideo-Regular.ttf" id="3_e6a7n"]
+
+[node name="EndScreen" type="Node2D" unique_id=275357555]
+script = ExtResource("1_lmk8k")
+
+[node name="Untitled" type="Sprite2D" parent="." unique_id=561230121]
+position = Vector2(800, 450)
+scale = Vector2(2.6666667, 2.25)
+texture = ExtResource("2_3w1jx")
+
+[node name="Label" type="Label" parent="." unique_id=1617120433]
+offset_left = 18.0
+offset_top = 27.0
+offset_right = 1305.0
+offset_bottom = 886.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("3_e6a7n")
+theme_override_font_sizes/font_size = 49
+text = "Thank you for playing our game!
+
+
+
+This was our first piece of concept art and we had a ton of fun making it into what you just played. 
+
+
+
+
+
+
+
+Stick around for a frame of your personal Scrunch, snip it and leave it in the comments!"
+horizontal_alignment = 1
+autowrap_mode = 2

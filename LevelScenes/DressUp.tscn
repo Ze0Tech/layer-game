@@ -64,10 +64,10 @@ texture = ExtResource("4_s8ulb")
 flip_h = true
 
 [node name="Finish" type="Button" parent="Background" unique_id=840875009]
-offset_left = 904.0
-offset_top = 673.0
-offset_right = 1040.0
-offset_bottom = 744.0
+offset_left = 598.0
+offset_top = 748.0
+offset_right = 734.0
+offset_bottom = 819.0
 theme_override_font_sizes/font_size = 45
 text = "Finish"
 
@@ -90,7 +90,7 @@ position = Vector2(1490, -172)
 scale = Vector2(1.58, 1.58)
 
 [node name="Layer1" type="Area2D" parent="Layers" unique_id=538214843]
-position = Vector2(-88, 313)
+position = Vector2(-337.34177, 381.01263)
 scale = Vector2(0.7, 0.7)
 
 [node name="LayerIcon" type="Sprite2D" parent="Layers/Layer1" unique_id=860239300]
@@ -98,23 +98,34 @@ scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("5_1nthe")
 
 [node name="LockIcon" type="Sprite2D" parent="Layers/Layer1/LayerIcon" unique_id=1844904817]
+visible = false
 position = Vector2(65.13574, -3.2007751)
 scale = Vector2(0.90415925, 0.90415925)
 texture = ExtResource("6_sljk1")
 hframes = 2
 
 [node name="VisIcon" type="Sprite2D" parent="Layers/Layer1/LayerIcon" unique_id=1466542452]
+visible = false
 position = Vector2(-57.829956, -1.392456)
 scale = Vector2(0.90415925, 0.90415925)
 texture = ExtResource("7_s8ulb")
 hframes = 2
+
+[node name="Label" type="Label" parent="Layers/Layer1/LayerIcon" unique_id=1843434764]
+offset_left = -66.87158
+offset_top = -24.900553
+offset_right = 67.12842
+offset_bottom = 26.099447
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 37
+text = "Change"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer1" unique_id=2133294458]
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_y3m36")
 
 [node name="Layer2" type="Area2D" parent="Layers" unique_id=1998676022]
-position = Vector2(-87.99999, 402.99997)
+position = Vector2(-337.34177, 473.41766)
 scale = Vector2(0.7, 0.7)
 
 [node name="LayerIcon" type="Sprite2D" parent="Layers/Layer2" unique_id=992631827]
@@ -122,23 +133,34 @@ scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("5_1nthe")
 
 [node name="LockIcon" type="Sprite2D" parent="Layers/Layer2/LayerIcon" unique_id=2066877036]
+visible = false
 position = Vector2(65.13574, -3.2007751)
 scale = Vector2(0.90415925, 0.90415925)
 texture = ExtResource("6_sljk1")
 hframes = 2
 
 [node name="VisIcon" type="Sprite2D" parent="Layers/Layer2/LayerIcon" unique_id=1003706169]
+visible = false
 position = Vector2(-57.829956, -1.392456)
 scale = Vector2(0.90415925, 0.90415925)
 texture = ExtResource("7_s8ulb")
 hframes = 2
+
+[node name="Label" type="Label" parent="Layers/Layer2/LayerIcon" unique_id=927989611]
+offset_left = -66.87158
+offset_top = -24.900553
+offset_right = 67.12842
+offset_bottom = 26.099447
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 37
+text = "Change"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer2" unique_id=2022358398]
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_y3m36")
 
 [node name="Layer3" type="Area2D" parent="Layers" unique_id=1943060090]
-position = Vector2(-88.99999, 494.00006)
+position = Vector2(-337.34174, 563.924)
 scale = Vector2(0.7, 0.7)
 
 [node name="LayerIcon" type="Sprite2D" parent="Layers/Layer3" unique_id=188532673]
@@ -146,18 +168,134 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("5_1nthe")
 
 [node name="LockIcon" type="Sprite2D" parent="Layers/Layer3/LayerIcon" unique_id=1541207132]
+visible = false
 position = Vector2(65.13574, -3.2007751)
 scale = Vector2(0.90415925, 0.90415925)
 texture = ExtResource("6_sljk1")
 hframes = 2
 
 [node name="VisIcon" type="Sprite2D" parent="Layers/Layer3/LayerIcon" unique_id=128127901]
+visible = false
 position = Vector2(-57.829956, -1.392456)
 scale = Vector2(0.90415925, 0.90415925)
 texture = ExtResource("7_s8ulb")
 hframes = 2
 
+[node name="Label" type="Label" parent="Layers/Layer3/LayerIcon" unique_id=402979816]
+offset_left = -66.87158
+offset_top = -24.900553
+offset_right = 67.12842
+offset_bottom = 26.099447
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 37
+text = "Change"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer3" unique_id=399542800]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_y3m36")
+
+[node name="Layer4" type="Area2D" parent="Layers" unique_id=1673495636 groups=["Negative"]]
+position = Vector2(-723.41766, 381.01263)
+scale = Vector2(0.7, 0.7)
+
+[node name="LayerIcon" type="Sprite2D" parent="Layers/Layer4" unique_id=121156280]
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("5_1nthe")
+
+[node name="LockIcon" type="Sprite2D" parent="Layers/Layer4/LayerIcon" unique_id=1517548516]
+visible = false
+position = Vector2(65.13574, -3.2007751)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("6_sljk1")
+hframes = 2
+
+[node name="VisIcon" type="Sprite2D" parent="Layers/Layer4/LayerIcon" unique_id=1210385293]
+visible = false
+position = Vector2(-57.829956, -1.392456)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("7_s8ulb")
+hframes = 2
+
+[node name="Label" type="Label" parent="Layers/Layer4/LayerIcon" unique_id=474998804]
+offset_left = -66.87158
+offset_top = -24.900553
+offset_right = 67.12842
+offset_bottom = 26.099447
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 37
+text = "Change"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer4" unique_id=1083080196]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_y3m36")
+
+[node name="Layer5" type="Area2D" parent="Layers" unique_id=1864457691 groups=["Negative"]]
+position = Vector2(-723.41766, 473.41766)
+scale = Vector2(0.7, 0.7)
+
+[node name="LayerIcon" type="Sprite2D" parent="Layers/Layer5" unique_id=2002502362]
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("5_1nthe")
+
+[node name="LockIcon" type="Sprite2D" parent="Layers/Layer5/LayerIcon" unique_id=1296302298]
+visible = false
+position = Vector2(65.13574, -3.2007751)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("6_sljk1")
+hframes = 2
+
+[node name="VisIcon" type="Sprite2D" parent="Layers/Layer5/LayerIcon" unique_id=1462641632]
+visible = false
+position = Vector2(-57.829956, -1.392456)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("7_s8ulb")
+hframes = 2
+
+[node name="Label" type="Label" parent="Layers/Layer5/LayerIcon" unique_id=42091428]
+offset_left = -66.87158
+offset_top = -24.900553
+offset_right = 67.12842
+offset_bottom = 26.099447
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 37
+text = "Change"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer5" unique_id=1747384525]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_y3m36")
+
+[node name="Layer6" type="Area2D" parent="Layers" unique_id=1267481316 groups=["Negative"]]
+position = Vector2(-723.4176, 563.924)
+scale = Vector2(0.7, 0.7)
+
+[node name="LayerIcon" type="Sprite2D" parent="Layers/Layer6" unique_id=1072521570]
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("5_1nthe")
+
+[node name="LockIcon" type="Sprite2D" parent="Layers/Layer6/LayerIcon" unique_id=111845925]
+visible = false
+position = Vector2(65.13574, -3.2007751)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("6_sljk1")
+hframes = 2
+
+[node name="VisIcon" type="Sprite2D" parent="Layers/Layer6/LayerIcon" unique_id=425212547]
+visible = false
+position = Vector2(-57.829956, -1.392456)
+scale = Vector2(0.90415925, 0.90415925)
+texture = ExtResource("7_s8ulb")
+hframes = 2
+
+[node name="Label" type="Label" parent="Layers/Layer6/LayerIcon" unique_id=1547750669]
+offset_left = -66.87158
+offset_top = -24.900553
+offset_right = 67.12842
+offset_bottom = 26.099447
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 37
+text = "Change"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer6" unique_id=2111916531]
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_y3m36")
 
@@ -177,34 +315,34 @@ texture = ExtResource("8_xtf6y")
 [node name="Top" type="Node2D" parent="LayerItems/Clothes" unique_id=1366472783]
 position = Vector2(32, 46)
 
-[node name="Fedora" type="Sprite2D" parent="LayerItems/Clothes/Top" unique_id=343522687]
-visible = false
-position = Vector2(618, 301.33334)
-texture = ExtResource("9_qxagx")
-metadata/_edit_lock_ = true
-
 [node name="Afro" type="Sprite2D" parent="LayerItems/Clothes/Top" unique_id=2074525966]
 visible = false
-position = Vector2(588, 294)
+position = Vector2(588, 294.00003)
 texture = ExtResource("10_nhouo")
 metadata/_edit_lock_ = true
 
 [node name="Cap" type="Sprite2D" parent="LayerItems/Clothes/Top" unique_id=136132594]
 visible = false
-position = Vector2(602.6667, 306)
+position = Vector2(602.6667, 306.00003)
 texture = ExtResource("11_jh3w2")
 metadata/_edit_lock_ = true
 
 [node name="Cowboy" type="Sprite2D" parent="LayerItems/Clothes/Top" unique_id=215614261]
 visible = false
-position = Vector2(625.3333, 289.33334)
+position = Vector2(625.3334, 289.33334)
 texture = ExtResource("12_2dx6n")
 metadata/_edit_lock_ = true
 
 [node name="Dunce" type="Sprite2D" parent="LayerItems/Clothes/Top" unique_id=1008432396]
 visible = false
-position = Vector2(612.6667, 260.66666)
+position = Vector2(612.6667, 260.6667)
 texture = ExtResource("13_2bo2t")
+metadata/_edit_lock_ = true
+
+[node name="Fedora" type="Sprite2D" parent="LayerItems/Clothes/Top" unique_id=343522687]
+visible = false
+position = Vector2(618, 301.33334)
+texture = ExtResource("9_qxagx")
 metadata/_edit_lock_ = true
 
 [node name="Headphones" type="Sprite2D" parent="LayerItems/Clothes/Top" unique_id=278331190]

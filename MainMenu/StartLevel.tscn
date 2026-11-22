@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dsdpsic1q2lka" path="res://Resources/General/Layer Icon.png" id="4_t3dhp"]
 [ext_resource type="Texture2D" uid="uid://hx0uaxatih5k" path="res://Resources/General/Lock Icon.png" id="5_rptnv"]
 [ext_resource type="Texture2D" uid="uid://jxcxu2nsyc8t" path="res://Resources/General/VisIcon.png" id="6_v7rco"]
-[ext_resource type="Texture2D" uid="uid://oceqien1py1b" path="res://Resources/General/image.png" id="7_3su7i"]
+[ext_resource type="Texture2D" uid="uid://ces1x87sctwu3" path="res://Resources/General/start.png" id="7_7ffvy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjku7"]
 size = Vector2(185.71436, 62.856934)
@@ -146,7 +146,7 @@ shape = SubResource("RectangleShape2D_etfwc")
 metadata/_edit_lock_ = true
 
 [node name="Image2" type="Sprite2D" parent="LayerItems/Piece1" unique_id=1605687575]
-texture = ExtResource("7_3su7i")
+texture = ExtResource("7_7ffvy")
 region_enabled = true
 region_rect = Rect2(39, 15, 175, 80)
 metadata/_edit_lock_ = true
@@ -161,7 +161,7 @@ shape = SubResource("RectangleShape2D_etfwc")
 metadata/_edit_lock_ = true
 
 [node name="Image3" type="Sprite2D" parent="LayerItems/Piece2" unique_id=249461180]
-texture = ExtResource("7_3su7i")
+texture = ExtResource("7_7ffvy")
 region_enabled = true
 region_rect = Rect2(39, 96, 175, 80)
 metadata/_edit_lock_ = true
@@ -177,7 +177,7 @@ shape = SubResource("RectangleShape2D_etfwc")
 metadata/_edit_lock_ = true
 
 [node name="Image4" type="Sprite2D" parent="LayerItems/Piece3" unique_id=747118248]
-texture = ExtResource("7_3su7i")
+texture = ExtResource("7_7ffvy")
 region_enabled = true
 region_rect = Rect2(212, 96, 175, 80)
 metadata/_edit_lock_ = true
@@ -192,7 +192,7 @@ shape = SubResource("RectangleShape2D_etfwc")
 metadata/_edit_lock_ = true
 
 [node name="Image5" type="Sprite2D" parent="LayerItems/Piece4" unique_id=661375390]
-texture = ExtResource("7_3su7i")
+texture = ExtResource("7_7ffvy")
 region_enabled = true
 region_rect = Rect2(212, 15, 175, 80)
 metadata/_edit_lock_ = true

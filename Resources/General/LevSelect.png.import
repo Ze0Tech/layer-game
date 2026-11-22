@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oceqien1py1b"
-path="res://.godot/imported/image.png-de3768b61dad5dd055ec2bd1500781c7.ctex"
+uid="uid://dhibgam3xylb0"
+path="res://.godot/imported/LevSelect.png-abaec2bffcf11b5a7701972e5ea9e17b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/General/image.png"
-dest_files=["res://.godot/imported/image.png-de3768b61dad5dd055ec2bd1500781c7.ctex"]
+source_file="res://Resources/General/LevSelect.png"
+dest_files=["res://.godot/imported/LevSelect.png-abaec2bffcf11b5a7701972e5ea9e17b.ctex"]
 
 [params]
 

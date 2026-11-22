@@ -53,7 +53,9 @@ func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, ar
 	if input.is_action_pressed("LMB"):
 		var Index : int = area.get_index()
 		if area.is_in_group('Layers'):
-			Swap(Index)
+			if area.is_in_group('Negative'):
+				Swap(Index-3 , -1)
+			else:	Swap(Index , 1)
 
 			
 		if area.is_in_group('Places'):
@@ -65,13 +67,15 @@ func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, ar
 	if input.is_action_released('LMB'):
 			Action.emit('Unhold')
 
-func Swap(Index : int) -> void:
+func Swap(Index : int , Amount : int) -> void:
 	var Category : Node2D = ClothesNode.get_child(Index)
 	
-	Clothes[Index] += 1
+	Clothes[Index] += Amount
 	
 	if Clothes[Index] > Category.get_children().size():
 		Clothes[Index] = 0
+	elif Clothes[Index] < 0:
+		Clothes[Index] = Category.get_children().size()
 		
 	Change()
 	
@@ -95,6 +99,8 @@ func Present() -> void:
 	tween.tween_property(Lcurtain,'position',Vector2(-234,330),2)
 	tween.parallel()
 	tween.tween_property(Rcurtain,'position',Vector2(1580,330),2)
+	$Layers.visible = false
+	$Background/Finish.visible = false
 	$Audio/DrumRoll.play(3)
 	await get_tree().create_timer(2).timeout
 	$Audio/Applause.play()
@@ -102,6 +108,7 @@ func Present() -> void:
 	Flowers.start()
 	Globals.LevelsComplete += 1
 	await get_tree().create_timer(5).timeout
+	print(Clothes)
 	get_parent().LevelSelect()
 	
 func FlowerSpawn() -> void:
@@ -129,7 +136,7 @@ func FlowerSpawn() -> void:
 	
 
 func _on_finish_pressed() -> void:
-	#$Audio/VictorySfx.play()
+	
 	Present()
 
 

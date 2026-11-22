@@ -13,8 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://obvanrk3j45b" path="res://Resources/DressUp/Middle/NewYork.png" id="12_vcix4"]
 [ext_resource type="Texture2D" uid="uid://dk6utvyb2ktym" path="res://Resources/DressUp/Middle/Scarf.png" id="13_yvd7t"]
 [ext_resource type="Texture2D" uid="uid://dhqjgxc3f5l1g" path="res://Resources/DressUp/Middle/Tie.png" id="14_csgbi"]
+[ext_resource type="Texture2D" uid="uid://c7chx2bjboj0k" path="res://Resources/DressUp/Bottom/jeans.png" id="14_fl2xa"]
 [ext_resource type="Texture2D" uid="uid://dknlw0p86osja" path="res://Resources/General/MouseIcon.png" id="15_0fwwn"]
+[ext_resource type="Texture2D" uid="uid://voyxwivn15ff" path="res://Resources/DressUp/Bottom/shoez.png" id="15_ly8lm"]
 [ext_resource type="AudioStream" uid="uid://bujhx15kncka0" path="res://Resources/Audio/Warrior with the Heart of an Eagle.mp3" id="15_xjft1"]
+[ext_resource type="Texture2D" uid="uid://c64ls6mvbv6l" path="res://Resources/DressUp/Bottom/trunks.png" id="16_snxdp"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_osx3g"]
 load_path = "res://.godot/imported/Bird.png-6ea07df844fa002c468e40753de5fda8.ctex"
@@ -85,17 +88,18 @@ metadata/_edit_lock_ = true
 position = Vector2(-562.8572, 697.1429)
 metadata/_edit_lock_ = true
 
+[node name="Bowtie" type="Sprite2D" parent="Canvas/Bird/Clothes/Middle" unique_id=1688360614]
+visible = false
+position = Vector2(368.66663, 457.33325)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("11_nrv2h")
+offset = Vector2(296.00006, -19.333344)
+metadata/_edit_lock_ = true
+
 [node name="Blush" type="Sprite2D" parent="Canvas/Bird/Clothes/Middle" unique_id=1974780948]
 visible = false
 position = Vector2(368.66666, 464.6667)
 texture = ExtResource("10_6amwk")
-offset = Vector2(296.00006, -19.333344)
-metadata/_edit_lock_ = true
-
-[node name="Bowtie" type="Sprite2D" parent="Canvas/Bird/Clothes/Middle" unique_id=1688360614]
-visible = false
-position = Vector2(368.66666, 457.33334)
-texture = ExtResource("11_nrv2h")
 offset = Vector2(296.00006, -19.333344)
 metadata/_edit_lock_ = true
 
@@ -119,6 +123,23 @@ position = Vector2(359.99997, 463.33334)
 texture = ExtResource("14_csgbi")
 offset = Vector2(296.00006, -19.333344)
 metadata/_edit_lock_ = true
+
+[node name="Bottom" type="Node2D" parent="Canvas/Bird/Clothes" unique_id=176272290]
+position = Vector2(-562.8572, 698.5715)
+
+[node name="Jeans" type="Sprite2D" parent="Canvas/Bird/Clothes/Bottom" unique_id=1195160043]
+visible = false
+position = Vector2(666, 518.6667)
+texture = ExtResource("14_fl2xa")
+
+[node name="Shoez" type="Sprite2D" parent="Canvas/Bird/Clothes/Bottom" unique_id=426738285]
+visible = false
+position = Vector2(677.3333, 544)
+texture = ExtResource("15_ly8lm")
+
+[node name="Trunks" type="Sprite2D" parent="Canvas/Bird/Clothes/Bottom" unique_id=2082856345]
+position = Vector2(670.00006, 500)
+texture = ExtResource("16_snxdp")
 
 [node name="MouseIcon" type="Sprite2D" parent="Canvas" unique_id=1615775149]
 z_index = 3

@@ -8,17 +8,19 @@ var LevelsComplete : int = 0
 @onready var Mouse : Sprite2D = $Canvas/MouseIcon
 @onready var Bird : Node2D = $Canvas/Bird
 @onready var ClothesNode : Node2D = $Canvas/Bird/Clothes
-@export var Clothes : Array = [0,0,0]
+@export var Clothes : Array = [7,7,7]
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 func BirdUpdate() -> void:
+	print(Clothes)
 	Bird.visible = true
-	if Clothes != [0,0,0]:
-		for i : Node2D in ClothesNode.get_children():
-			if i.get_child(Clothes[i.get_index()]):
-				i.get_child(Clothes[i.get_index()]).visible = true
+	for i : Node2D in ClothesNode.get_children():
+		for q : Sprite2D in i.get_children():
+			if q.get_index() == Clothes[i.get_index()]:
+				q.visible = true
+			elif not q.get_index() == Clothes[i.get_index()] : q.visible = false
 	
 func BirdHide() -> void:
 	for i : Node2D in ClothesNode.get_children():

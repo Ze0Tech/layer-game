@@ -24,6 +24,8 @@ func InputCheck() -> void:
 	pass
 	if Input.is_action_just_pressed('Esc'):
 		LevelSelect()
+	elif Input.is_action_just_pressed('Ctrl'):
+		Globals.LevelsComplete += 1
 
 func LevelSelect() ->void:
 	var NewLevelSelect : Node2D = LevelSelectScene.instantiate()

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bwtjf2ioy48ql"]
+
+[ext_resource type="Script" uid="uid://qlt8edxckhv1" path="res://scrunch_frame.gd" id="1_v8mbu"]
+
+[node name="ScrunchFrame" type="Node2D" unique_id=535566762]
+script = ExtResource("1_v8mbu")

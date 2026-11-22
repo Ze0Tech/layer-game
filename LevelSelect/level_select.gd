@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var Markers : Array = $Background/Markers.get_children()
 @onready var GameScene : PackedScene = preload("res://Game/Game.tscn")
+@onready var EndScene : PackedScene = preload("res://MainMenu/ZEndLevel.tscn")
 @onready var LevelAreas : Array = $LevelAreas.get_children()
 
 var Game : Node2D
@@ -9,6 +10,7 @@ var Levels : Array = []
 var Level : int = 1
 
 func _ready() -> void:
+	print(Globals.Clothes)
 	for i : Node2D in LevelAreas:
 		i.connect('input_event',LevelInput.bind(i))
 		
@@ -17,7 +19,11 @@ func _ready() -> void:
 		Globals.BirdUpdate()
 		
 	for i in Globals.LevelsComplete:
-		find_child('Stars').get_child(i).visible = true
+		if Globals.LevelsComplete <= 3:
+			find_child('Stars').get_child(i).visible = true
+		
+	if Globals.LevelsComplete > 3:
+		$LevelAreas/Slot5.visible = true
 		
 func _process(_delta: float) -> void:
 	
@@ -37,7 +43,15 @@ func MainMenu() -> void:
 
 func LevelInput(_viewport : Variant, input : InputEvent , _shape_idx: Variant, area : Area2D) -> void:
 	if input.is_action_pressed('LMB'):
-		LevelLoad(area.get_index())
+		if area.name == 'Slot5':
+			var NewLevel : Node2D = EndScene.instantiate()
+			Game.add_child(NewLevel)
+			Game.visible = true
+			Game.init()
+			#Globals.BirdHide()
+			queue_free()
+		else:
+			LevelLoad(area.get_index())
 	
 func Setup() -> void:
 	Game = GameScene.instantiate()
@@ -49,6 +63,7 @@ func Setup() -> void:
 		Levels.append(load("res://LevelScenes/" + Scene))
 	print(Levels)
 
+	
 func LevelLoad(index : int) -> void:
 	print(Game)
 	var NewLevel : Node2D = Levels[index].instantiate()

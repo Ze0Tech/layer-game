@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://beg1vxgjc2s0d" path="res://LevelScripts/rock_falling.gd" id="1_1hnk5"]
 [ext_resource type="Texture2D" uid="uid://c311u4gficdx3" path="res://Resources/Placeholders/title_screen_draftbig.png" id="2_yg753"]
-[ext_resource type="Texture2D" uid="uid://bur6c2ho6b3jb" path="res://Resources/General/Background.webp" id="3_j0d0v"]
+[ext_resource type="Texture2D" uid="uid://dwq2ca1xxrt2t" path="res://Resources/RockFallingBackground.png" id="3_3seon"]
 [ext_resource type="Texture2D" uid="uid://dsdpsic1q2lka" path="res://Resources/General/Layer Icon.png" id="4_pwx0u"]
 [ext_resource type="Texture2D" uid="uid://hx0uaxatih5k" path="res://Resources/General/Lock Icon.png" id="5_2extm"]
 [ext_resource type="Texture2D" uid="uid://jxcxu2nsyc8t" path="res://Resources/General/VisIcon.png" id="6_vsb5o"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dqi2vtromhlco" path="res://RockFalling/boulder sprite.png" id="8_2extm"]
 [ext_resource type="Script" uid="uid://d0di1mxr5qqr6" path="res://RockFalling/RockFallChick.gd" id="8_j0d0v"]
 [ext_resource type="Texture2D" uid="uid://bkqon8sexiq23" path="res://RockFalling/chick.png" id="9_pwx0u"]
+[ext_resource type="Texture2D" uid="uid://bb5fosp8fa4yp" path="res://Resources/General/heart.png" id="12_3seon"]
 [ext_resource type="AudioStream" uid="uid://csq3jaatacmvd" path="res://Resources/Audio/Victory_SFX.mp3" id="12_yhn4y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rd45t"]
@@ -36,7 +37,7 @@ metadata/_edit_lock_ = true
 [node name="Background2" type="Sprite2D" parent="Background" unique_id=675416365]
 position = Vector2(673, 452.99997)
 scale = Vector2(1.2488478, 1.2823129)
-texture = ExtResource("3_j0d0v")
+texture = ExtResource("3_3seon")
 metadata/_edit_lock_ = true
 
 [node name="ProgressBar" type="ProgressBar" parent="Background" unique_id=671031388]
@@ -258,6 +259,28 @@ hframes = 3
 [node name="Flip" type="Timer" parent="Character/CharacterBody2D" unique_id=895348285]
 wait_time = 0.5
 one_shot = true
+
+[node name="Hearts" type="Node2D" parent="Character/CharacterBody2D" unique_id=365755557]
+
+[node name="Heart" type="Sprite2D" parent="Character/CharacterBody2D/Hearts" unique_id=1568611319]
+position = Vector2(-76, 99)
+texture = ExtResource("12_3seon")
+hframes = 4
+
+[node name="Heart2" type="Sprite2D" parent="Character/CharacterBody2D/Hearts" unique_id=989354654]
+position = Vector2(-15, 99)
+texture = ExtResource("12_3seon")
+hframes = 4
+
+[node name="Heart3" type="Sprite2D" parent="Character/CharacterBody2D/Hearts" unique_id=256991852]
+position = Vector2(46, 99)
+texture = ExtResource("12_3seon")
+hframes = 4
+
+[node name="Heart4" type="Sprite2D" parent="Character/CharacterBody2D/Hearts" unique_id=1113192893]
+position = Vector2(104, 99)
+texture = ExtResource("12_3seon")
+hframes = 4
 
 [node name="Timers" type="Node2D" parent="." unique_id=162194476]
 
