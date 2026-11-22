@@ -87,7 +87,7 @@ func LockCheck() -> void:
 		$Places/Cage/BirdcageNode/BirdCelebrateSheet.visible = true
 		WinLabel.visible = true
 		$Audio/VictorySfx.play()
-
+		$Places/Cage/Lock.queue_free()
 func _on_lock_area_entered(area: Area2D) -> void:
 	if area.name == 'Key':
 		Lock = true

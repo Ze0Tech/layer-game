@@ -40,7 +40,8 @@
 				"278eecc3-7edd-4bb3-b250-f0d75fb0c7a7",
 				"98d0963c-8eb5-48e1-a881-8a6f0556e814",
 				"8a2196bd-a3a0-4d41-b3c0-c27e1c88be08",
-				"d13a63c2-3f3c-4e91-b2ba-15cb690e1526"
+				"d13a63c2-3f3c-4e91-b2ba-15cb690e1526",
+				"f6dd2f02-1ba6-43f4-a960-734fb66d0663"
 			]
 		},
 		{
@@ -253,6 +254,13 @@
 			"title": "SFX",
 			"description": "",
 			"category": "3e8988c0-596c-4baf-a989-7e753b44371f",
+			"steps": []
+		},
+		{
+			"uuid": "f6dd2f02-1ba6-43f4-a960-734fb66d0663",
+			"title": "Double victory in key find",
+			"description": "",
+			"category": "6deed6e0-28e5-4b6d-8604-bcb6e054f779",
 			"steps": []
 		}
 	],
