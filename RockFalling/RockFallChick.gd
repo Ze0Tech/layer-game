@@ -36,7 +36,7 @@ func Death():
 		Move = false
 		velocity = Vector2(0,0)
 		await get_tree().create_timer(2).timeout
-		get_parent().get_parent().LevelSelect()
+		get_parent().get_parent().get_parent().LevelSelect()
 
 func Die(body : Variant) -> void:
 	if body.is_in_group('Rock'):

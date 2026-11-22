@@ -68,6 +68,7 @@ func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, ar
 			Action.emit('Unhold')
 
 func Swap(Index : int , Amount : int) -> void:
+	print('Swap')
 	var Category : Node2D = ClothesNode.get_child(Index)
 	
 	Clothes[Index] += Amount
@@ -80,7 +81,7 @@ func Swap(Index : int , Amount : int) -> void:
 	Change()
 	
 func Change() -> void:
-	
+	print('Change')
 	for i : Node2D in ClothesNode.get_children():
 		for q : Sprite2D in i.get_children():
 			if q.get_index() == Clothes[i.get_index()]:

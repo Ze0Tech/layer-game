@@ -1,10 +1,30 @@
 {
+<<<<<<< HEAD
   "2D": 24803.947,
+=======
+<<<<<<< HEAD
+  "2D": 24772.795,
+=======
+  "2D": 24586.325,
+>>>>>>> parent of 5e87ec0 (Dressup Background change)
+>>>>>>> main
   "3D": 99.663,
   "AFK": 5508.944,
   "Asset Store": 53.704,
   "Documentation": 510.472999999997,
+<<<<<<< HEAD
   "Game": 90020.0590000001,
   "Script": 60210.764,
   "Tasks": 2733.33
+=======
+<<<<<<< HEAD
+  "Game": 89852.4860000001,
+  "Script": 60163.754,
+  "Tasks": 2733.33
+=======
+  "Game": 89640.9800000001,
+  "Script": 60077.457,
+  "Tasks": 2712.695
+>>>>>>> parent of 5e87ec0 (Dressup Background change)
+>>>>>>> main
 }
