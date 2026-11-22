@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dk6utvyb2ktym" path="res://Resources/DressUp/Middle/Scarf.png" id="13_yvd7t"]
 [ext_resource type="Texture2D" uid="uid://dhqjgxc3f5l1g" path="res://Resources/DressUp/Middle/Tie.png" id="14_csgbi"]
 [ext_resource type="Texture2D" uid="uid://dknlw0p86osja" path="res://Resources/General/MouseIcon.png" id="15_0fwwn"]
+[ext_resource type="AudioStream" uid="uid://bujhx15kncka0" path="res://Resources/Audio/Warrior with the Heart of an Eagle.mp3" id="15_xjft1"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_osx3g"]
 load_path = "res://.godot/imported/Bird.png-6ea07df844fa002c468e40753de5fda8.ctex"
@@ -124,3 +125,9 @@ z_index = 3
 scale = Vector2(2.26, 2.26)
 texture = ExtResource("15_0fwwn")
 offset = Vector2(4, 11)
+
+[node name="WarriorWithTheHeartOfAnEagle" type="AudioStreamPlayer" parent="." unique_id=1252120665]
+stream = ExtResource("15_xjft1")
+volume_db = -8.0
+autoplay = true
+parameters/looping = true

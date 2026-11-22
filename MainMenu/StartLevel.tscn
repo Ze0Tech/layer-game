@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://clgaps6ltfn2y"]
 
-[ext_resource type="Script" uid="uid://b42fym2vex0qu" path="res://LevelScripts/StartLevel.gd" id="1_kqqls"]
-[ext_resource type="Texture2D" uid="uid://c311u4gficdx3" path="res://Resources/Placeholders/title_screen_draftbig.png" id="2_dw7j6"]
-[ext_resource type="Texture2D" uid="uid://bur6c2ho6b3jb" path="res://Resources/General/Background.webp" id="3_dw7j6"]
-[ext_resource type="Texture2D" uid="uid://dsdpsic1q2lka" path="res://Resources/General/Layer Icon.png" id="3_hkrva"]
-[ext_resource type="Texture2D" uid="uid://oceqien1py1b" path="res://Resources/General/image.png" id="3_x8u7c"]
-[ext_resource type="Texture2D" uid="uid://hx0uaxatih5k" path="res://Resources/General/Lock Icon.png" id="4_u17oo"]
-[ext_resource type="Texture2D" uid="uid://jxcxu2nsyc8t" path="res://Resources/General/VisIcon.png" id="5_a0wcj"]
+[ext_resource type="Script" uid="uid://b42fym2vex0qu" path="res://LevelScripts/StartLevel.gd" id="1_d4ceb"]
+[ext_resource type="Texture2D" uid="uid://c311u4gficdx3" path="res://Resources/Placeholders/title_screen_draftbig.png" id="2_7ffvy"]
+[ext_resource type="Texture2D" uid="uid://bur6c2ho6b3jb" path="res://Resources/General/Background.webp" id="3_233ak"]
+[ext_resource type="Texture2D" uid="uid://dsdpsic1q2lka" path="res://Resources/General/Layer Icon.png" id="4_t3dhp"]
+[ext_resource type="Texture2D" uid="uid://hx0uaxatih5k" path="res://Resources/General/Lock Icon.png" id="5_rptnv"]
+[ext_resource type="Texture2D" uid="uid://jxcxu2nsyc8t" path="res://Resources/General/VisIcon.png" id="6_v7rco"]
+[ext_resource type="Texture2D" uid="uid://oceqien1py1b" path="res://Resources/General/image.png" id="7_3su7i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjku7"]
 size = Vector2(185.71436, 62.856934)
@@ -15,7 +15,7 @@ size = Vector2(185.71436, 62.856934)
 size = Vector2(175, 80)
 
 [node name="StartLevel" type="Node2D" unique_id=1789833393]
-script = ExtResource("1_kqqls")
+script = ExtResource("1_d4ceb")
 
 [node name="Background" type="Node2D" parent="." unique_id=2056750400]
 
@@ -24,12 +24,12 @@ offset_left = 6.0
 offset_top = 15.0
 offset_right = 1606.0
 offset_bottom = 915.0
-texture = ExtResource("2_dw7j6")
+texture = ExtResource("2_7ffvy")
 
 [node name="Background2" type="Sprite2D" parent="Background" unique_id=1589670272]
 position = Vector2(678.5, 467.5)
 scale = Vector2(1.25, 1.25)
-texture = ExtResource("3_dw7j6")
+texture = ExtResource("3_233ak")
 
 [node name="Layers" type="Node2D" parent="." unique_id=1000858341]
 position = Vector2(1495, -198.99997)
@@ -41,19 +41,20 @@ scale = Vector2(0.7, 0.7)
 
 [node name="LayerIcon" type="Sprite2D" parent="Layers/Layer1" unique_id=653850335]
 scale = Vector2(0.9999998, 0.9999998)
-texture = ExtResource("3_hkrva")
+texture = ExtResource("4_t3dhp")
 
 [node name="LockIcon" type="Sprite2D" parent="Layers/Layer1/LayerIcon" unique_id=1267643033]
 position = Vector2(65.13574, -3.2007751)
 scale = Vector2(0.90415925, 0.90415925)
-texture = ExtResource("4_u17oo")
+texture = ExtResource("5_rptnv")
 hframes = 2
 
 [node name="VisIcon" type="Sprite2D" parent="Layers/Layer1/LayerIcon" unique_id=826195232]
 position = Vector2(-57.829956, -1.392456)
 scale = Vector2(0.90415925, 0.90415925)
-texture = ExtResource("5_a0wcj")
+texture = ExtResource("6_v7rco")
 hframes = 2
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer1" unique_id=1788392433]
 scale = Vector2(0.99999994, 0.99999994)
@@ -65,18 +66,18 @@ scale = Vector2(0.7, 0.7)
 
 [node name="LayerIcon" type="Sprite2D" parent="Layers/Layer2" unique_id=1660402263]
 scale = Vector2(0.9999998, 0.9999998)
-texture = ExtResource("3_hkrva")
+texture = ExtResource("4_t3dhp")
 
 [node name="LockIcon" type="Sprite2D" parent="Layers/Layer2/LayerIcon" unique_id=1992919030]
 position = Vector2(65.13574, -3.2007751)
 scale = Vector2(0.90415925, 0.90415925)
-texture = ExtResource("4_u17oo")
+texture = ExtResource("5_rptnv")
 hframes = 2
 
 [node name="VisIcon" type="Sprite2D" parent="Layers/Layer2/LayerIcon" unique_id=112610927]
 position = Vector2(-57.829956, -1.392456)
 scale = Vector2(0.90415925, 0.90415925)
-texture = ExtResource("5_a0wcj")
+texture = ExtResource("6_v7rco")
 hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer2" unique_id=1486937060]
@@ -89,19 +90,20 @@ scale = Vector2(0.7, 0.7)
 
 [node name="LayerIcon" type="Sprite2D" parent="Layers/Layer3" unique_id=587486441]
 scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("3_hkrva")
+texture = ExtResource("4_t3dhp")
 
 [node name="LockIcon" type="Sprite2D" parent="Layers/Layer3/LayerIcon" unique_id=1538605617]
 position = Vector2(65.13574, -3.2007751)
 scale = Vector2(0.90415925, 0.90415925)
-texture = ExtResource("4_u17oo")
+texture = ExtResource("5_rptnv")
 hframes = 2
 
 [node name="VisIcon" type="Sprite2D" parent="Layers/Layer3/LayerIcon" unique_id=1341420714]
 position = Vector2(-57.829956, -1.392456)
 scale = Vector2(0.90415925, 0.90415925)
-texture = ExtResource("5_a0wcj")
+texture = ExtResource("6_v7rco")
 hframes = 2
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer3" unique_id=703510572]
 scale = Vector2(0.99999994, 0.99999994)
@@ -113,18 +115,18 @@ scale = Vector2(0.7, 0.7)
 
 [node name="LayerIcon" type="Sprite2D" parent="Layers/Layer4" unique_id=1727326814]
 scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("3_hkrva")
+texture = ExtResource("4_t3dhp")
 
 [node name="LockIcon" type="Sprite2D" parent="Layers/Layer4/LayerIcon" unique_id=478246404]
 position = Vector2(65.13574, -3.2007751)
 scale = Vector2(0.90415925, 0.90415925)
-texture = ExtResource("4_u17oo")
+texture = ExtResource("5_rptnv")
 hframes = 2
 
 [node name="VisIcon" type="Sprite2D" parent="Layers/Layer4/LayerIcon" unique_id=448535746]
 position = Vector2(-57.829956, -1.392456)
 scale = Vector2(0.90415925, 0.90415925)
-texture = ExtResource("5_a0wcj")
+texture = ExtResource("6_v7rco")
 hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Layer4" unique_id=1814366594]
@@ -144,7 +146,7 @@ shape = SubResource("RectangleShape2D_etfwc")
 metadata/_edit_lock_ = true
 
 [node name="Image2" type="Sprite2D" parent="LayerItems/Piece1" unique_id=1605687575]
-texture = ExtResource("3_x8u7c")
+texture = ExtResource("7_3su7i")
 region_enabled = true
 region_rect = Rect2(39, 15, 175, 80)
 metadata/_edit_lock_ = true
@@ -159,7 +161,7 @@ shape = SubResource("RectangleShape2D_etfwc")
 metadata/_edit_lock_ = true
 
 [node name="Image3" type="Sprite2D" parent="LayerItems/Piece2" unique_id=249461180]
-texture = ExtResource("3_x8u7c")
+texture = ExtResource("7_3su7i")
 region_enabled = true
 region_rect = Rect2(39, 96, 175, 80)
 metadata/_edit_lock_ = true
@@ -175,7 +177,7 @@ shape = SubResource("RectangleShape2D_etfwc")
 metadata/_edit_lock_ = true
 
 [node name="Image4" type="Sprite2D" parent="LayerItems/Piece3" unique_id=747118248]
-texture = ExtResource("3_x8u7c")
+texture = ExtResource("7_3su7i")
 region_enabled = true
 region_rect = Rect2(212, 96, 175, 80)
 metadata/_edit_lock_ = true
@@ -190,7 +192,7 @@ shape = SubResource("RectangleShape2D_etfwc")
 metadata/_edit_lock_ = true
 
 [node name="Image5" type="Sprite2D" parent="LayerItems/Piece4" unique_id=661375390]
-texture = ExtResource("3_x8u7c")
+texture = ExtResource("7_3su7i")
 region_enabled = true
 region_rect = Rect2(212, 15, 175, 80)
 metadata/_edit_lock_ = true

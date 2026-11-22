@@ -1,6 +1,6 @@
 extends Node
 
-@onready var GameControl : Node2D = $".."
+@onready var GameControl : Node2D = get_parent()
 
 var Holding : Area2D
 var Place : bool

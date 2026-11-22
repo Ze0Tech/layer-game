@@ -16,7 +16,7 @@ signal Action(Command : String, Item : Area2D)
 
 func _ready() -> void:
 	for i : Node2D in LevelItems:
-		if i.name == 'Background':
+		if i.name == 'Background' or i.name == 'Audio':
 			pass
 		elif i.name == 'Timers':
 			pass
@@ -86,7 +86,7 @@ func LockCheck() -> void:
 		$Places/Cage/BirdcageNode/Birdcage.visible = false
 		$Places/Cage/BirdcageNode/BirdCelebrateSheet.visible = true
 		WinLabel.visible = true
-
+		$Audio/VictorySfx.play()
 
 func _on_lock_area_entered(area: Area2D) -> void:
 	if area.name == 'Key':

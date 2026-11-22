@@ -4,7 +4,7 @@ extends Node2D
 
 #Variables ////////////////////////////////////////////////////////////////
 
-@onready var GameFunctions : Node = $GameFunctions
+@onready var GameFunctions : Node = get_child(0)
 @onready var Audio : Node = $Audio
 @onready var UIUX : Control = $UIUX
 var Levels : Array = []

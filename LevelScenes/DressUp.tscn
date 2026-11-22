@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://c7chx2bjboj0k" path="res://Resources/DressUp/Bottom/jeans.png" id="21_pdh8n"]
 [ext_resource type="Texture2D" uid="uid://voyxwivn15ff" path="res://Resources/DressUp/Bottom/shoez.png" id="22_1nthe"]
 [ext_resource type="Texture2D" uid="uid://c64ls6mvbv6l" path="res://Resources/DressUp/Bottom/trunks.png" id="23_sljk1"]
+[ext_resource type="AudioStream" uid="uid://csq3jaatacmvd" path="res://Resources/Audio/Victory_SFX.mp3" id="26_s8ulb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3m36"]
 size = Vector2(185.71436, 62.856934)
@@ -49,13 +50,13 @@ metadata/_edit_lock_ = true
 
 [node name="Curtain2" type="Sprite2D" parent="Background" unique_id=411257742]
 z_index = 1
-position = Vector2(283, 333)
+position = Vector2(283, 286.25)
 scale = Vector2(1.9743936, 1.9743935)
 texture = ExtResource("4_s8ulb")
 
 [node name="Curtain3" type="Sprite2D" parent="Background" unique_id=254318413]
 z_index = 1
-position = Vector2(1125, 332)
+position = Vector2(1125, 285.25)
 scale = Vector2(1.9743936, 1.9743935)
 texture = ExtResource("4_s8ulb")
 flip_h = true
@@ -75,6 +76,7 @@ scale = Vector2(1.25, 1.25)
 texture = ExtResource("5_xtf6y")
 
 [node name="Nest" type="Sprite2D" parent="Background" unique_id=799028299]
+visible = false
 z_index = 1
 position = Vector2(663, 621)
 texture = ExtResource("4_pdh8n")
@@ -159,7 +161,7 @@ shape = SubResource("RectangleShape2D_y3m36")
 
 [node name="LayerItems" type="Node2D" parent="." unique_id=798432804]
 z_index = 1
-position = Vector2(-335, -204)
+position = Vector2(-335, -83)
 scale = Vector2(1.5, 1.5)
 
 [node name="Bird" type="Node2D" parent="LayerItems" unique_id=315807051]
@@ -277,10 +279,17 @@ texture = ExtResource("23_sljk1")
 [node name="Timers" type="Node2D" parent="." unique_id=662326389]
 
 [node name="Anim" type="Timer" parent="Timers" unique_id=1035304774]
-wait_time = 0.2
+wait_time = 0.5
 
 [node name="Flowers" type="Timer" parent="Timers" unique_id=1626402576]
 wait_time = 0.5
 
+[node name="Audio" type="Node2D" parent="." unique_id=363291978]
+
+[node name="VictorySfx" type="AudioStreamPlayer" parent="Audio" unique_id=2145002966]
+stream = ExtResource("26_s8ulb")
+volume_db = -11.206
+
 [connection signal="pressed" from="Background/Finish" to="." method="_on_finish_pressed"]
+[connection signal="timeout" from="Timers/Anim" to="." method="_on_anim_timeout"]
 [connection signal="timeout" from="Timers/Flowers" to="." method="_on_flowers_timeout"]

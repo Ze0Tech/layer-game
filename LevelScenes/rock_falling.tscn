@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://dsdpsic1q2lka" path="res://Resources/General/Layer Icon.png" id="4_pwx0u"]
 [ext_resource type="Texture2D" uid="uid://hx0uaxatih5k" path="res://Resources/General/Lock Icon.png" id="5_2extm"]
 [ext_resource type="Texture2D" uid="uid://jxcxu2nsyc8t" path="res://Resources/General/VisIcon.png" id="6_vsb5o"]
+[ext_resource type="Texture2D" uid="uid://ddemx1iaj4ufx" path="res://RockFalling/platform.png" id="7_vsb5o"]
 [ext_resource type="Script" uid="uid://cp4duay7jiomd" path="res://RockFalling/rock.gd" id="7_yg753"]
+[ext_resource type="Texture2D" uid="uid://dqi2vtromhlco" path="res://RockFalling/boulder sprite.png" id="8_2extm"]
 [ext_resource type="Script" uid="uid://d0di1mxr5qqr6" path="res://RockFalling/RockFallChick.gd" id="8_j0d0v"]
 [ext_resource type="Texture2D" uid="uid://bkqon8sexiq23" path="res://RockFalling/chick.png" id="9_pwx0u"]
 
@@ -69,6 +71,7 @@ position = Vector2(-57.829956, -1.392456)
 scale = Vector2(0.90415925, 0.90415925)
 texture = ExtResource("6_vsb5o")
 hframes = 2
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LayerUI/Layer1" unique_id=502494040]
 scale = Vector2(0.99999994, 0.99999994)
@@ -93,6 +96,7 @@ position = Vector2(-57.829956, -1.392456)
 scale = Vector2(0.90415925, 0.90415925)
 texture = ExtResource("6_vsb5o")
 hframes = 2
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LayerUI/Layer2" unique_id=251239044]
 scale = Vector2(0.99999994, 0.99999994)
@@ -125,9 +129,12 @@ shape = SubResource("RectangleShape2D_rd45t")
 [node name="Objects" type="Node2D" parent="." unique_id=14121466]
 
 [node name="Object" type="Area2D" parent="Objects" unique_id=1589369059]
-position = Vector2(1061, 604)
+visible = false
+position = Vector2(1032, 613)
+scale = Vector2(1.85, 1)
 
 [node name="ObjSprite" type="Sprite2D" parent="Objects/Object" unique_id=191806707]
+visible = false
 scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("4_pwx0u")
 
@@ -137,15 +144,23 @@ shape = SubResource("RectangleShape2D_rd45t")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Objects/Object" unique_id=412780304]
 scale = Vector2(0.99999994, 0.99999994)
+collision_layer = 0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Objects/Object/StaticBody2D" unique_id=1976877339]
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_rd45t")
 
+[node name="Platform" type="Sprite2D" parent="Objects/Object" unique_id=399414723]
+scale = Vector2(0.7400949, 1.1287128)
+texture = ExtResource("7_vsb5o")
+
 [node name="Object2" type="Area2D" parent="Objects" unique_id=15659003]
-position = Vector2(706, 603)
+visible = false
+position = Vector2(677, 612)
+scale = Vector2(1.85, 1)
 
 [node name="ObjSprite" type="Sprite2D" parent="Objects/Object2" unique_id=1426678012]
+visible = false
 scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("4_pwx0u")
 
@@ -155,15 +170,22 @@ shape = SubResource("RectangleShape2D_rd45t")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Objects/Object2" unique_id=1444711163]
 scale = Vector2(0.99999994, 0.99999994)
+collision_layer = 0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Objects/Object2/StaticBody2D" unique_id=1676816492]
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_rd45t")
 
+[node name="Platform" type="Sprite2D" parent="Objects/Object2" unique_id=918576168]
+scale = Vector2(0.7400949, 1.1287128)
+texture = ExtResource("7_vsb5o")
+
 [node name="Object3" type="Area2D" parent="Objects" unique_id=1607443587]
-position = Vector2(347, 602)
+position = Vector2(318, 611)
+scale = Vector2(1.85, 1)
 
 [node name="ObjSprite" type="Sprite2D" parent="Objects/Object3" unique_id=2097749472]
+visible = false
 scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("4_pwx0u")
 
@@ -178,18 +200,26 @@ scale = Vector2(0.99999994, 0.99999994)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_rd45t")
 
+[node name="Platform" type="Sprite2D" parent="Objects/Object3" unique_id=184171734]
+scale = Vector2(0.7400949, 1.1287128)
+texture = ExtResource("7_vsb5o")
+
 [node name="Rocks" type="Node2D" parent="." unique_id=1750821701]
 
 [node name="RockCopy" type="RigidBody2D" parent="Rocks" unique_id=769222316]
-visible = false
 position = Vector2(1181, 120)
 script = ExtResource("7_yg753")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/RockCopy" unique_id=428087738]
-polygon = PackedVector2Array(-1, -44, 24, -36, 37, -2, 27, 28, 2, 46, -32, 39, -47, 10, -31, -23)
+polygon = PackedVector2Array(1, -32, 6, -26, 30, -24, 38, -15, 32, 0, 34, 13, 16, 26, 2, 26, -11, 33, -22, 22, -33, 25, -40, 15, -39, -1, -48, -19, -34, -30)
 
 [node name="CollisionPolygon2D2" type="Polygon2D" parent="Rocks/RockCopy" unique_id=283026431]
-polygon = PackedVector2Array(-1, -44, 24, -36, 37, -2, 27, 28, 2, 46, -32, 39, -47, 10, -31, -23)
+visible = false
+polygon = PackedVector2Array(1, -32, 6, -26, 30, -24, 38, -15, 32, 0, 34, 13, 16, 26, 2, 26, -11, 33, -22, 22, -33, 25, -40, 15, -39, -1, -48, -19, -34, -30)
+
+[node name="BoulderSprite" type="Sprite2D" parent="Rocks/RockCopy" unique_id=986510587]
+texture = ExtResource("8_2extm")
+hframes = 3
 
 [node name="Character" type="Node2D" parent="." unique_id=1933794332]
 
@@ -228,4 +258,6 @@ wait_time = 0.1
 autostart = true
 
 [connection signal="timeout" from="Timers/RockSpawn" to="." method="_on_rock_spawn_timeout"]
+[connection signal="timeout" from="Timers/Animation" to="." method="_on_animation_timeout"]
+[connection signal="timeout" from="Timers/Animation" to="Rocks/RockCopy" method="_on_animation_timeout"]
 [connection signal="timeout" from="Timers/Animation" to="Character/CharacterBody2D" method="_on_animation_timeout"]

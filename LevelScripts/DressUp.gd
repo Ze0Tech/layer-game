@@ -9,12 +9,9 @@ extends Node2D
 @onready var Rcurtain : Sprite2D = $Background/Curtain3
 @onready var Crowd : Sprite2D = $Background/Crowd
 
-
 var Items : Array
 var Finished : bool
 var Place : bool
-
-
 
 var Clothes : Array = [
 	0,
@@ -22,12 +19,11 @@ var Clothes : Array = [
 	0
 ]
 
-
 signal Action(Command : String, Item : Area2D)
 
 func _ready() -> void:
 	for i : Node2D in LevelItems:
-		if i.name == 'Background' or i.name == 'Timers':
+		if i.name == 'Background' or i.name == 'Timers' or i.name == 'Audio':
 			pass
 		elif i.name == 'LayerItems':
 			pass
@@ -57,10 +53,7 @@ func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, ar
 		var Index : int = area.get_index()
 		if area.is_in_group('Layers'):
 			Swap(Index)
-			#var LayerObj : Area2D = LevelItems[2].get_child(Index)
-			#if LayerObj:
-				#Action.emit('VisToggle',LayerObj)
-				#Action.emit('Swap',Index)
+
 			
 		if area.is_in_group('Places'):
 			Action.emit('CenterBig',area)
@@ -93,13 +86,7 @@ func Change() -> void:
 	Globals.Clothes[1] = Clothes[1]
 	Globals.Clothes[2] = Clothes[2]
 	print(Globals.Clothes)
-	#if Index == 0:
-		#print(Index)
-	#elif Index == 1:
-		#print(Index)
-	#else:
-		#print(Index)
-	
+
 func Present() -> void:
 	var tween : Tween = create_tween()
 	#var lTween : Tween = Tween.new()
@@ -136,6 +123,7 @@ func FlowerSpawn() -> void:
 	
 
 func _on_finish_pressed() -> void:
+	$Audio/VictorySfx.play()
 	Present()
 
 

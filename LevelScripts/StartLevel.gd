@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var LevelItems : Array = get_children()
 
+var Game : PackedScene = preload('res://Game/Game.tscn')
 var Items : Array
 var Finished : bool
 var Place : bool
@@ -12,6 +13,16 @@ var Pieces : Array
 signal Action(Command : String, Item : Area2D)
 
 func _ready() -> void:
+	
+	var StartGame = Game.instantiate()
+	connect('Action',StartGame.LevelAction)
+	add_sibling.call_deferred(StartGame)
+	
+	get_parent().remove_child.call_deferred(self)
+	StartGame.add_child.call_deferred(self)
+	
+	
+	
 	for i : Node2D in LevelItems:
 		if i.name == 'Background' or i.name == 'Buttons':
 			pass
@@ -40,7 +51,9 @@ func _ready() -> void:
 				q.connect('input_event',ItemInput.bind(q))
 		
 		Pieces = LevelItems[2].get_children()
-				
+		
+
+		
 func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, area : Area2D, Vsprite : Sprite2D = null) -> void:
 	if input.is_action_pressed("LMB"):
 		if area.is_in_group('Layers'):
@@ -58,9 +71,9 @@ func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, ar
 	if input.is_action_released('LMB'):
 		if Held:
 			Held.remove_from_group('Held')
-			Action.emit('Unhold')
-			PuzzleCheck()
 			
+			PuzzleCheck()
+		Action.emit('Unhold')
 func AreaEntered(NewHeld : Area2D, NewTouched : Area2D, State : int) -> void: # 1 - Enter 0 - Exit
 	if NewHeld.visible and NewTouched.visible:
 		if State == 1:
@@ -126,3 +139,10 @@ func _on_button_button_up() -> void:
 	for i : Area2D in Pieces:
 		i.modulate = Color(1.0, 1.0, 1.0, 1.0)
 		
+	
+		
+
+
+func _on_button_pressed() -> void:
+	get_parent().queue_free()
+	get_tree().change_scene_to_file("res://LevelSelect/level_select.tscn")

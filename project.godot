@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Layer Game"
-run/main_scene="uid://dlk6lo7k3ppdl"
+run/main_scene="uid://clgaps6ltfn2y"
 config/features=PackedStringArray("4.7", "Forward Plus")
 boot_splash/image="uid://c3o7jv0gofyoi"
 config/icon="uid://b5dvtwef041v2"

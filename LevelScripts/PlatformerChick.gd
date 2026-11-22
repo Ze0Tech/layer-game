@@ -46,6 +46,7 @@ func _physics_process(delta):
 				animated_sprite.play("run")
 		
 		if Input.is_action_just_pressed("Space") and !has_jumped and is_on_floor():
+			$"../../Audio/JumpSfx".play()
 			has_jumped = true
 			get_jump()
 			variable_jump.start(1)

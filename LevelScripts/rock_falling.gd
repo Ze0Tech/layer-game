@@ -38,13 +38,39 @@ func ItemInput(input : InputEvent, area : Variant) -> void:
 	if input.is_action_pressed("LMB"):
 		
 		if area.is_in_group('LayerUI'):
-			var LayerObj : Variant = find_child('Objects').get_child(area.get_index())
-			if LayerObj:
-				var VSprite : Sprite2D = area.get_child(0).get_child(1)
-				Action.emit('VisToggle',LayerObj)
-				Action.emit('CollisionToggle',LayerObj.get_child(2))
-				VSprite.frame = not LayerObj.visible
-				
+			var index : int = area.get_index()
+			if index == 0:
+				find_child('LayerUI').get_child(0).get_child(0).get_child(1).frame = 0
+				find_child('LayerUI').get_child(1).get_child(0).get_child(1).frame = 1
+				find_child('LayerUI').get_child(2).get_child(0).get_child(1).frame = 1
+				find_child('Objects').get_child(0).visible = true
+				find_child('Objects').get_child(0).get_child(2).collision_layer = 1
+				find_child('Objects').get_child(1).visible = false
+				find_child('Objects').get_child(1).get_child(2).collision_layer = 0
+				find_child('Objects').get_child(2).visible = false
+				find_child('Objects').get_child(2).get_child(2).collision_layer = 0
+			elif index == 1:
+				find_child('LayerUI').get_child(0).get_child(0).get_child(1).frame = 1
+				find_child('LayerUI').get_child(1).get_child(0).get_child(1).frame = 0
+				find_child('LayerUI').get_child(2).get_child(0).get_child(1).frame = 1
+				find_child('Objects').get_child(1).visible = true
+				find_child('Objects').get_child(1).get_child(2).collision_layer = 1
+				find_child('Objects').get_child(0).visible = false
+				find_child('Objects').get_child(0).get_child(2).collision_layer = 0
+				find_child('Objects').get_child(2).visible = false
+				find_child('Objects').get_child(2).get_child(2).collision_layer = 0
+			elif index == 2:
+				find_child('LayerUI').get_child(0).get_child(0).get_child(1).frame = 1
+				find_child('LayerUI').get_child(1).get_child(0).get_child(1).frame = 1
+				find_child('LayerUI').get_child(2).get_child(0).get_child(1).frame = 0
+				find_child('Objects').get_child(2).visible = true
+				find_child('Objects').get_child(2).get_child(2).collision_layer = 1
+				find_child('Objects').get_child(1).visible = false
+				find_child('Objects').get_child(1).get_child(2).collision_layer = 0
+				find_child('Objects').get_child(0).visible = false
+				find_child('Objects').get_child(0).get_child(2).collision_layer = 0
+			else: print('error')
+			
 		if area.is_in_group('Places'):
 			Action.emit('CenterBig',area)
 			Place = not Place
@@ -66,6 +92,7 @@ func RockSpawn() -> void:
 	NewRock.position = Vector2(randi_range(180,1180),125)
 	NewRock.visible = true
 	NewRock.add_to_group('Rock')
+
 	
 	find_child('Rocks').add_child(NewRock)
 	
@@ -73,3 +100,9 @@ func RockSpawn() -> void:
 
 func _on_rock_spawn_timeout() -> void:
 	RockSpawn()
+
+
+func _on_animation_timeout() -> void:
+	for i : RigidBody2D in find_child('Rocks').get_children():
+		var sprite : Sprite2D = i.get_child(2)
+		sprite.frame = (sprite.frame + 1) % 3

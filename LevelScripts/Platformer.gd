@@ -40,49 +40,56 @@ func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, ar
 	if input.is_action_pressed("LMB"):
 		
 		if area.is_in_group('Layers') or _shape_idx == 1:
-			
-			var Index = area.get_index()
-			var Layers : Array = LevelItems[2].get_children()
-			
-			for i in Layers:
-				var Boxes : Array = i.get_children()
-				for Box in Boxes:
-
-					if i.get_index() == Index:
-						Action.emit('VisOn',Box)
-						Action.emit('CollOn',Box.get_child(2))
+			var index : int = area.get_index()
+			if index == 0: # Red
+				$Background/Red.visible = true
+				$Background/Blue.visible = false
+				$Background/Green.visible = false
+				find_child('Layers').get_child(0).get_child(0).get_child(1).frame = 0
+				find_child('Layers').get_child(1).get_child(0).get_child(1).frame = 1
+				find_child('Layers').get_child(2).get_child(0).get_child(1).frame = 1
+				for i in find_child('LayerObjects').get_child(0).get_children():
+					i.visible = true
+					i.get_child(2).collision_layer = 1
+				for i in find_child('LayerObjects').get_child(1).get_children():
+					i.visible = false
+					i.get_child(2).collision_layer = 0
+				for i in find_child('LayerObjects').get_child(2).get_children():
+					i.visible = false
+					i.get_child(2).collision_layer = 0
+			elif index == 1: #Blue
+				$Background/Red.visible = false
+				$Background/Blue.visible = true
+				$Background/Green.visible = false
+				find_child('Layers').get_child(0).get_child(0).get_child(1).frame = 1
+				find_child('Layers').get_child(1).get_child(0).get_child(1).frame = 0
+				find_child('Layers').get_child(2).get_child(0).get_child(1).frame = 1
+				for i in find_child('LayerObjects').get_child(1).get_children():
+					i.visible = true
+					i.get_child(2).collision_layer = 1
+				for i in find_child('LayerObjects').get_child(0).get_children():
+					i.visible = false
+					i.get_child(2).collision_layer = 0
+				for i in find_child('LayerObjects').get_child(2).get_children():
+					i.visible = false
+					i.get_child(2).collision_layer = 0
+			elif index == 2: #Green
+				$Background/Red.visible = false
+				$Background/Blue.visible = false
+				$Background/Green.visible = true
+				find_child('Layers').get_child(0).get_child(0).get_child(1).frame = 1
+				find_child('Layers').get_child(1).get_child(0).get_child(1).frame = 1
+				find_child('Layers').get_child(2).get_child(0).get_child(1).frame = 0
+				for i in find_child('LayerObjects').get_child(2).get_children():
+					i.visible = true
+					i.get_child(2).collision_layer = 1
+				for i in find_child('LayerObjects').get_child(1).get_children():
+					i.visible = false
+					i.get_child(2).collision_layer = 0
+				for i in find_child('LayerObjects').get_child(0).get_children():
+					i.visible = false
+					i.get_child(2).collision_layer = 0
 						
-						#fuck() 
-						Vsprite.frame = Box.visible
-						
-					else:
-						Action.emit('VisOff',Box)
-						Action.emit('CollOff',Box.get_child(2))
-						
-			
-			
-			
-			
-			
-			
-			
-			
-			#var LayerObj : Area2D = LevelItems[2].get_child(area.get_index())
-			#var CollBoxes : Array = LayerObj.get_children()
-		#
-			#Action.emit('VisToggle', LayerObj)
-			#for i in CollBoxes:
-				#Action.emit('CollisionToggle',i)
-		
-		
-		
-		
-			#var LayerObj : Variant = LevelItems[2].get_child(area.get_index())
-			#if LayerObj:
-				#Action.emit('VisToggle',LayerObj)
-				#for i in LayerObj.get_children():
-					#Action.emit('CollisionToggle',i.get_child(2))
-
 
 		if area.is_in_group('Places'):
 			Action.emit('CenterBig',area)
@@ -98,7 +105,7 @@ func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, ar
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	print('yey')
-
+	$Audio/VictorySfx.play()
 
 func _on_death_body_entered(_body: Node2D) -> void:
 	Player.position = Vector2(325,550)
