@@ -16,6 +16,9 @@ func _ready() -> void:
 	if Globals.Clothes:
 		Globals.BirdUpdate()
 		
+	for i in Globals.LevelsComplete:
+		find_child('Stars').get_child(i).visible = true
+		
 func _process(_delta: float) -> void:
 	
 	InputCheck()
@@ -23,6 +26,8 @@ func _process(_delta: float) -> void:
 func InputCheck() -> void:
 	if Input.is_action_just_pressed('Esc'):
 		MainMenu()
+	#if Input.is_action_just_pressed("Ctrl"):
+		#Globals.LevelsComplete += 1
 
 func MainMenu() -> void:
 	get_tree().change_scene_to_file("res://MainMenu/MainMenu.tscn")

@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dqi2vtromhlco" path="res://RockFalling/boulder sprite.png" id="8_2extm"]
 [ext_resource type="Script" uid="uid://d0di1mxr5qqr6" path="res://RockFalling/RockFallChick.gd" id="8_j0d0v"]
 [ext_resource type="Texture2D" uid="uid://bkqon8sexiq23" path="res://RockFalling/chick.png" id="9_pwx0u"]
+[ext_resource type="AudioStream" uid="uid://csq3jaatacmvd" path="res://Resources/Audio/Victory_SFX.mp3" id="12_yhn4y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rd45t"]
 size = Vector2(185.71436, 62.856934)
@@ -37,6 +38,16 @@ position = Vector2(673, 452.99997)
 scale = Vector2(1.2488478, 1.2823129)
 texture = ExtResource("3_j0d0v")
 metadata/_edit_lock_ = true
+
+[node name="ProgressBar" type="ProgressBar" parent="Background" unique_id=671031388]
+offset_left = 280.0
+offset_top = 101.0
+offset_right = 1124.0
+offset_bottom = 128.0
+max_value = 150.0
+step = 1.0
+value = 150.0
+show_percentage = false
 
 [node name="Walls" type="Node2D" parent="." unique_id=759558621]
 
@@ -207,6 +218,7 @@ texture = ExtResource("7_vsb5o")
 [node name="Rocks" type="Node2D" parent="." unique_id=1750821701]
 
 [node name="RockCopy" type="RigidBody2D" parent="Rocks" unique_id=769222316]
+visible = false
 position = Vector2(1181, 120)
 script = ExtResource("7_yg753")
 
@@ -257,7 +269,19 @@ autostart = true
 wait_time = 0.1
 autostart = true
 
+[node name="Survive" type="Timer" parent="Timers" unique_id=1682868674]
+wait_time = 15.0
+one_shot = true
+autostart = true
+
+[node name="Audio" type="Node2D" parent="." unique_id=599983112]
+
+[node name="VictorySfx" type="AudioStreamPlayer" parent="Audio" unique_id=39642009]
+stream = ExtResource("12_yhn4y")
+volume_db = -12.0
+
 [connection signal="timeout" from="Timers/RockSpawn" to="." method="_on_rock_spawn_timeout"]
 [connection signal="timeout" from="Timers/Animation" to="." method="_on_animation_timeout"]
 [connection signal="timeout" from="Timers/Animation" to="Rocks/RockCopy" method="_on_animation_timeout"]
 [connection signal="timeout" from="Timers/Animation" to="Character/CharacterBody2D" method="_on_animation_timeout"]
+[connection signal="timeout" from="Timers/Survive" to="." method="_on_survive_timeout"]

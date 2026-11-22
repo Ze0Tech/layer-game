@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var LevelItems : Array = get_children()
+@onready var Star : Sprite2D = $Background/Star
 
 var Items : Array
 var Finished : bool
@@ -106,6 +107,10 @@ func ItemInput(_viewport : Variant, input : InputEvent, _shape_idx : Variant, ar
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	print('yey')
 	$Audio/VictorySfx.play()
+	$Places/Win.queue_free()
+	Globals.LevelsComplete += 1
+	await get_tree().create_timer(3).timeout
+	get_parent().LevelSelect()
 
 func _on_death_body_entered(_body: Node2D) -> void:
 	Player.position = Vector2(325,550)
@@ -113,3 +118,7 @@ func _on_death_body_entered(_body: Node2D) -> void:
 	input.action = 'LMB'
 	input.pressed = true
 	ItemInput(null,input,1,$Layers/Layer3,$Layers/Layer1/LayerIcon/VisIcon)
+
+
+func _on_animate_timeout() -> void:
+	Star.frame = (Star.frame + 1) % 3

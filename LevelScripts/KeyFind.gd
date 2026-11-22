@@ -10,6 +10,7 @@ var Sprites : Array
 var Items : Array
 var Lock : bool
 var Finished : bool
+var Menu : bool = true
 var Place : bool
 var Mod : Area2D
 signal Action(Command : String, Item : Area2D)
@@ -88,6 +89,17 @@ func LockCheck() -> void:
 		WinLabel.visible = true
 		$Audio/VictorySfx.play()
 		$Places/Cage/Lock.queue_free()
+		await get_tree().create_timer(3.0).timeout
+		call_deferred('Menufunc')
+		Lock = false
+		
+		
+func Menufunc() -> void:
+	if Menu:
+		Globals.LevelsComplete += 1
+		get_parent().LevelSelect()
+		Menu = false
+		
 func _on_lock_area_entered(area: Area2D) -> void:
 	if area.name == 'Key':
 		Lock = true

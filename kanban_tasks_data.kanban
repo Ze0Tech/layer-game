@@ -31,25 +31,17 @@
 			"uuid": "1ed2c5aa-37d0-4ffc-a049-22a405558df2",
 			"title": "Todo",
 			"tasks": [
-				"dc4ddddc-978e-4692-be61-f4f406fcf0b7",
 				"fc69525f-aedb-460f-bf95-3df13c2cef4b",
-				"f7b93a03-7016-4fe8-8501-d229dcef5d8b",
-				"180b8857-d35f-45b9-9f33-9add721d1d2b",
-				"5f8faa55-dd3b-40bd-a74c-a716c3ce087c",
+				"dc4ddddc-978e-4692-be61-f4f406fcf0b7",
 				"ce8c89a9-f3ff-4b1d-bcdb-70398b81c999",
 				"278eecc3-7edd-4bb3-b250-f0d75fb0c7a7",
-				"98d0963c-8eb5-48e1-a881-8a6f0556e814",
-				"8a2196bd-a3a0-4d41-b3c0-c27e1c88be08",
-				"d13a63c2-3f3c-4e91-b2ba-15cb690e1526",
-				"f6dd2f02-1ba6-43f4-a960-734fb66d0663"
+				"98d0963c-8eb5-48e1-a881-8a6f0556e814"
 			]
 		},
 		{
 			"uuid": "4c4fd0b0-e9ae-42a9-86be-e2b9fc73f092",
 			"title": "Doing",
-			"tasks": [
-				"1f5f4318-2665-4a2c-8b3b-33ff376c518d"
-			]
+			"tasks": []
 		},
 		{
 			"uuid": "b83031cf-bb2a-439d-a528-c512d3c716bf",
@@ -57,12 +49,19 @@
 			"tasks": [
 				"dfcdb69c-4f9d-4421-a2fa-87c207b2ca14",
 				"ad8858eb-50b2-4c79-b847-a7f5593d327a",
+				"d13a63c2-3f3c-4e91-b2ba-15cb690e1526",
+				"2952c2d3-f10f-4db8-89bd-f18973024de2",
+				"12cd22b1-669b-4777-b938-15fcc35424d8",
+				"8a2196bd-a3a0-4d41-b3c0-c27e1c88be08",
 				"93de1445-66c7-4222-83f0-e6d8fec6799d",
 				"d7db8930-d54d-4961-99f0-7773eedff94c",
 				"fc83684e-9afa-4f48-ac69-3843cbea4b04",
 				"c81d1144-89b3-491b-8fdc-d76fd3c33bf0",
 				"83346589-8190-49c7-9c7d-436df3835edb",
+				"f6dd2f02-1ba6-43f4-a960-734fb66d0663",
+				"73f7b232-a94b-49ad-bb47-9dce5ebaa0dc",
 				"2139a31e-fb1c-4815-8344-475427a8f49c",
+				"5bab500c-f24b-42dd-ac69-e08ad0a44e55",
 				"5fe64a29-3e0c-471a-a8a3-baa5ab1392e3",
 				"f9100b67-bcae-4655-aebb-e05e3e372df5",
 				"403a6034-08e4-4ca7-bd07-094d23ed7b5f",
@@ -97,31 +96,27 @@
 		},
 		{
 			"uuid": "fc69525f-aedb-460f-bf95-3df13c2cef4b",
-			"title": "Vistoggle for cover from rock",
+			"title": "",
 			"description": "",
 			"category": "469bb5b7-c554-4723-a72a-59751c83be04",
-			"steps": []
-		},
-		{
-			"uuid": "f7b93a03-7016-4fe8-8501-d229dcef5d8b",
-			"title": "Lollipop (eraser tool?)",
-			"description": "",
-			"category": "469bb5b7-c554-4723-a72a-59751c83be04",
-			"steps": []
-		},
-		{
-			"uuid": "180b8857-d35f-45b9-9f33-9add721d1d2b",
-			"title": "Tetris",
-			"description": "",
-			"category": "469bb5b7-c554-4723-a72a-59751c83be04",
-			"steps": []
-		},
-		{
-			"uuid": "5f8faa55-dd3b-40bd-a74c-a716c3ce087c",
-			"title": "Paint by Numbers",
-			"description": "",
-			"category": "469bb5b7-c554-4723-a72a-59751c83be04",
-			"steps": []
+			"steps": [
+				{
+					"details": "Lollipop (eraser tool?)",
+					"done": false
+				},
+				{
+					"details": "Vistoggle for cover from rock",
+					"done": false
+				},
+				{
+					"details": "Tetris",
+					"done": false
+				},
+				{
+					"details": "Paint by Numbers",
+					"done": false
+				}
+			]
 		},
 		{
 			"uuid": "93de1445-66c7-4222-83f0-e6d8fec6799d",
@@ -244,7 +239,7 @@
 		},
 		{
 			"uuid": "d13a63c2-3f3c-4e91-b2ba-15cb690e1526",
-			"title": "visual win for platform maze",
+			"title": "star for platform maze",
 			"description": "",
 			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
 			"steps": []
@@ -261,6 +256,51 @@
 			"title": "Double victory in key find",
 			"description": "",
 			"category": "6deed6e0-28e5-4b6d-8604-bcb6e054f779",
+			"steps": []
+		},
+		{
+			"uuid": "5bab500c-f24b-42dd-ac69-e08ad0a44e55",
+			"title": "return to menu (KeyFind)",
+			"description": "",
+			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
+			"steps": []
+		},
+		{
+			"uuid": "2952c2d3-f10f-4db8-89bd-f18973024de2",
+			"title": "return to menu (the rest of them)",
+			"description": "",
+			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
+			"steps": [
+				{
+					"details": "dress up",
+					"done": true
+				},
+				{
+					"details": "KeyFind",
+					"done": true
+				},
+				{
+					"details": "rockfall",
+					"done": true
+				},
+				{
+					"details": "platformer",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "73f7b232-a94b-49ad-bb47-9dce5ebaa0dc",
+			"title": "Mouse hidden",
+			"description": "",
+			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
+			"steps": []
+		},
+		{
+			"uuid": "12cd22b1-669b-4777-b938-15fcc35424d8",
+			"title": "Stars in Level select for progres",
+			"description": "",
+			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
 			"steps": []
 		}
 	],

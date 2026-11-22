@@ -10,11 +10,11 @@ func _ready() -> void:
 	KillTimer.wait_time = 2
 	KillTimer.start()
 	
-	
 func End() -> void:
 	self.queue_free()
 
 
-func _on_animation_timeout() -> void:
-	var sprite : Sprite2D = find_child('BoulderSprite')
-	sprite.frame = (sprite.frame + 1) % 3
+#func _on_animation_timeout() -> void:
+	#var sprite : Sprite2D = find_child('BoulderSprite')
+	#sprite.frame = (sprite.frame + 1) % 3
+	

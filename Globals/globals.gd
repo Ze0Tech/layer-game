@@ -3,14 +3,15 @@ extends Node
 var MusicMod : float = 0
 var SFXMod : float = 0
 var AltControl : bool = 0
+var LevelsComplete : int = 0
 
 @onready var Mouse : Sprite2D = $Canvas/MouseIcon
 @onready var Bird : Node2D = $Canvas/Bird
 @onready var ClothesNode : Node2D = $Canvas/Bird/Clothes
 @export var Clothes : Array = [0,0,0]
 
-#func _ready() -> void:
-	#
+func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 func BirdUpdate() -> void:
 	Bird.visible = true

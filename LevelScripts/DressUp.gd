@@ -9,6 +9,7 @@ extends Node2D
 @onready var Rcurtain : Sprite2D = $Background/Curtain3
 @onready var Crowd : Sprite2D = $Background/Crowd
 
+var Menu : bool = true
 var Items : Array
 var Finished : bool
 var Place : bool
@@ -94,9 +95,14 @@ func Present() -> void:
 	tween.tween_property(Lcurtain,'position',Vector2(-234,330),2)
 	tween.parallel()
 	tween.tween_property(Rcurtain,'position',Vector2(1580,330),2)
-	
+	$Audio/DrumRoll.play(3)
+	await get_tree().create_timer(2).timeout
+	$Audio/Applause.play()
 	Anim.start()
 	Flowers.start()
+	Globals.LevelsComplete += 1
+	await get_tree().create_timer(5).timeout
+	get_parent().LevelSelect()
 	
 func FlowerSpawn() -> void:
 	var tween : Tween = create_tween()
@@ -123,7 +129,7 @@ func FlowerSpawn() -> void:
 	
 
 func _on_finish_pressed() -> void:
-	$Audio/VictorySfx.play()
+	#$Audio/VictorySfx.play()
 	Present()
 
 

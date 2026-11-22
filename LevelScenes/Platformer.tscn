@@ -11,13 +11,13 @@
 [ext_resource type="Script" uid="uid://bdc4put30p2lu" path="res://LevelScripts/PlatformerChick.gd" id="6_hfqar"]
 [ext_resource type="Texture2D" uid="uid://deyoplyunku0w" path="res://Resources/Platformer/green.png" id="7_0ko7b"]
 [ext_resource type="Texture2D" uid="uid://tm7fvte88ebv" path="res://Resources/Platformer/tree.png" id="7_xtj6x"]
+[ext_resource type="Texture2D" uid="uid://57jiovf1vgci" path="res://Resources/Platformer/star.png" id="8_1q26l"]
 [ext_resource type="Texture2D" uid="uid://civdhvrvhxelu" path="res://Resources/Platformer/chick.png" id="8_ainyb"]
 [ext_resource type="Texture2D" uid="uid://dpdx6sssooohj" path="res://Resources/Platformer/Jump.png" id="9_hfqar"]
 [ext_resource type="Texture2D" uid="uid://brnhcwjwger6u" path="res://Resources/Platformer/idle.png" id="10_am0gi"]
 [ext_resource type="Texture2D" uid="uid://rot8m3ro1h58" path="res://Resources/Platformer/bird_dash-Sheet.png" id="10_hfqar"]
 [ext_resource type="AudioStream" uid="uid://juj15rg84a6p" path="res://Resources/Audio/Jump_SFX.wav" id="12_6umwk"]
 [ext_resource type="AudioStream" uid="uid://csq3jaatacmvd" path="res://Resources/Audio/Victory_SFX.mp3" id="13_j8iut"]
-[ext_resource type="Texture2D" uid="uid://c0bfyf8nvo0t4" path="res://Resources/General/Nest.png" id="18_1q26l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b3kt6"]
 size = Vector2(185.71436, 62.856934)
@@ -155,6 +155,12 @@ visible = false
 position = Vector2(800, 450)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("7_0ko7b")
+
+[node name="Star" type="Sprite2D" parent="Background" unique_id=1487620715]
+position = Vector2(1155, 129)
+scale = Vector2(1.595, 1.595)
+texture = ExtResource("8_1q26l")
+hframes = 3
 
 [node name="Layers" type="Node2D" parent="." unique_id=1000858341]
 position = Vector2(1480, -102)
@@ -1127,12 +1133,8 @@ volume_db = -15.0
 stream = ExtResource("13_j8iut")
 volume_db = -14.0
 
-[node name="Nest" type="Sprite2D" parent="Audio" unique_id=1487620715]
-position = Vector2(1156, 116.00001)
-scale = Vector2(0.2507837, 0.2507837)
-texture = ExtResource("18_1q26l")
-
 [connection signal="body_entered" from="Places/Win" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Places/Death" to="." method="_on_death_body_entered"]
+[connection signal="timeout" from="Objects/CharacterBody2D/Animate" to="." method="_on_animate_timeout"]
 [connection signal="timeout" from="Objects/CharacterBody2D/Animate" to="Objects/CharacterBody2D" method="_on_animate_timeout"]
 [connection signal="timeout" from="Objects/CharacterBody2D/JumpTimer" to="Objects/CharacterBody2D" method="_on_animate_timeout"]

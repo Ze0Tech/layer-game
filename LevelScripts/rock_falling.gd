@@ -8,6 +8,10 @@ extends Node2D
 
 @onready var Character : CharacterBody2D = $Character/CharacterBody2D
 
+@onready var Bar : ProgressBar = $Background/ProgressBar
+
+@onready var SurvTimer : Timer = $Timers/Survive
+
 var Items : Array
 var Finished : bool
 var Place : bool
@@ -18,7 +22,7 @@ func _ready() -> void:
 	
 	for Category : Node2D in LevelItems:
 		print(Category.name)
-		if Category.name == 'Background' or Category.name == 'Timers':
+		if Category.name == 'Background' or Category.name == 'Timers' or Category.name == 'Audio':
 			pass
 		else:
 			var NewItems : Array = Category.get_children()
@@ -32,7 +36,10 @@ func _ready() -> void:
 					_shape_idx : int
 					) -> void:
 					ItemInput(event,item))
-		
+
+func _process(delta: float) -> void:
+	Bar.value = SurvTimer.time_left * 10
+
 func ItemInput(input : InputEvent, area : Variant) -> void:
 	
 	if input.is_action_pressed("LMB"):
@@ -106,3 +113,14 @@ func _on_animation_timeout() -> void:
 	for i : RigidBody2D in find_child('Rocks').get_children():
 		var sprite : Sprite2D = i.get_child(2)
 		sprite.frame = (sprite.frame + 1) % 3
+		sprite.rotation += 0.3
+
+
+func _on_survive_timeout() -> void:
+	RockTimer.stop()
+	$Audio/VictorySfx.play()
+	Character.StopMove()
+	Globals.LevelsComplete += 1
+	await get_tree().create_timer(4).timeout
+	
+	get_parent().LevelSelect()

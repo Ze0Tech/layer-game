@@ -25,7 +25,9 @@
 [ext_resource type="Texture2D" uid="uid://c7chx2bjboj0k" path="res://Resources/DressUp/Bottom/jeans.png" id="21_pdh8n"]
 [ext_resource type="Texture2D" uid="uid://voyxwivn15ff" path="res://Resources/DressUp/Bottom/shoez.png" id="22_1nthe"]
 [ext_resource type="Texture2D" uid="uid://c64ls6mvbv6l" path="res://Resources/DressUp/Bottom/trunks.png" id="23_sljk1"]
+[ext_resource type="AudioStream" uid="uid://cwsmwidcfrs8f" path="res://Resources/Audio/DrumRoll.mp3" id="26_qxagx"]
 [ext_resource type="AudioStream" uid="uid://csq3jaatacmvd" path="res://Resources/Audio/Victory_SFX.mp3" id="26_s8ulb"]
+[ext_resource type="AudioStream" uid="uid://5w07qt71hj7j" path="res://Resources/Audio/Applause.mp3" id="28_nhouo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3m36"]
 size = Vector2(185.71436, 62.856934)
@@ -286,9 +288,15 @@ wait_time = 0.5
 
 [node name="Audio" type="Node2D" parent="." unique_id=363291978]
 
+[node name="DrumRoll" type="AudioStreamPlayer" parent="Audio" unique_id=1242197290]
+stream = ExtResource("26_qxagx")
+
 [node name="VictorySfx" type="AudioStreamPlayer" parent="Audio" unique_id=2145002966]
 stream = ExtResource("26_s8ulb")
 volume_db = -11.206
+
+[node name="Applause" type="AudioStreamPlayer" parent="Audio" unique_id=1287181945]
+stream = ExtResource("28_nhouo")
 
 [connection signal="pressed" from="Background/Finish" to="." method="_on_finish_pressed"]
 [connection signal="timeout" from="Timers/Anim" to="." method="_on_anim_timeout"]
