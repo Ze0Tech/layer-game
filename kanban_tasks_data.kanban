@@ -31,11 +31,8 @@
 			"uuid": "1ed2c5aa-37d0-4ffc-a049-22a405558df2",
 			"title": "Todo",
 			"tasks": [
-				"fc69525f-aedb-460f-bf95-3df13c2cef4b",
-				"dc4ddddc-978e-4692-be61-f4f406fcf0b7",
-				"ce8c89a9-f3ff-4b1d-bcdb-70398b81c999",
-				"278eecc3-7edd-4bb3-b250-f0d75fb0c7a7",
-				"98d0963c-8eb5-48e1-a881-8a6f0556e814"
+				"7e12f2fb-7df5-43c2-8f37-7a76a8317e05",
+				"819c7bbf-0674-44b6-9a1b-08b9c7083b06"
 			]
 		},
 		{
@@ -50,6 +47,7 @@
 				"dfcdb69c-4f9d-4421-a2fa-87c207b2ca14",
 				"ad8858eb-50b2-4c79-b847-a7f5593d327a",
 				"d13a63c2-3f3c-4e91-b2ba-15cb690e1526",
+				"98d0963c-8eb5-48e1-a881-8a6f0556e814",
 				"2952c2d3-f10f-4db8-89bd-f18973024de2",
 				"12cd22b1-669b-4777-b938-15fcc35424d8",
 				"8a2196bd-a3a0-4d41-b3c0-c27e1c88be08",
@@ -74,13 +72,6 @@
 	],
 	"tasks": [
 		{
-			"uuid": "dc4ddddc-978e-4692-be61-f4f406fcf0b7",
-			"title": "Key / Cage overlap",
-			"description": "",
-			"category": "6deed6e0-28e5-4b6d-8604-bcb6e054f779",
-			"steps": []
-		},
-		{
 			"uuid": "d7db8930-d54d-4961-99f0-7773eedff94c",
 			"title": "Start Menu Puzzle",
 			"description": "",
@@ -95,30 +86,6 @@
 			"steps": []
 		},
 		{
-			"uuid": "fc69525f-aedb-460f-bf95-3df13c2cef4b",
-			"title": "",
-			"description": "",
-			"category": "469bb5b7-c554-4723-a72a-59751c83be04",
-			"steps": [
-				{
-					"details": "Lollipop (eraser tool?)",
-					"done": false
-				},
-				{
-					"details": "Vistoggle for cover from rock",
-					"done": false
-				},
-				{
-					"details": "Tetris",
-					"done": false
-				},
-				{
-					"details": "Paint by Numbers",
-					"done": false
-				}
-			]
-		},
-		{
 			"uuid": "93de1445-66c7-4222-83f0-e6d8fec6799d",
 			"title": "Bird Dress Up",
 			"description": "",
@@ -130,20 +97,6 @@
 			"title": "Key Finder",
 			"description": "",
 			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
-			"steps": []
-		},
-		{
-			"uuid": "ce8c89a9-f3ff-4b1d-bcdb-70398b81c999",
-			"title": "Bluescreen on death",
-			"description": "",
-			"category": "8c27b97c-cdd3-4916-a37a-fe4a073a1af7",
-			"steps": []
-		},
-		{
-			"uuid": "278eecc3-7edd-4bb3-b250-f0d75fb0c7a7",
-			"title": "little bird stealing key Lev1",
-			"description": "",
-			"category": "8c27b97c-cdd3-4916-a37a-fe4a073a1af7",
 			"steps": []
 		},
 		{
@@ -299,6 +252,20 @@
 		{
 			"uuid": "12cd22b1-669b-4777-b938-15fcc35424d8",
 			"title": "Stars in Level select for progres",
+			"description": "",
+			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
+			"steps": []
+		},
+		{
+			"uuid": "7e12f2fb-7df5-43c2-8f37-7a76a8317e05",
+			"title": "Add end frame",
+			"description": "",
+			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
+			"steps": []
+		},
+		{
+			"uuid": "819c7bbf-0674-44b6-9a1b-08b9c7083b06",
+			"title": "Tutorialize some",
 			"description": "",
 			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
 			"steps": []

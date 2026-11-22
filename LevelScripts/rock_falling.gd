@@ -120,7 +120,8 @@ func _on_survive_timeout() -> void:
 	RockTimer.stop()
 	$Audio/VictorySfx.play()
 	Character.StopMove()
-	Globals.LevelsComplete += 1
+	if not Globals.LevelsComplete.has('RockFall'):
+		Globals.LevelsComplete.append('RockFall')
 	await get_tree().create_timer(4).timeout
 	
 	get_parent().LevelSelect()

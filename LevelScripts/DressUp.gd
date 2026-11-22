@@ -106,7 +106,8 @@ func Present() -> void:
 	$Audio/Applause.play()
 	Anim.start()
 	Flowers.start()
-	Globals.LevelsComplete += 1
+	if not Globals.LevelsComplete.has('DressUp'):
+		Globals.LevelsComplete.append('DressUp')
 	await get_tree().create_timer(5).timeout
 	print(Clothes)
 	get_parent().LevelSelect()

@@ -18,11 +18,11 @@ func _ready() -> void:
 	if Globals.Clothes:
 		Globals.BirdUpdate()
 		
-	for i in Globals.LevelsComplete:
-		if Globals.LevelsComplete <= 3:
+	for i in Globals.LevelsComplete.size():
+		if Globals.LevelsComplete.size() <= 4:
 			find_child('Stars').get_child(i).visible = true
 		
-	if Globals.LevelsComplete > 3:
+	if Globals.LevelsComplete.size() > 3:
 		$LevelAreas/Slot5.visible = true
 		
 func _process(_delta: float) -> void:

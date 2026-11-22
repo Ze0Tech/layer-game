@@ -96,7 +96,8 @@ func LockCheck() -> void:
 		
 func Menufunc() -> void:
 	if Menu:
-		Globals.LevelsComplete += 1
+		if not Globals.LevelsComplete.has('KeyFind'):
+			Globals.LevelsComplete.append('KeyFind')
 		get_parent().LevelSelect()
 		Menu = false
 		

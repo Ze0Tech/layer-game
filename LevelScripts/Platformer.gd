@@ -108,7 +108,8 @@ func _on_area_2d_body_entered(_body: Node2D) -> void:
 	print('yey')
 	$Audio/VictorySfx.play()
 	$Places/Win.queue_free()
-	Globals.LevelsComplete += 1
+	if not Globals.LevelsComplete.has('Platformer'):
+		Globals.LevelsComplete.append('Platformer')
 	await get_tree().create_timer(3).timeout
 	get_parent().LevelSelect()
 

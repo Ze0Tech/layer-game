@@ -1,6 +1,18 @@
 [gd_scene format=3 uid="uid://bwtjf2ioy48ql"]
 
 [ext_resource type="Script" uid="uid://qlt8edxckhv1" path="res://scrunch_frame.gd" id="1_v8mbu"]
+[ext_resource type="Texture2D" uid="uid://w65o4gp1lvb" path="res://Resources/Frame.png" id="2_ftaad"]
+[ext_resource type="Texture2D" uid="uid://dcnwkamci101q" path="res://Resources/Gallery.png" id="2_rbbwg"]
 
 [node name="ScrunchFrame" type="Node2D" unique_id=535566762]
 script = ExtResource("1_v8mbu")
+
+[node name="Gallery" type="Sprite2D" parent="." unique_id=1063551900]
+position = Vector2(800, 449.75)
+scale = Vector2(5, 4.997222)
+texture = ExtResource("2_rbbwg")
+
+[node name="Frame" type="Sprite2D" parent="." unique_id=383994040]
+position = Vector2(861.3, 442.4)
+scale = Vector2(5, 5.0055556)
+texture = ExtResource("2_ftaad")

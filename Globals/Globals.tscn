@@ -138,6 +138,7 @@ position = Vector2(677.3333, 544)
 texture = ExtResource("15_ly8lm")
 
 [node name="Trunks" type="Sprite2D" parent="Canvas/Bird/Clothes/Bottom" unique_id=2082856345]
+visible = false
 position = Vector2(670.00006, 500)
 texture = ExtResource("16_snxdp")
 
@@ -149,6 +150,6 @@ offset = Vector2(4, 11)
 
 [node name="WarriorWithTheHeartOfAnEagle" type="AudioStreamPlayer" parent="." unique_id=1252120665]
 stream = ExtResource("15_xjft1")
-volume_db = -8.0
+volume_db = -10.0
 autoplay = true
 parameters/looping = true
