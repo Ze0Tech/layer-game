@@ -63,6 +63,7 @@ position = Vector2(405, 285.5)
 shape = SubResource("RectangleShape2D_hg4s6")
 
 [node name="Slot5" type="Area2D" parent="LevelAreas" unique_id=1942038699]
+visible = false
 position = Vector2(-1, 225)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelAreas/Slot5" unique_id=231884517]
