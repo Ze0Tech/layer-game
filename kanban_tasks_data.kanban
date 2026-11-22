@@ -31,8 +31,8 @@
 			"uuid": "1ed2c5aa-37d0-4ffc-a049-22a405558df2",
 			"title": "Todo",
 			"tasks": [
-				"7e12f2fb-7df5-43c2-8f37-7a76a8317e05",
-				"819c7bbf-0674-44b6-9a1b-08b9c7083b06"
+				"819c7bbf-0674-44b6-9a1b-08b9c7083b06",
+				"7b87cc87-c011-463e-a74d-59dd07e8f834"
 			]
 		},
 		{
@@ -48,6 +48,7 @@
 				"ad8858eb-50b2-4c79-b847-a7f5593d327a",
 				"d13a63c2-3f3c-4e91-b2ba-15cb690e1526",
 				"98d0963c-8eb5-48e1-a881-8a6f0556e814",
+				"7e12f2fb-7df5-43c2-8f37-7a76a8317e05",
 				"2952c2d3-f10f-4db8-89bd-f18973024de2",
 				"12cd22b1-669b-4777-b938-15fcc35424d8",
 				"8a2196bd-a3a0-4d41-b3c0-c27e1c88be08",
@@ -268,6 +269,13 @@
 			"title": "Tutorialize some",
 			"description": "",
 			"category": "190588e1-5aad-4fac-9383-4b1f6769dd48",
+			"steps": []
+		},
+		{
+			"uuid": "7b87cc87-c011-463e-a74d-59dd07e8f834",
+			"title": "Windows Background",
+			"description": "",
+			"category": "469bb5b7-c554-4723-a72a-59751c83be04",
 			"steps": []
 		}
 	],
