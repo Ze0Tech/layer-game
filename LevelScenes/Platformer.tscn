@@ -1131,7 +1131,7 @@ volume_db = -15.0
 
 [node name="VictorySfx" type="AudioStreamPlayer" parent="Audio" unique_id=663232089]
 stream = ExtResource("13_j8iut")
-volume_db = -14.0
+volume_db = -10.0
 
 [connection signal="body_entered" from="Places/Win" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Places/Death" to="." method="_on_death_body_entered"]

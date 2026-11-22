@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b1510x8f0d53h"]
 
 [ext_resource type="Script" uid="uid://beg1vxgjc2s0d" path="res://LevelScripts/rock_falling.gd" id="1_1hnk5"]
-[ext_resource type="Texture2D" uid="uid://c311u4gficdx3" path="res://Resources/Placeholders/title_screen_draftbig.png" id="2_yg753"]
+[ext_resource type="Texture2D" uid="uid://1f65y7dyks85" path="res://Resources/Placeholders/Background.png" id="2_3seon"]
 [ext_resource type="Texture2D" uid="uid://dwq2ca1xxrt2t" path="res://Resources/RockFallingBackground.png" id="3_3seon"]
 [ext_resource type="Texture2D" uid="uid://dsdpsic1q2lka" path="res://Resources/General/Layer Icon.png" id="4_pwx0u"]
 [ext_resource type="Texture2D" uid="uid://hx0uaxatih5k" path="res://Resources/General/Lock Icon.png" id="5_2extm"]
@@ -31,7 +31,7 @@ script = ExtResource("1_1hnk5")
 [node name="Background" type="TextureRect" parent="Background" unique_id=602834306]
 offset_right = 1600.0
 offset_bottom = 900.0
-texture = ExtResource("2_yg753")
+texture = ExtResource("2_3seon")
 metadata/_edit_lock_ = true
 
 [node name="Background2" type="Sprite2D" parent="Background" unique_id=675416365]
@@ -301,7 +301,7 @@ autostart = true
 
 [node name="VictorySfx" type="AudioStreamPlayer" parent="Audio" unique_id=39642009]
 stream = ExtResource("12_yhn4y")
-volume_db = -12.0
+volume_db = -10.0
 
 [connection signal="timeout" from="Timers/RockSpawn" to="." method="_on_rock_spawn_timeout"]
 [connection signal="timeout" from="Timers/Animation" to="." method="_on_animation_timeout"]

@@ -152,3 +152,8 @@ offset = Vector2(4, 11)
 stream = ExtResource("15_xjft1")
 volume_db = 4.083
 autoplay = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1068130864]
+wait_time = 74.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

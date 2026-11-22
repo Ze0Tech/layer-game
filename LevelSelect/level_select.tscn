@@ -8,12 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://cyle8p31m57wa" path="res://Resources/Falling/Lev4.png" id="5_bgf6f"]
 [ext_resource type="Texture2D" uid="uid://deby4kru85ami" path="res://Resources/Falling/Lev5.png" id="6_3da11"]
 [ext_resource type="Texture2D" uid="uid://2b35y1fu2s2p" path="res://Resources/General/End.png" id="7_bgf6f"]
+[ext_resource type="FontFile" uid="uid://d2leid5c1hj10" path="res://Resources/HomeVideo-Regular.ttf" id="9_3da11"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hg4s6"]
 size = Vector2(212, 141)
-
-[sub_resource type="SystemFont" id="SystemFont_hg4s6"]
-font_names = PackedStringArray("Eras ITC")
 
 [node name="LevelSelect" type="Node2D" unique_id=1908919975]
 script = ExtResource("1_vomi7")
@@ -142,10 +140,10 @@ texture = ExtResource("3_0y4ob")
 hframes = 3
 
 [node name="Label" type="Label" parent="." unique_id=1091259546]
-offset_left = 183.0
+offset_left = 182.0
 offset_top = 121.0
-offset_right = 223.0
-offset_bottom = 144.0
-theme_override_fonts/font = SubResource("SystemFont_hg4s6")
+offset_right = 674.0
+offset_bottom = 179.0
+theme_override_fonts/font = ExtResource("9_3da11")
 theme_override_font_sizes/font_size = 63
 text = "Project Files"

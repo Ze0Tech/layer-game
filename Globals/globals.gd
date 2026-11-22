@@ -32,3 +32,7 @@ func _process(delta: float) -> void:
 		print(Clothes)
 		
 	Mouse.position = Mouse.get_global_mouse_position()
+
+
+func _on_timer_timeout() -> void:
+	$WarriorWithTheHeartOfAnEagle.play()

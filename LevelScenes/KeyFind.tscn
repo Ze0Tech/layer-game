@@ -266,7 +266,7 @@ autostart = true
 
 [node name="VictorySfx" type="AudioStreamPlayer" parent="Audio" unique_id=1594011326]
 stream = ExtResource("15_d8k1g")
-volume_db = -14.0
+volume_db = -10.0
 
 [connection signal="area_entered" from="Places/Cage/Lock" to="." method="_on_lock_area_entered"]
 [connection signal="area_exited" from="Places/Cage/Lock" to="." method="_on_lock_area_exited"]

@@ -41,7 +41,7 @@ func _ready() -> void:
 				q.add_to_group(i.name)
 				print(q.get_groups())
 				q.connect('input_event',ItemInput.bind(q))
-	
+		
 	Globals.Bird.visible = false
 	Globals.BirdHide()
 	
